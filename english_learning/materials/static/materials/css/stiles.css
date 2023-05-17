@@ -1,0 +1,14 @@
+body{
+    text-align: center;
+    background-color: rgb(61, 68, 68);
+    color: rgb(233, 230, 13);
+  }
+#mt-5{
+    color: blue;
+}
+#navbar-nav{
+    color: brown;
+}
+a{
+    color: rgb(20, 110, 220);
+}

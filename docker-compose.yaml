@@ -1,0 +1,50 @@
+version: "3.9"
+services:
+  english_learning:
+    container_name: my_web
+    build: ./english_learning
+    command: >
+      sh -c "python manage.py migrate --noinput &&
+             python manage.py runserver 0.0.0.0:8000"
+    ports:
+      - 80:8000
+    volumes:
+      - ./english_learning:/app
+    depends_on:
+      - mysql
+    links:
+      - mysql:db
+  mysql:
+    restart: always
+    image: mysql:8.0
+    ports:
+      - '3306:3306'
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+    environment:
+
+      MYSQL_DATABASE: 'mydatabase'
+      
+    healthcheck:
+      test: ['CMD', '/opt/bitnami/scripts/mysql/healthcheck.sh']
+      interval: 15s
+      timeout: 5s
+      retries: 6
+  bot:
+    container_name: my_bot
+    build: ./bot
+    command: python lang_bot.py
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./bot:/app
+      # - ./bot/handlers:/app/handlers
+    depends_on:
+      - mysql
+    links:
+      - mysql:db
+
+volumes:
+  mysql_data:
+    # driver: local

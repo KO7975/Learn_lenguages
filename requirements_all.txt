@@ -1,0 +1,10 @@
+mysql-connector-python==8.0.33
+aiogram==2.25.1
+requests==2.29.0
+PyMySQL==1.0.3
+django==4.2
+python-gettext==5.0
+python-dotenv==1.0.0
+django-bootstrap-v5==1.0.11
+django-modeltranslation==0.18.9
+mysqlclient==2.1.1

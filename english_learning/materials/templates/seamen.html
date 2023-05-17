@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content%}
+{% load i18n %}
+<head>
+	<title>{% trans "For Seamen" %}</title>
+    <style>
+        body{
+            margin-top: 100px;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-8"><h1>{% trans "Learning English as a seaman can be a challenging task, but there are several ways you can improve your language skills. Here are some tips:" %}</h1>
+            </div>
+            <div class="col-md-4" ><a href="{% url 'registr' %}"><img src="/media/photo/English_for_seamen.jpg" style="height: 320px; border-radius: 1rem;"></a></div>
+        </div>
+        <ul>
+            <li>{% trans "Start with the basics: Begin by learning the fundamental grammar rules, vocabulary, and sentence structures. You can find resources online, in books, or enroll in a course specifically designed for seafarers." %}</li>
+            <li>{% trans "Watch English movies and TV shows: Watching English movies and TV shows can help you improve your listening skills and expose you to different accents and dialects." %}</li>
+            <li>{% trans "Read English books and news articles: Reading in English can help you develop your vocabulary and comprehension skills. Start with simple books and gradually move to more advanced materials." %}</li>
+            <li>{% trans "Practice speaking with others: Find a language partner or join an online forum to practice speaking in English. It's crucial to practice speaking regularly to improve your fluency." %}</li>
+            <li>{% trans "Use English on the job: Use English whenever possible on the job. Communicate with your colleagues and superiors in English, even if it's challenging at first." %}</li>
+            <li>{% trans "Take an English proficiency test: Taking an English proficiency test like Marlins or CES can help you assess your language skills and identify areas where you need to improve." %}</li>
+            <li>{% trans "Join an English-speaking club: Join an English-speaking club or attend language exchange events to meet and practice with other English learners." %}</li>
+        </ul>
+        <p>{% trans "Remember, learning a language takes time and practice. Be patient with yourself and focus on making incremental progress. With consistent effort, you can improve your English language skills and become a better communicator both on and off the job." %}<a href="{% url 'registr' %}">{% trans "Study" %}</a></p>
+    </div>
+</body>
+{% endblock %}

@@ -1,0 +1,163 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block title %}
+  {{course.title}} :: {{block.super}}
+{% endblock %}
+{% block sidebar %}
+{% include 'inc/_sidebar.html' %}
+{% endblock %}
+{% block content %}
+<header>
+  <style>
+        /* Style the buttons that are used to open and close the accordion panel */
+    .accordion {
+      background-color: #ccc;
+      color: #444;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      text-align: left;
+      border: none;
+      outline: none;
+      transition: 0.4s;
+    }
+
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    .active, .accordion:hover {
+      background-color:  #898989;
+      box-shadow: 1px 0 10px 10px #cac867;
+      color: #0b213d;
+      text-size-adjust: auto;
+    }
+
+    /* Style the accordion panel. Note: hidden by default */
+    .panel {
+      margin-bottom: 50px;
+      text-align: center;
+      padding: 0 18px;
+      background-color: #EEEEEE;
+      display: none;
+      overflow: hidden;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    }
+    .content {
+        
+        padding: 20px;
+    }
+
+    /* style for the three main content blocks */
+    .block {
+        background-color: #fff;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.2);
+        
+        
+    }
+    .block img {
+        max-width: 100%;
+    }
+  </style>
+</header>
+<body style="background-color: #eee;">
+  <div class="container" style="margin-top: 100px; ">
+      <div class="row fst-italic">
+          <div class="content col-md-4 col-md-push-3 " style="background: #ccc; padding: 10px;">{{ course.language }} </div>
+            <h2 style="color: #838111;">{% trans 'Hello' %} {{user}} {{user.first_name}}</h2>
+            <h2>{% trans 'Your topic today is:' %} <b style="background-color: #cbedec;">{{ course.topic }}</b></h2><br>
+            
+            <div class="block">
+              <h2>{% trans 'Lessons' %}</h2>
+              <p>{{materials_lesson_materials.material_id.pk}}</p>
+                {% for i in lessons %}
+                <button class="accordion border-bottom" id="accordion">{% trans 'Lesson' %} {{i.number}} : {{ i.name }}</button>
+                <div class="panel">
+                  <div class="card-body ">
+                    <div class="media">
+                      <div class="card-body accordion-collapse">
+                        {% for t in i.materials.all %} 
+                          {% if t.url %}
+                            <p>{{t.text}}</p><br>
+                            <p style="color: #250ce3;">{% trans 'Сlick on the icon below.' %}</p>
+                            <p><a href="{{t.url}}"><img src="{% static 'materials/photos/web.png' %}"></a></p>
+                              {% if 'embed' in t.url%}</p>
+                                <p><iframe width="853" height="480" src="{{t.url}}"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+                              {% endif %} 
+                          {% else %}
+                          <div class="row" style="border-bottom: 1px solid black;
+                          padding-bottom: 15px; margin-top: 20px;">
+                            <div class="col-md-4" style="margin-top: 20px;">
+                              <p>{{t.text}}</p>    
+                            </div>
+                            <div class="col-md-8">
+                              <p><b>{{t.title}}</b></p>
+                              <p>{{t.material_tag}}</p>
+                            </div>
+                          </div>
+                          {% endif %}
+                        {% endfor %}
+                      </div> 
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}  
+            </div>  
+            <div class="block" style="margin-bottom: 40px;">
+              <h2>{% trans 'Additional  Materials' %}</h2>
+                {% for item in mat %}
+              <button class="accordion border-bottom" id="accordion">{{ item.title }}</button>
+              <div class="panel">
+                <div class="card-body">
+                  <div class="media">
+                    <div class="card-body accordion-collapse" >
+                      {% if item.url %}
+                        <p>{{item.text}}</p><br>
+                        <p style="color: #250ce3;">{% trans 'Сlick on the icon below.' %}</p>
+                        <p><a href="{{item.url}}"><img src="{% static 'materials/photos/web.png' %}"></a></p>
+                          {% if 'embed' in item.url%}</p>
+                            <p><iframe width="853" height="480" src="{{item.url}}"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+                          {% endif %}
+                      {% else %}
+                      <div class="row" style="margin-top: 20px;">
+                        <div class="col-md-6">
+                          <p>{{item.text}}</p>
+                        </div>
+                        <div class="col-md-4">
+                          <p><b>{{item.title}}</b></p>
+                          <p style="padding-bottom: 25px;">{{item.material_tag}}</p>
+                        </div>
+                      </div>
+                        
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% endfor%}
+            </div>
+      </div>  
+  </div>
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+          /* Toggle between adding and removing the "active" class,
+          to highlight the button that controls the panel */
+          this.classList.toggle("active");
+
+          /* Toggle between hiding and showing the active panel */
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+              panel.style.display = "none";
+          } else {
+              panel.style.display = "block";
+          }
+      });
+  }
+</script>
+</body>
+{% endblock %}
+

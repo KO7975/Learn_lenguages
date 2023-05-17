@@ -1,0 +1,13 @@
+{% block sidebar %}
+{% include 'inc/_sidebar.html' %}
+{% endblock %}
+<div class="list-group">
+
+    {% for item in courses %}
+    <div class="col-md-3">
+        <p>{{ item.get_absolute_url }}</p>
+        <a href="{{ item.get_absolute_url }}" class="list-group-item 
+        list-group-item-action">{{ item.title }}</a>
+    </div>  
+
+</div>

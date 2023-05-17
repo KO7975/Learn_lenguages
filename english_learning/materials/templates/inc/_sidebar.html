@@ -1,0 +1,13 @@
+{% load materials_tag %}
+
+<div class="list-group" style="margin-top: 70px;">
+    {% get_list_courses as categories %}
+    {% for item in categories %}
+    <a href="{% url 'course' item.pk %}" class="list-group-item
+ list-group-item-action">{{ item.title }}</a>
+    {% endfor %}
+</div>
+
+
+<br>
+

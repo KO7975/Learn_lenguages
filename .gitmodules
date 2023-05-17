@@ -1,0 +1,3 @@
+[submodule "pyTelegramBotAPI"]
+	path = pyTelegramBotAPI
+	url = ./bot/pyTelegramBotAPI

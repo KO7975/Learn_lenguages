@@ -1,0 +1,1130 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-17 13:45+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\english_learning\settings.py:132 .\materials\templates\home.html:224
+#: .\materials\templates\home.html:257
+msgid "English"
+msgstr "Английский"
+
+#: .\english_learning\settings.py:133
+msgid "Russian"
+msgstr "Русский"
+
+#: .\english_learning\settings.py:134
+msgid "Ukrainian"
+msgstr "Украинский"
+
+#: .\materials\templates\base.html:83
+msgid "Lets Learning"
+msgstr "Давайте учиться"
+
+#: .\materials\templates\base.html:93
+msgid "Admin Page"
+msgstr "Админ страница"
+
+#: .\materials\templates\base.html:97
+msgid "Courses"
+msgstr "Курсы"
+
+#: .\materials\templates\base.html:109 .\materials\templates\base.html:119
+msgid "Logout"
+msgstr "Выйти"
+
+#: .\materials\templates\base.html:115
+msgid "Course"
+msgstr "Курс"
+
+#: .\materials\templates\base.html:124
+msgid "Login"
+msgstr "Войти"
+
+#: .\materials\templates\base.html:127 .\materials\templates\registr.html:74
+msgid "Register"
+msgstr "Зарегистрироваться"
+
+#: .\materials\templates\course_detail.html:67
+msgid "Hello"
+msgstr "Здравствуйте!"
+
+#: .\materials\templates\course_detail.html:68
+msgid "Your topic today is:"
+msgstr "Ваша тема сегодня:"
+
+#: .\materials\templates\course_detail.html:71
+msgid "Lessons"
+msgstr "Уроки"
+
+#: .\materials\templates\course_detail.html:74
+msgid "Lesson"
+msgstr "Урок"
+
+#: .\materials\templates\course_detail.html:82
+#: .\materials\templates\course_detail.html:116
+msgid "Сlick on the icon below."
+msgstr "Нажмите на иконку ниже."
+
+#: .\materials\templates\course_detail.html:107
+msgid "Additional  Materials"
+msgstr "Дополнительные материалы"
+
+#: .\materials\templates\home.html:160
+msgid "Hello. Nice to meet you here. My Name is"
+msgstr "Привет. Рада видеть вас здесь.Меня зовут"
+
+#: .\materials\templates\home.html:161
+msgid ""
+"I can help you learn languages faster and more enjoyable. I offer a variety "
+"of courses to help you reach your language goals."
+msgstr ""
+"Я помогу Вам научиться языкам быстрее и увлекательнее.Я предлагаю много "
+"разных курсов для достижения Ваших языковых целей."
+
+#: .\materials\templates\home.html:161
+msgid ""
+"I have video and audio materials to help you learn the basics and practice "
+"the language."
+msgstr ""
+"У меня есть видео и аудио материалы, которые помогут Вам изучить базовые "
+"правила и практиковать язык."
+
+#: .\materials\templates\home.html:162
+msgid ""
+"Studying an individual course online can be a convenient and flexible way to "
+"learn new skills or advance your education."
+msgstr ""
+"Изучение языка на индивидуальном курсе онлайн может быть удобным и гибким "
+"способом получить новые навыки или повысить уровень знаний."
+
+#: .\materials\templates\home.html:163
+msgid ""
+"let's make first step to find out more about my courses and improve  your "
+"target language."
+msgstr ""
+"Сделаем первый шаг, чтобы узнать больше о моих курсах и улучшить ваши знания."
+
+#: .\materials\templates\home.html:168
+msgid "First step"
+msgstr "Первый шаг"
+
+#: .\materials\templates\home.html:171
+msgid "About me"
+msgstr "Обо мне"
+
+#: .\materials\templates\home.html:183
+msgid "Let's learning languages together!"
+msgstr "Давайте изучать языки вместе!"
+
+#: .\materials\templates\home.html:193
+msgid "Interactive Learning"
+msgstr "Интерактивное обучение"
+
+#: .\materials\templates\home.html:194
+msgid ""
+"Our courses are designed to be engaging and interactive, making learning a "
+"fun experience."
+msgstr ""
+"Наши курсы разработаны так, чтобы быть интересными и интерактивными, что "
+"делает обучение увлекательным."
+
+#: .\materials\templates\home.html:198
+msgid "Flexible Schedule"
+msgstr "Гибкий график"
+
+#: .\materials\templates\home.html:199
+msgid ""
+"You can learn at your own pace, whenever and wherever you want. No need to "
+"attend physical classes."
+msgstr ""
+"Вы можете учиться в своем собственном темпе, в любое время и в любом месте. "
+"Нет необходимости посещать уроки если вы сами не хотите."
+
+#: .\materials\templates\home.html:203
+msgid "Experienced Teacher"
+msgstr "Опытный учитель"
+
+#: .\materials\templates\home.html:204
+msgid ""
+"Our teacher are highly qualified and experienced in teaching their "
+"respective languages."
+msgstr ""
+"Учитель имеет высокую квалификацию и опыт преподавания соответствующих "
+"языков."
+
+#: .\materials\templates\home.html:215
+msgid "Languages"
+msgstr "Языки"
+
+#: .\materials\templates\home.html:220
+msgid "Choose language"
+msgstr "Выберите язык"
+
+#: .\materials\templates\home.html:227
+msgid "For seamen"
+msgstr "Для моряков"
+
+#: .\materials\templates\home.html:230 .\materials\templates\home.html:272
+msgid "Polish"
+msgstr "Польский"
+
+#: .\materials\templates\home.html:233 .\materials\templates\home.html:279
+msgid "Spanish"
+msgstr "Испанский"
+
+#: .\materials\templates\home.html:258 .\materials\templates\home.html:266
+#: .\materials\templates\home.html:273 .\materials\templates\home.html:280
+msgid "Read more"
+msgstr "Читать"
+
+#: .\materials\templates\home.html:258 .\materials\templates\home.html:273
+#: .\materials\templates\home.html:280
+msgid "About learning this language"
+msgstr "о изучении этого языка"
+
+#: .\materials\templates\home.html:265
+msgid "English for seamen"
+msgstr "Английский для моряков"
+
+#: .\materials\templates\home.html:299
+msgid "Comments"
+msgstr "Комментарии"
+
+#: .\materials\templates\home.html:306
+msgid "Add comment"
+msgstr "Добавить Комментарий"
+
+#: .\materials\templates\home.html:307
+msgid "Comment"
+msgstr "Комментарий"
+
+#: .\materials\templates\home.html:336
+msgid "Follow on social media:"
+msgstr "Подпишитесь"
+
+#: .\materials\templates\home.html:356
+msgid "Contact Us:"
+msgstr "Связаться:"
+
+#: .\materials\templates\home.html:358
+msgid "Phone:"
+msgstr "Телефон"
+
+#: .\materials\templates\home.html:359
+msgid "Email:"
+msgstr "@маил"
+
+#: .\materials\templates\poland.html:5
+msgid "Poland"
+msgstr "Польский"
+
+#: .\materials\templates\poland.html:16
+msgid ""
+"Polish is the official language of Poland, a country located in Central "
+"Europe. It's a Slavic language and has around 50 million native speakers "
+"worldwide."
+msgstr ""
+"Польский язык является официальным языком Польши, страны, расположенной в "
+"Центральной Европе. Это славянский язык, на котором говорят около 50 "
+"миллионов человек по всему миру."
+
+#: .\materials\templates\poland.html:19
+msgid ""
+"If you're interested in learning Polish, here are a few tips to help you get "
+"started:"
+msgstr ""
+"Если вы заинтересованы в изучении польского языка, вот несколько советов, "
+"которые помогут вам начать:"
+
+#: .\materials\templates\poland.html:21
+msgid ""
+"Learn the basics: Start by learning the basics of Polish, including the "
+"alphabet, pronunciation, and basic grammar rules. Polish has a unique "
+"writing system that includes diacritical marks, which can be challenging to "
+"learn at first, but it's essential to get them right to be understood "
+"correctly."
+msgstr ""
+"Изучите основы: начните с изучения основ польского языка, включая алфавит, "
+"произношение и основные правила грамматики. В польском языке уникальная "
+"система письма, включающая диакритические знаки, выучить которые поначалу "
+"может быть сложно, но очень важно правильно их понять, чтобы их правильно "
+"понимали."
+
+#: .\materials\templates\poland.html:22
+msgid ""
+"Practice speaking: To improve your speaking skills, practice speaking with "
+"native speakers or language exchange partners. Join language groups, attend "
+"language meetups, or find a tutor to practice speaking with regularly."
+msgstr ""
+"Практика разговорной речи: чтобы улучшить свои разговорные навыки, "
+"попрактикуйтесь в разговоре с носителями языка или партнерами по языковому "
+"обмену. Присоединяйтесь к языковым группам, посещайте языковые встречи или "
+"найдите репетитора, с которым можно регулярно практиковаться в разговорной "
+"речи."
+
+#: .\materials\templates\poland.html:23
+msgid ""
+"Listen to Polish music and watch movies: Listening to Polish music and "
+"watching movies can help you improve your listening skills and pick up new "
+"vocabulary. Start with simpler songs and movies and gradually move up to "
+"more complex ones as you improve."
+msgstr ""
+"Слушайте польскую музыку и смотрите фильмы. Прослушивание польской музыки и "
+"просмотр фильмов помогут вам улучшить навыки аудирования и расширить "
+"словарный запас. Начните с более простых песен и фильмов и постепенно "
+"переходите к более сложным по мере улучшения."
+
+#: .\materials\templates\poland.html:24
+msgid ""
+"Use language learning apps: There are many language learning apps available "
+"that can help you practice your Polish skills. These apps often include "
+"interactive exercises, vocabulary games, and other language learning tools."
+msgstr ""
+"Используйте приложения для изучения языка. Существует множество приложений "
+"для изучения языка, которые помогут вам практиковать свои навыки польского "
+"языка. Эти приложения часто включают в себя интерактивные упражнения, "
+"словарные игры и другие инструменты для изучения языка."
+
+#: .\materials\templates\poland.html:25
+msgid ""
+"Immerse yourself in the language: To become proficient in Polish, it's "
+"essential to immerse yourself in the language as much as possible. This "
+"includes reading Polish books, watching Polish TV shows, and speaking Polish "
+"whenever possible."
+msgstr ""
+"Погрузитесь в язык: чтобы овладеть польским языком, необходимо максимально "
+"погрузиться в язык. Это включает в себя чтение польских книг, просмотр "
+"польских телепередач и разговор по-польски, когда это возможно."
+
+#: .\materials\templates\poland.html:27
+msgid ""
+"By following these strategies, you can improve your Polish language skills "
+"and communicate more effectively with native speakers. Polish is a "
+"challenging language to learn, but with time and practice , you can improve "
+"your Polish language skills and communicate more effectively in both "
+"personal and professional settings."
+msgstr ""
+"Следуя этим стратегиям, вы сможете улучшить свои знания польского языка и "
+"более эффективно общаться с носителями языка. Польский язык сложен для "
+"изучения, но со временем и практикой вы сможете улучшить свои знания "
+"польского языка и более эффективно общаться как в личной, так и в "
+"профессиональной среде."
+
+#: .\materials\templates\poland.html:27 .\materials\templates\seamen.html:29
+msgid "Study"
+msgstr "Изучать"
+
+#: .\materials\templates\registr.html:7
+msgid "Registration Form"
+msgstr "Форма регистрации"
+
+#: .\materials\templates\registr.html:19
+msgid "Sign up"
+msgstr "Зарегистрироваться"
+
+#: .\materials\templates\registr.html:27
+msgid "Your Name"
+msgstr "Ваше имя"
+
+#: .\materials\templates\registr.html:35
+msgid "Your Surname"
+msgstr "Ваша фамилия"
+
+#: .\materials\templates\registr.html:44
+#, fuzzy
+#| msgid "Your Email"
+msgid "Your Email*"
+msgstr "Ваша почта"
+
+#: .\materials\templates\registr.html:53
+#, fuzzy
+#| msgid "Phone number"
+msgid "Phone number*"
+msgstr "Номер телефона"
+
+#: .\materials\templates\registr.html:62
+#, fuzzy
+#| msgid "Password"
+msgid "Password*"
+msgstr "Пароль"
+
+#: .\materials\templates\registr.html:69
+msgid "I agree all statements in"
+msgstr "Я согласен со всеми утверждениями в"
+
+#: .\materials\templates\registr.html:69
+msgid "Terms of service"
+msgstr "Условия использования"
+
+#: .\materials\templates\seamen.html:5
+#, fuzzy
+#| msgid "For seamen"
+msgid "For Seamen"
+msgstr "Для моряков"
+
+#: .\materials\templates\seamen.html:16
+msgid ""
+"Learning English as a seaman can be a challenging task, but there are "
+"several ways you can improve your language skills. Here are some tips:"
+msgstr ""
+"Изучение английского языка для моряка может быть сложной задачей, но есть "
+"несколько способов улучшить свои языковые навыки. Вот несколько советов:"
+
+#: .\materials\templates\seamen.html:21
+msgid ""
+"Start with the basics: Begin by learning the fundamental grammar rules, "
+"vocabulary, and sentence structures. You can find resources online, in "
+"books, or enroll in a course specifically designed for seafarers."
+msgstr ""
+"Начните с основ: начните с изучения основных правил грамматики, словарного "
+"запаса и структур предложений. Вы можете найти ресурсы в Интернете, в книгах "
+"или записаться на курс, специально разработанный для моряков."
+
+#: .\materials\templates\seamen.html:22
+msgid ""
+"Watch English movies and TV shows: Watching English movies and TV shows can "
+"help you improve your listening skills and expose you to different accents "
+"and dialects."
+msgstr ""
+"Смотрите английские фильмы и телешоу. Просмотр английских фильмов и телешоу "
+"может помочь вам улучшить навыки слушания и познакомить вас с разными "
+"акцентами и диалектами."
+
+#: .\materials\templates\seamen.html:23
+msgid ""
+"Read English books and news articles: Reading in English can help you "
+"develop your vocabulary and comprehension skills. Start with simple books "
+"and gradually move to more advanced materials."
+msgstr ""
+"Читайте английские книги и новостные статьи. Чтение на английском поможет "
+"вам развить словарный запас и навыки понимания. Начните с простых книг и "
+"постепенно переходите к более сложным материалам."
+
+#: .\materials\templates\seamen.html:24
+msgid ""
+"Practice speaking with others: Find a language partner or join an online "
+"forum to practice speaking in English. It's crucial to practice speaking "
+"regularly to improve your fluency."
+msgstr ""
+"Практика общения с другими: найдите языкового партнера или присоединитесь к "
+"онлайн-форуму, чтобы попрактиковаться в разговоре на английском языке. "
+"Крайне важно регулярно практиковаться в разговорной речи, чтобы улучшить "
+"беглость речи."
+
+#: .\materials\templates\seamen.html:25
+msgid ""
+"Use English on the job: Use English whenever possible on the job. "
+"Communicate with your colleagues and superiors in English, even if it's "
+"challenging at first."
+msgstr ""
+"Используйте английский язык на работе: используйте английский язык, когда "
+"это возможно на работе. Общайтесь с коллегами и начальством на английском "
+"языке, даже если поначалу это сложно."
+
+#: .\materials\templates\seamen.html:26
+msgid ""
+"Take an English proficiency test: Taking an English proficiency test like "
+"Marlins or CES can help you assess your language skills and identify areas "
+"where you need to improve."
+msgstr ""
+"Пройдите тест на знание английского языка. Прохождение теста на знание "
+"английского языка, такого как Marlins или CES, может помочь вам оценить свои "
+"языковые навыки и определить области, в которых вам необходимо улучшить свои "
+"навыки."
+
+#: .\materials\templates\seamen.html:27
+msgid ""
+"Join an English-speaking club: Join an English-speaking club or attend "
+"language exchange events to meet and practice with other English learners."
+msgstr ""
+"Присоединяйтесь к англоязычному клубу: присоединяйтесь к англоязычному клубу "
+"или посещайте мероприятия по языковому обмену, чтобы встречаться и "
+"практиковаться с другими изучающими английский язык."
+
+#: .\materials\templates\seamen.html:29
+msgid ""
+"Remember, learning a language takes time and practice. Be patient with "
+"yourself and focus on making incremental progress. With consistent effort, "
+"you can improve your English language skills and become a better "
+"communicator both on and off the job."
+msgstr ""
+"Помните, что изучение языка требует времени и практики. Будьте терпеливы к "
+"себе и сосредоточьтесь на постепенном прогрессе. Прилагая постоянные усилия, "
+"вы сможете улучшить свои знания английского языка и стать лучшим "
+"собеседником как на работе, так и вне ее."
+
+#~ msgid "Hello, my name is Anastasiia"
+#~ msgstr "Здравствуйте, меня зовут Анастасия."
+
+#~ msgid ""
+#~ "and I am a multi-languages teacher with experience teaching children and "
+#~ "adults of different ages."
+#~ msgstr ""
+#~ "и я многоязычный учитель с опытом обучения детей и взрослых разных "
+#~ "возрастов."
+
+#~ msgid ""
+#~ "I am excited to share my love for languages and cultures with my students."
+#~ msgstr ""
+#~ "Я рад поделиться своей любовью к языкам и культурам со своими учениками."
+
+#~ msgid ""
+#~ "As a multi-languages teacher, I possess excellent communication skills "
+#~ "that enable me to effectively convey language concepts to my students."
+#~ msgstr ""
+#~ "Как учитель, владеющий несколькими языками, я обладаю отличными "
+#~ "коммуникативными навыками, которые позволяют мне эффективно передавать "
+#~ "языковые концепции своим ученикам."
+
+#~ msgid ""
+#~ "I am able to explain complex grammar rules and vocabulary in a clear and "
+#~ "concise manner, making it easier for my students to understand and retain "
+#~ "the information."
+#~ msgstr ""
+#~ "Я могу объяснить сложные грамматические правила и словарный запас в ясной "
+#~ "и лаконичной форме, что облегчает моим ученикам понимание и запоминание "
+#~ "информации."
+
+#~ msgid ""
+#~ "In addition to my strong communication skills, I have experience working "
+#~ "with students of different age groups, from young children to adults."
+#~ msgstr ""
+#~ "Помимо моих сильных коммуникативных навыков, у меня есть опыт работы со "
+#~ "студентами разных возрастных групп, от маленьких детей до взрослых."
+
+#~ msgid ""
+#~ "This has allowed me to develop a teaching style that is adaptable to the "
+#~ "needs and learning styles of each individual student."
+#~ msgstr ""
+#~ "Это позволило мне разработать стиль преподавания, который можно "
+#~ "адаптировать к потребностям и стилям обучения каждого отдельного ученика."
+
+#~ msgid ""
+#~ "I believe that every student is unique, and I strive to create a "
+#~ "personalized learning experience that is engaging and effective."
+#~ msgstr ""
+#~ "Я считаю, что каждый ученик уникален, и я стремлюсь создать "
+#~ "персонализированный процесс обучения, который будет увлекательным и "
+#~ "эффективным."
+
+#~ msgid ""
+#~ "One of my greatest strengths as a multi-languages teacher is my "
+#~ "experience teaching in different countries and working with students from "
+#~ "diverse cultural backgrounds."
+#~ msgstr ""
+#~ "Одной из моих самых сильных сторон как учителя, владеющего несколькими "
+#~ "языками, является мой опыт преподавания в разных странах и работы со "
+#~ "студентами из разных культур."
+
+#~ msgid ""
+#~ "This has given me a deep appreciation and understanding of the cultural "
+#~ "nuances that are often intertwined with language learning."
+#~ msgstr ""
+#~ "Это дало мне глубокую оценку и понимание культурных нюансов, которые "
+#~ "часто переплетаются с изучением языка."
+
+#~ msgid ""
+#~ "I believe that language and culture are interconnected, and I strive to "
+#~ "incorporate cultural elements into my lessons to provide a more holistic "
+#~ "learning experience for my students."
+#~ msgstr ""
+#~ "Я считаю, что язык и культура взаимосвязаны, и я стараюсь включать "
+#~ "культурные элементы в свои уроки, чтобы предоставить своим ученикам более "
+#~ "целостный опыт обучения."
+
+#~ msgid ""
+#~ "Overall, I am passionate about teaching languages and helping my students "
+#~ "achieve their language learning goals."
+#~ msgstr ""
+#~ "В целом, я увлечена преподаванием языков и помогаю своим студентам "
+#~ "достичь их целей в изучении языка."
+
+#~ msgid ""
+#~ "Whether you are a beginner or an advanced learner, I am confident that I "
+#~ "can help you improve your language skills and deepen your understanding "
+#~ "of different cultures."
+#~ msgstr ""
+#~ "Являетесь ли вы новичком или продвинутым учеником, я уверена, что смогу "
+#~ "помочь вам улучшить ваши языковые навыки и углубить ваше понимание "
+#~ "различных культур."
+
+#, fuzzy
+#~| msgid "Languages"
+#~ msgid "Language"
+#~ msgstr "Языки"
+
+#~ msgid ""
+#~ "English is one of the most widely spoken languages in the world, with "
+#~ "over 1.5 billion people speaking it globally. It's considered the "
+#~ "international language of business, education, and communication, making "
+#~ "it an important language to learn for both personal and professional "
+#~ "reasons."
+#~ msgstr ""
+#~ "Английский является одним из самых распространенных языков в мире, на нем "
+#~ "говорят более 1,5 миллиарда человек во всем мире. Он считается "
+#~ "международным языком бизнеса, образования и общения, что делает его "
+#~ "важным языком для изучения как в личных, так и в профессиональных целях."
+
+#~ msgid ""
+#~ "There are a few key strategies that can help you improve your language "
+#~ "skills:"
+#~ msgstr ""
+#~ "Есть несколько ключевых стратегий, которые могут помочь вам улучшить свои "
+#~ "языковые навыки:"
+
+#~ msgid ""
+#~ "Practice speaking: One of the most effective ways to improve your English "
+#~ "language skills is to practice speaking as much as possible. Find a "
+#~ "language exchange partner or join a language group to practice speaking "
+#~ "with other learners and native speakers."
+#~ msgstr ""
+#~ "Практикуйтесь в разговорной речи: один из самых эффективных способов "
+#~ "улучшить свои знания английского языка — это как можно больше "
+#~ "практиковаться в разговорной речи. Найдите партнера по языковому обмену "
+#~ "или присоединитесь к языковой группе, чтобы попрактиковаться в общении с "
+#~ "другими учащимися и носителями языка."
+
+#~ msgid ""
+#~ "Watch English movies and TV shows: Watching English-language movies and "
+#~ "TV shows is a fun and engaging way to improve your listening skills and "
+#~ "pick up new vocabulary."
+#~ msgstr ""
+#~ "Смотрите англоязычные фильмы и телешоу. Просмотр англоязычных фильмов и "
+#~ "телешоу — это веселый и увлекательный способ улучшить свои навыки "
+#~ "слушания и пополнить словарный запас."
+
+#~ msgid ""
+#~ "Read English books and articles: Reading English books and articles can "
+#~ "help you improve your reading comprehension and grammar skills. Start "
+#~ "with books and articles that are appropriate for your level of English "
+#~ "proficiency and gradually work your way up to more challenging texts."
+#~ msgstr ""
+#~ "Читайте английские книги и статьи. Чтение английских книг и статей может "
+#~ "помочь вам улучшить навыки понимания прочитанного и грамматики. Начните с "
+#~ "книг и статей, соответствующих вашему уровню владения английским языком, "
+#~ "и постепенно переходите к более сложным текстам."
+
+#~ msgid ""
+#~ "Use language learning apps: There are many language learning apps "
+#~ "available that can help you practice your English skills. These apps "
+#~ "often include interactive exercises, vocabulary games, and other language "
+#~ "learning tools."
+#~ msgstr ""
+#~ "Используйте приложения для изучения языка. Существует множество "
+#~ "приложений для изучения языка, которые помогут вам практиковать свои "
+#~ "навыки английского языка. Эти приложения часто включают в себя "
+#~ "интерактивные упражнения, словарные игры и другие инструменты для "
+#~ "изучения языка."
+
+#~ msgid ""
+#~ "Take English language courses: Taking English language courses at a "
+#~ "language school or online can provide you with structured learning "
+#~ "opportunities and a supportive learning environment."
+#~ msgstr ""
+#~ "Пройдите курсы английского языка. Прохождение курсов английского языка в "
+#~ "языковой школе или в Интернете может предоставить вам структурированные "
+#~ "возможности обучения и благоприятную среду обучения."
+
+#~ msgid ""
+#~ "By incorporating these strategies into your language learning routine, "
+#~ "you can improve your English language skills and communicate more "
+#~ "effectively in both personal and professional settings. "
+#~ msgstr ""
+#~ "Включив эти стратегии в свой распорядок изучения языка, вы сможете "
+#~ "улучшить свои навыки владения английским языком и более эффективно "
+#~ "общаться как в личной, так и в профессиональной среде."
+
+#~ msgid "Forgot Password"
+#~ msgstr "Забыли пароль"
+
+#~ msgid ""
+#~ "Please enter the email address associated with your account and we will "
+#~ "send you a link to reset your password."
+#~ msgstr ""
+#~ "Пожалуйста, введите адрес электронной почты, связанный с вашей учетной "
+#~ "записью, и мы вышлем вам ссылку для сброса пароля."
+
+#~ msgid "Email"
+#~ msgstr "Эмаил"
+
+#~ msgid "Reset Password"
+#~ msgstr "Сброс пароля"
+
+#~ msgid ""
+#~ "If you do not receive an email within a few minutes, please check your "
+#~ "spam folder or contact us at [insert contact information]."
+#~ msgstr ""
+#~ "Если вы не получили электронное письмо в течение нескольких минут, "
+#~ "проверьте папку со спамом или свяжитесь с нами по адресу [вставьте "
+#~ "контактную информацию]."
+
+#~ msgid "Login Form"
+#~ msgstr "Форма входа"
+
+#~ msgid "Sign into your account"
+#~ msgstr "Войдите в свой аккаунт"
+
+#~ msgid "Email address"
+#~ msgstr "Почта"
+
+#~ msgid "Forgot password?"
+#~ msgstr "Забыли пароль?"
+
+#~ msgid "Don't have an account?"
+#~ msgstr "У вас нет аккаунта?"
+
+#~ msgid "Terms of use."
+#~ msgstr "Условия использования."
+
+#~ msgid "Privacy policy"
+#~ msgstr "Политика конфиденциальности"
+
+#~ msgid "Privacy Policy"
+#~ msgstr "Политика конфиденциальности"
+
+#~ msgid "Last updated:"
+#~ msgstr "Последнее обновление:"
+
+#~ msgid ""
+#~ "This page informs you of our policies regarding the collection, use and "
+#~ "disclosure of Personal Information we receive from users of the Site."
+#~ msgstr ""
+#~ "Эта страница информирует вас о нашей политике в отношении сбора, "
+#~ "использования и раскрытия Личной информации, которую мы получаем от "
+#~ "пользователей Сайта."
+
+#~ msgid "Information Collection and Use"
+#~ msgstr "Сбор и использование информации"
+
+#~ msgid ""
+#~ "While using our Site, we may ask you to provide us with certain "
+#~ "personally identifiable information that can be used to contact or "
+#~ "identify you. Personally identifiable information may include, but is not "
+#~ "limited to, your name, email address, phone number, and mailing address "
+#~ "@mail."
+#~ msgstr ""
+#~ "При использовании нашего Сайта мы можем попросить вас предоставить нам "
+#~ "определенную личную информацию, которая может быть использована для связи "
+#~ "или идентификации вас. Личная информация может включать, помимо прочего, "
+#~ "ваше имя, адрес электронной почты, номер телефона и почтовый адрес @mail."
+
+#~ msgid "2. Log Data"
+#~ msgstr "2. Данные журнала"
+
+#~ msgid ""
+#~ "Like many site operators, we collect information that your browser sends "
+#~ "whenever you visit our Site (Log Data). This Log Data may include "
+#~ "information such as your computers Internet Protocol (IP) address, "
+#~ "browser type, browser version, the pages of our Site that you visit, the "
+#~ "time and date of your visit, the time spent on those pages and other "
+#~ "statistics. In addition, we may use third party services such as Google "
+#~ "Analytics that collect, monitor and analyze this data."
+#~ msgstr ""
+#~ "Как и многие операторы сайта, мы собираем информацию, которую ваш браузер "
+#~ "отправляет каждый раз, когда вы посещаете наш Сайт (данные журнала). Эти "
+#~ "данные журнала могут включать в себя такую информацию, как адрес интернет-"
+#~ "протокола (IP) вашего компьютера, тип браузера, версия браузера, страницы "
+#~ "нашего Сайта, которые вы посещаете, время и дата вашего посещения, время, "
+#~ "проведенное на этих страницах, и другие статистические данные. Кроме "
+#~ "того, мы можем использовать сторонние службы, такие как Google Analytics, "
+#~ "которые собирают, отслеживают и анализируют эти данные."
+
+#~ msgid "Cookies"
+#~ msgstr "Политика использования файлов cookie"
+
+#~ msgid ""
+#~ "Cookies are files with small amount of data, which may include an "
+#~ "anonymous unique identifier. Cookies are sent to your browser from a web "
+#~ "site and stored on your computer's hard drive. Like many sites, we use "
+#~ "'cookies' to collect information. You can instruct your browser to refuse "
+#~ "all cookies or to indicate when a cookie is being sent. However, if you "
+#~ "do not accept cookies, you may not be able to use some portions of our "
+#~ "Site."
+#~ msgstr ""
+#~ "Файлы cookie — это файлы с небольшим объемом данных, которые могут "
+#~ "включать анонимный уникальный идентификатор. Файлы cookie отправляются в "
+#~ "ваш браузер с веб-сайта и сохраняются на жестком диске вашего компьютера. "
+#~ "Как и многие сайты, мы используем файлы cookie для сбора информации. Вы "
+#~ "можете указать своему браузеру отказаться от всех файлов cookie или "
+#~ "указать, когда файл cookie отправляется. Однако, если вы не принимаете "
+#~ "файлы cookie, вы не сможете использовать некоторые разделы нашего Сайта."
+
+#~ msgid "Security"
+#~ msgstr "Безопасность"
+
+#~ msgid ""
+#~ "The security of your Personal Information is important to us, but "
+#~ "remember that no method of transmission over the Internet, or method of "
+#~ "electronic storage, is 100%% secure. While we strive to use commercially "
+#~ "acceptable means to protect your Personal Information, we cannot "
+#~ "guarantee its absolute security."
+#~ msgstr ""
+#~ "Безопасность вашей личной информации важна для нас, но помните, что ни "
+#~ "один метод передачи через Интернет или метод электронного хранения не "
+#~ "является безопасным на 100%. Хотя мы стремимся использовать коммерчески "
+#~ "приемлемые средства для защиты вашей Личной информации, мы не можем "
+#~ "гарантировать ее абсолютную безопасность."
+
+#~ msgid "Disclosure of Personal Information"
+#~ msgstr "Раскрытие личной информации"
+
+#~ msgid ""
+#~ "We may disclose your Personal Information if we are required by law to do "
+#~ "so or if you violate our Terms of Service."
+#~ msgstr ""
+#~ "Мы можем раскрывать вашу Личную информацию, если это требуется по закону "
+#~ "или если вы нарушаете наши Условия предоставления услуг."
+
+#~ msgid "Changes to This Privacy Policy"
+#~ msgstr "Изменения в настоящей Политике конфиденциальности"
+
+#~ msgid ""
+#~ "We may update this Privacy Policy from time to time. We will notify you "
+#~ "of any changes by posting the new Privacy Policy on the Site. You are "
+#~ "advised to review this Privacy Policy periodically for any changes."
+#~ msgstr ""
+#~ "Мы можем время от времени обновлять настоящую Политику "
+#~ "конфиденциальности. Мы сообщим вам о любых изменениях, опубликовав новую "
+#~ "Политику конфиденциальности на Сайте. Вам рекомендуется периодически "
+#~ "просматривать настоящую Политику конфиденциальности на предмет любых "
+#~ "изменений."
+
+#~ msgid "Contact Us"
+#~ msgstr "Связаться с нами"
+
+#~ msgid ""
+#~ "If you have any questions about this Privacy Policy, please contact us at "
+#~ "contact information."
+#~ msgstr ""
+#~ "Если у вас есть какие-либо вопросы об этой Политике конфиденциальности, "
+#~ "пожалуйста, свяжитесь с нами по контактной информации."
+
+#~ msgid ""
+#~ "Spanish is one of the world's most widely spoken languages, with over 500 "
+#~ "million speakers globally. It's the second-most spoken language in the "
+#~ "world, after Mandarin Chinese. Learning Spanish can be beneficial for "
+#~ "both personal and professional reasons, as it's a language used in many "
+#~ "international business and trade contexts, as well as a popular language "
+#~ "for travel and cultural exchange."
+#~ msgstr ""
+#~ "Испанский является одним из самых распространенных языков в мире, на нем "
+#~ "говорят более 500 миллионов человек по всему миру. Это второй по "
+#~ "распространенности язык в мире после китайского. Изучение испанского "
+#~ "может быть полезным как в личных, так и в профессиональных целях, так как "
+#~ "это язык, используемый во многих международных деловых и торговых "
+#~ "контекстах, а также популярный язык для путешествий и культурного обмена."
+
+#~ msgid ""
+#~ "Here are some key strategies to improve your Spanish language skills:"
+#~ msgstr ""
+#~ "Вот несколько ключевых стратегий для улучшения ваших навыков испанского "
+#~ "языка:"
+
+#~ msgid ""
+#~ "Practice speaking: One of the most effective ways to improve your Spanish "
+#~ "language skills is to practice speaking with other learners and native "
+#~ "speakers. Find a language exchange partner or join a language group to "
+#~ "practice conversation and pronunciation."
+#~ msgstr ""
+#~ "Практика разговорной речи. Один из самых эффективных способов улучшить "
+#~ "свои навыки испанского языка — это попрактиковаться в общении с другими "
+#~ "учащимися и носителями языка. Найдите партнера по языковому обмену или "
+#~ "присоединитесь к языковой группе, чтобы попрактиковаться в разговоре и "
+#~ "произношении."
+
+#~ msgid ""
+#~ "Watch Spanish movies and TV shows: Watching Spanish-language movies and "
+#~ "TV shows can help improve your listening skills, vocabulary, and "
+#~ "understanding of cultural nuances."
+#~ msgstr ""
+#~ "Смотрите испанские фильмы и телепередачи. Просмотр фильмов и телепередач "
+#~ "на испанском языке может помочь улучшить ваши навыки слушания, словарный "
+#~ "запас и понимание культурных нюансов."
+
+#~ msgid ""
+#~ "Read Spanish books and articles: Reading Spanish-language books and "
+#~ "articles can help improve your reading comprehension, grammar, and "
+#~ "vocabulary skills. Start with materials that are appropriate for your "
+#~ "current level of proficiency and gradually work your way up to more "
+#~ "challenging texts."
+#~ msgstr ""
+#~ "Читайте книги и статьи на испанском языке. Чтение книг и статей на "
+#~ "испанском языке может помочь улучшить ваше понимание прочитанного, "
+#~ "грамматику и словарный запас. Начните с материалов, соответствующих "
+#~ "вашему нынешнему уровню владения языком, и постепенно переходите к более "
+#~ "сложным текстам."
+
+#~ msgid ""
+#~ "Use language learning apps: There are many language learning apps "
+#~ "available that can help you practice your Spanish skills, such as "
+#~ "Duolingo, Babbel, or Rosetta Stone. These apps offer interactive "
+#~ "exercises, vocabulary games, and other language learning tools."
+#~ msgstr ""
+#~ "Используйте приложения для изучения языка. Существует множество "
+#~ "приложений для изучения языка, которые помогут вам попрактиковаться в "
+#~ "испанском языке, например Duolingo, Babbel или Rosetta Stone. Эти "
+#~ "приложения предлагают интерактивные упражнения, словарные игры и другие "
+#~ "инструменты для изучения языка."
+
+#~ msgid ""
+#~ "Take Spanish language courses: Taking a formal Spanish language course, "
+#~ "either in-person or online, can provide you with structured learning "
+#~ "opportunities and a supportive environment to practice your skills."
+#~ msgstr ""
+#~ "Пройдите курсы испанского языка. Прохождение официального курса "
+#~ "испанского языка, очного или онлайн, может предоставить вам "
+#~ "структурированные возможности обучения и благоприятную среду для "
+#~ "отработки ваших навыков."
+
+#~ msgid ""
+#~ "By incorporating these strategies into your language learning routine, "
+#~ "you can improve your Spanish language skills and communicate more "
+#~ "effectively in both personal and professional settings."
+#~ msgstr ""
+#~ "Включив эти стратегии в свою программу изучения языка, вы сможете "
+#~ "улучшить свои навыки владения испанским языком и более эффективно "
+#~ "общаться как в личной, так и в профессиональной среде."
+
+#~ msgid "Terms of Service"
+#~ msgstr "Условия использования"
+
+#~ msgid ""
+#~ "These Terms of Service (\"Terms\") govern your use of the English "
+#~ "Studying Site (\"Site\"). By accessing or using the Site, you agree to be "
+#~ "bound by these Terms."
+#~ msgstr ""
+#~ "Настоящие Условия предоставления услуг (\"Terms\") регулируют "
+#~ "использование вами сайта English Studying.Сайт (\"Сайт\"). Получая доступ "
+#~ "к Сайту или используя его, вы соглашаетесь соблюдать настоящие Условия."
+
+#~ msgid "Use of Site"
+#~ msgstr "Использование сайта"
+
+#~ msgid ""
+#~ "The Site provides English language learning resources, including but not "
+#~ "limited to online courses, study materials, and communication tools. You "
+#~ "may use the Site for personal, non-commercial use only. You agree to use "
+#~ "the Site in a manner consistent with all applicable laws and regulations."
+#~ msgstr ""
+#~ "Сайт предоставляет ресурсы для изучения различныч языков, включая, помимо "
+#~ "прочего, онлайн-курсы, учебные материалы и средства коммуникации. Вы "
+#~ "можете использовать Сайт только в личных некоммерческих целях. Вы "
+#~ "соглашаетесь использовать Сайт в соответствии со всеми применимыми "
+#~ "законами и правилами."
+
+#~ msgid "User Accounts"
+#~ msgstr "Учетные записи пользователей"
+
+#~ msgid ""
+#~ "To access certain features of the Site, you may need to create a user "
+#~ "account. You agree to provide accurate and complete information when "
+#~ "creating your account and to keep your login credentials secure. You are "
+#~ "responsible for all activity that occurs under your account."
+#~ msgstr ""
+#~ "Для доступа к определенным функциям Сайта вам может потребоваться создать "
+#~ "учетную запись пользователя. Вы соглашаетесь предоставить точную и полную "
+#~ "информацию при создании учетной записи и хранить свои учетные данные в "
+#~ "безопасности. Вы несете ответственность за все действия, которые "
+#~ "происходят под вашей учетной записью."
+
+#~ msgid "Payment and Refunds"
+#~ msgstr "Оплата и возврат"
+
+#~ msgid ""
+#~ "Certain features of the Site may require payment, such as enrollment in a "
+#~ "course or purchase of study materials. Payment information will be "
+#~ "collected by a third-party payment processor and will be subject to their "
+#~ "terms and conditions. You agree to pay all fees and charges associated "
+#~ "with your use of the Site. Refunds may be available for certain "
+#~ "purchases, as outlined in the Company's refund policy."
+#~ msgstr ""
+#~ "Некоторые функции Сайта могут потребовать оплаты, например, зачисление на "
+#~ "курс или покупку учебных материалов. Платежная информация будет "
+#~ "собираться сторонним платежным процессором и будет регулироваться их "
+#~ "условиями. Вы соглашаетесь оплачивать все сборы и сборы, связанные с "
+#~ "использованием вами Сайта. Возврат может быть доступен для определенных "
+#~ "покупок, как указано в политике возврата Компании."
+
+#~ msgid "Intellectual Property"
+#~ msgstr "Интеллектуальная собственность"
+
+#~ msgid ""
+#~ "The Site and its contents, including but not limited to text, graphics, "
+#~ "images, and software, are the property of the Company or its licensors "
+#~ "and are protected by copyright and other intellectual property laws. You "
+#~ "may not reproduce, modify, distribute, or otherwise use any content from "
+#~ "the Site without the express written permission of the Company."
+#~ msgstr ""
+#~ "Сайт и его содержимое, включая, помимо прочего, текст, графику, "
+#~ "изображения и программное обеспечение, являются собственностью Компании "
+#~ "или ее лицензиаров и защищены авторским правом и другими законами об "
+#~ "интеллектуальной собственности. Вы не можете воспроизводить, изменять, "
+#~ "распространять или иным образом использовать любой контент с Сайта без "
+#~ "письменного разрешения Компании."
+
+#~ msgid "User Content"
+#~ msgstr "Пользовательский контент"
+
+#~ msgid ""
+#~ "You may have the opportunity to submit content to the Site, such as "
+#~ "comments, questions, or assignments. By submitting content, you grant the "
+#~ "Company a non-exclusive, royalty-free, perpetual, and irrevocable license "
+#~ "to use, display, modify, and distribute your content in any manner the "
+#~ "Company chooses, without compensation or attribution to you."
+#~ msgstr ""
+#~ "У вас может быть возможность отправлять контент на Сайт, например, "
+#~ "комментарии, вопросы или задания. Отправляя контент, вы предоставляете "
+#~ "Компании неисключительную, безвозмездную, бессрочную и безотзывную "
+#~ "лицензию на использование, отображение, изменение и распространение "
+#~ "вашего контента любым способом, который выбирает Компания, без "
+#~ "компенсации или ссылки на вас."
+
+#~ msgid "Prohibited Conduct"
+#~ msgstr "Запрещенное поведение"
+
+#~ msgid "You agree not to use the Site to:"
+#~ msgstr "Вы соглашаетесь не использовать Сайт для:"
+
+#~ msgid "Harass, threaten, or intimidate others"
+#~ msgstr "Преследовать, угрожать или запугивать других"
+
+#~ msgid "Post or transmit any content that is illegal, harmful, or offensive"
+#~ msgstr ""
+#~ "Размещать или передавать любой контент, который является незаконным, "
+#~ "вредоносным или оскорбительным"
+
+#~ msgid "Use the Site to engage in any fraudulent activity"
+#~ msgstr "Использовать Сайт для участия в любой мошеннической деятельности"
+
+#~ msgid "Attempt to gain unauthorized access to the Site or its systems"
+#~ msgstr ""
+#~ "Попытка получить несанкционированный доступ к Сайту или его системам"
+
+#~ msgid "Termination"
+#~ msgstr "Прекращение"
+
+#~ msgid ""
+#~ "The Company may terminate your access to the Site at any time, with or "
+#~ "without cause, and without notice. Upon termination, you must immediately "
+#~ "cease all use of the Site and any content obtained from it."
+#~ msgstr ""
+#~ "Компания может прекратить ваш доступ к Сайту в любое время, с указанием "
+#~ "причины или без таковой и без предварительного уведомления. После "
+#~ "расторжения вы должны немедленно прекратить любое использование Сайта и "
+#~ "любого контента, полученного с него."
+
+#~ msgid "Disclaimer of Warranties"
+#~ msgstr "Отказ от гарантий"
+
+#~ msgid ""
+#~ "The Site is provided \"as is\" and without warranty of any kind. The "
+#~ "Company makes no representations or warranties about the accuracy, "
+#~ "completeness, or suitability of the Site or its content for any purpose. "
+#~ "You use the Site at your own risk."
+#~ msgstr ""
+#~ "Сайт предоставляется «как есть» и без каких-либо гарантий. Компания не "
+#~ "делает никаких заявлений или гарантий относительно точности, полноты или "
+#~ "пригодности Сайта или его содержимого для каких-либо целей. Вы "
+#~ "используете Сайт на свой страх и риск."
+
+#~ msgid "Limitation of Liability"
+#~ msgstr "Ограничение ответственности"
+
+#~ msgid ""
+#~ "The Company and its affiliates, officers, employees, and agents will not "
+#~ "be liable for any damages arising from your use of the Site or its "
+#~ "content, including but not limited to direct, indirect, incidental, "
+#~ "punitive, and consequential damages. This limitation of liability applies "
+#~ "even if the Company has been advised of the possibility of such damages."
+#~ msgstr ""
+#~ "Компания и ее аффилированные лица, должностные лица, сотрудники и агенты "
+#~ "не несут ответственности за любые убытки, возникающие в результате "
+#~ "использования вами Сайта или его содержимого, включая, помимо прочего, "
+#~ "прямые, косвенные, случайные, штрафные и косвенные убытки. Это "
+#~ "ограничение ответственности применяется, даже если Компания была "
+#~ "уведомлена о возможности таких убытков."
+
+#~ msgid "Indemnification"
+#~ msgstr "Компенсация"
+
+#~ msgid ""
+#~ "You agree to indemnify and hold harmless the Company and its affiliates, "
+#~ "officers, employees, and agents from any claims, damages, and expenses "
+#~ "(including attorneys' fees) arising from your use of the Site or your "
+#~ "violation of these Terms."
+#~ msgstr ""
+#~ "Вы соглашаетесь возместить ущерб и оградить Компанию и ее аффилированных "
+#~ "лиц, должностных лиц, сотрудников и агентов от любых претензий, убытков и "
+#~ "расходов (включая гонорары адвокатов), возникающих в результате "
+#~ "использования вами Сайта или нарушения вами настоящих Условий."
+
+#~ msgid "Governing Law"
+#~ msgstr "Применимое право"
+
+#~ msgid ""
+#~ "These Terms and any disputes arising from your use of the Site will be "
+#~ "governed by and construed in accordance with the laws of Ukraine, without "
+#~ "regard to its conflict of law provisions."
+#~ msgstr ""
+#~ "Настоящие Условия и любые споры, возникающие в связи с использованием "
+#~ "вами Сайта, регулируются и толкуются в соответствии с законодательством "
+#~ "Украины без учета его коллизионных норм."
+
+#~ msgid "Changes to Terms"
+#~ msgstr "Изменения в Условиях"
+
+#~ msgid ""
+#~ "The Company may update these Terms from time to time. You should review "
+#~ "these Terms periodically for any changes. By continuing to use the Site "
+#~ "after the Company makes any changes to these Terms, you agree to be bound "
+#~ "by the revised Terms."
+#~ msgstr ""
+#~ "Компания может время от времени обновлять настоящие Условия. Вам следует "
+#~ "периодически просматривать настоящие Условия на предмет любых изменений. "
+#~ "Продолжая использовать Сайт после того, как Компания внесет какие-либо "
+#~ "изменения в настоящие Условия, вы соглашаетесь соблюдать пересмотренные "
+#~ "Условия."
+
+#~ msgid "Entire Agreement"
+#~ msgstr "Полное согласие"
+
+#~ msgid ""
+#~ "These Terms constitute the entire agreement between you and the Company "
+#~ "with respect to the Site and supersede all prior or contemporaneous "
+#~ "communications and proposals, whether oral or written, between you and "
+#~ "the Company."
+#~ msgstr ""
+#~ "Настоящие Условия представляют собой полное соглашение между вами и "
+#~ "Компанией в отношении Сайта и заменяют собой все предыдущие или "
+#~ "одновременные сообщения и предложения, устные или письменные, между вами "
+#~ "и Компанией."
+
+#~ msgid ""
+#~ "If you have any questions about these Terms, please contact us at  "
+#~ "contact information."
+#~ msgstr ""
+#~ "Если у вас есть какие-либо вопросы об этих Условиях, пожалуйста, "
+#~ "свяжитесь с нами по контактной информации."
+
+#~ msgid "Previous"
+#~ msgstr "Предыдущаяя"
+
+#~ msgid "Next"
+#~ msgstr "Следующаяя"

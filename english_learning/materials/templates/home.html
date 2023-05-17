@@ -1,0 +1,365 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block sidebar %}
+{% include 'inc/_sidebar.html' %}
+{% endblock %}
+
+{% block content %}
+<style>
+    /* стили для маленьких экранов */
+  @media screen and (max-width: 480px) {
+    body {
+      font-size: 5px; /* изменение размера шрифта */
+      text-size-adjust: 5px;
+    }
+  }
+
+  /* стили для средних экранов */
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    body {
+      font-size: 10px; /* изменение размера шрифта */
+      text-size-adjust: 10px;
+    }
+  }
+
+  /* стили для больших экранов */
+  @media screen and (min-width: 769px) {
+    body {
+      font-size: 16px; /* изменение размера шрифта */
+      text-size-adjust: 16px;
+    }
+  }
+  body {
+    background-color: #eee;
+    text-size-adjust:auto;
+      
+  }
+  #top {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+  }
+
+  . {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .hit-voting:hover {
+    color: rgb(33, 37, 41);
+  }
+
+  .hit-voting {
+    cursor: pointer;
+  }
+  .carousel .carousel-item {
+    align-items:center;
+    align-content: center;
+    height: 420px;  
+  }
+
+  .carousel-item img {  
+    margin-top: 20px;
+    
+    margin-right: 100px;
+    height: 420px;
+  }
+  .wrapper {
+    display: inline-flex;
+    justify-content: center;
+  }
+  .wrapper i {
+    padding: 10px;
+    text-shadow: 0px 6px 8px rgba(0, 0, 0, 0.6);
+    transition: all ease-in-out 150ms;
+  }
+  .wrapper a:nth-child(1) {
+    color: #30A3E6;
+  }
+  .wrapper a:nth-child(2) {
+    color: #4867AA;
+  }
+  .wrapper a:nth-child(3) {
+    color:  #DA2B70;
+  }
+  .wrapper i:hover {
+    margin-top: -3px;
+    text-shadow: 0px 14px 10px rgba(0, 0, 0, 0.4);
+  }
+
+  .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+  #benefits {
+		
+    padding: 5px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    vertical-align: middle;
+    
+  }
+  #benefits img{
+    min-width: auto; 
+    min-height: auto;
+    border-radius: 3px;
+    box-shadow: 10px 10px 5px #454242;
+    margin-bottom: 10px;
+  }
+  
+  #benefits h3{
+    font-size: 36px;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    flex-basis: 100%;
+    text-shadow:10px 10px 6px #454242;
+  }
+  
+  #benefits p{
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+
+    margin-bottom: 20px;
+    margin-left: 30px;
+    box-shadow: 10px 10px 5px #454242;
+    background-color: #807979;
+    border-radius: 15px;
+  }
+  .block {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    
+  }
+  .block img {
+      max-width: 100%;
+  }
+</style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <section  class="vh-100" style="color: #C6C8C6; margin-top: 55px;">
+    <div id="top" class="p-4 p-md-5 mb-4 rounded d-flex justify-content-center align-items-center text-bg-dark">
+      <div id="tone" class="col-md-8  px-3">
+        <h1 class="display-4 fst-italic">{% translate 'Hello. Nice to meet you here. My Name is' %} <b><span style=" color:#859bca; text-shadow: 0px 14px 10px rgba(212, 89, 89, 0.4);">Anastasiia Rakhovskaia</span></b>!</h1>
+        <p class="lead my-3">{% translate 'I can help you learn languages faster and more enjoyable. I offer a variety of courses to help you reach your language goals.'%}<br>{% translate 'I have video and audio materials to help you learn the basics and practice the language.'%}
+          <br>{% translate 'Studying an individual course online can be a convenient and flexible way to learn new skills or advance your education.' %}<br>
+           {% translate "let's make first step to find out more about my courses and improve  your target language." %}
+        </p>
+        <div class="conteiner pt-5 col-12 ">
+          <div class="row">
+            <div class="col">
+              <h4><a href="{% url 'registr' %}" class="text-white fw-bold">{% translate 'First step' %}</a></h4>
+            </div>
+            <div class="col" style="text-align: right;">
+              <h4><a href="{% url 'about_me' %}" class="text-white fw-bold">{% translate 'About me' %}</a></h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md4  px-3 img-fluid">
+        <a href="{% url 'registr' %}"><img src="/media/photo/nastya.jpg"class="img-fluid" width="320" height="auto" style="border-radius: 1rem;"></a>
+      </div>
+    </div>
+
+    <div class="conteiner justify-content-center align-items-center pt-5 ">
+      <div class="col-md-12 col-xl-12 fst-italic">
+        <h1 align="center" style="color: #000000;">{% translate "Let's learning languages together!" %}</h1>
+      </div>
+    </div>
+
+    <div class="container py-6 pt-3 shadow p-3 mb-3 bg-white rounded" >
+      <div class="row d-flex justify-content-center align-items-center " >
+        <div class="block col-md-12 col-12 col-xl-12" style="background-color: rgb(101, 98, 95);"> <!-- background:center/contain no-repeat  url('/media/photo/bourd.jpg'); background-size: 150%;"> -->         
+          <div class="row align-items-start justify-content-center">
+            <div class="col-md-4 col-4 col-lg-4" style="margin-top: 45px;" id="benefits">
+              <img src="/media/photo/home1.avif" class="img-fluid" alt="Benefit_1" style="width: 240px;">
+              <h3>{% translate "Interactive Learning" %}</h3>
+              <p>{% translate "Our courses are designed to be engaging and interactive, making learning a fun experience." %}</p>
+            </div>
+            <div class="col-md-4 col-4" style="margin-top: 30px;" id="benefits">
+                  <img src="/media/photo/home.jpg" class="img-fluid" alt="Benefit_2" style="width: 320px; margin-left: -30px;">
+                  <h3>{% translate "Flexible Schedule" %}</h3>
+                  <p>{% translate "You can learn at your own pace, whenever and wherever you want. No need to attend physical classes." %}</p>
+            </div>
+            <div class="col-md-4 col-4" style="margin-top: 10px;" id="benefits">
+              <img src="/media/photo/mult.jpg" class="img-fluid" alt="Benefit_3" style="width: 380px; margin-left: -40px;">
+              <h3>{% translate "Experienced Teacher" %}</h3>
+              <p>{% translate "Our teacher are highly qualified and experienced in teaching their respective languages." %}</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="container py-6 pt-5 " >
+      <div class="row d-flex justify-content-center align-items-center ">
+        <div class="col-md-10 col-xl-10  fst-italic" >
+          <h1 align="center" style="color: #000000;  margin-top: 30px; ">{% translate 'Languages' %}</h1>
+          <div class="card" style="border-radius: 1rem 1rem 0 0; background-color: rgb(33, 37, 41);">
+            <div class="row g-0">
+              <div class="container text-center" >
+                <div class="text" >
+                  <p><b>{% translate 'Choose language' %}</b></p>
+                </div>
+                <div class="row align-items-start" style="color: #EABD6D;">
+                  <div class="col-md-3 col-3">
+                    <h3><a href="{% url 'english' %}" class="text-white fw-bold">{% translate 'English' %}</a></h3>
+                  </div>
+                  <div class="col-md-3 col-3">
+                    <h3><a href="{% url 'seamen' %}" class="text-white fw-bold">{% translate 'For seamen' %}</a></h3>
+                  </div>
+                  <div class="col-md-3 col-3">
+                    <h3><a href="{% url 'poland' %}" class="text-white fw-bold">{% translate 'Polish' %}</a></h3>
+                  </div>
+                  <div class="col-md-3 col-3">
+                    <h3><a href="{% url 'spanish' %}" class="text-white fw-bold">{% translate 'Spanish' %}</a></h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-6 " style="margin-top: -20px;" >
+      <div class="row d-flex justify-content-center align-items-center ">    
+        <div id="carouselExampleCaptions" class="carousel slide col-md-10 " data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          </div>
+          <div class="carousel-inner rounded shadow p-3 mb-3">
+            <div class="carousel-item active">
+              <div class="photo">
+                <img src="/media/photo/English the.jpg" class="img-fluid d-block w-100" style="height: 500px; width: auto;"  alt="image">
+                <div class="carousel-caption d-none d-md-block" style="color: #121212;">
+                  <h5>{% translate 'English' %}</h5>
+                  <p><a href="{%url 'english' %}">{% translate 'Read more' %}</a> {% translate 'About learning this language' %}</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="/media/photo/ship.jpg" class="img-fluid d-block w-100" style=" height: 460px;"  alt="image">
+              <div class="carousel-caption d-none d-md-block">
+                <h5><b style="background-color: #1A2D37; opacity: 80%;">{% translate 'English for seamen' %}</b></h5>
+                <p><a style="background-color: #D3D2D8; opacity: 80%;" href="{%url 'seamen' %}">{% translate 'Read more' %}</a> </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="/media/photo/polish.jpg" class="img-fluid d-block w-100" alt="image">
+              <div class="carousel-caption d-none d-md-block" >
+                <h5>{% translate 'Polish' %}</h5>
+                <p><a href="{%url 'poland' %}">{% translate 'Read more' %}</a> {% translate 'About learning this language' %}</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="/media/photo/Spanish.jpg" style="height: 460px;"class="img-fluid d-block w-100"  alt="image">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>{% translate 'Spanish' %}</h5>
+                <p><a href="{%url 'spanish' %}">{% translate 'Read more' %}</a> {% translate 'About learning this language' %}</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row d-flex justify-content-center ">
+      <div class="col-md-8 col-lg-6">
+        <div class="card shadow p-3 mb-3  rounded fst-italic" style="background-color: #f0f2f5;border-radius: 1rem; margin-top: 50px; margin-bottom: 50px;">
+          <h1 align="center" style="color: #000000;">{% translate 'Comments' %}</h1>
+          <div style="overflow-y: scroll; height:400px;">
+          <div class="card-body p-4">
+            <div class="coment-bottom bg-white p-2 px-4">
+                <form class="d-flex flex-row add-comment-section mt-4 mb-4" method="post">
+                  {% csrf_token %}
+                  <img class="img-fluid img-responsive rounded-circle mr-2" src="/media/photo/wem.png" width="38">
+                  <input name="coment" type="text" class="form-control mr-3" placeholder="{% trans 'Add comment' %}">
+                  <button class="btn btn-secondary" type="submit">{% translate 'Comment' %}</button>
+                </form>
+            {% for comment in comments%}
+            <div class="card mb-4">
+              <div class="card-body p-4">
+
+                <div class="d-flex ">
+                  <div class="d-flex flex-row align-items-center"><p style="color:#000000">{{comment.comment}}</p></div>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <div class="d-flex flex-row align-items-center">
+                    <img src="/media/photo/wem.png" alt="avatar" width="25"
+                      height="25" />
+                    <p class="small mb-0 ms-2">{{comment.user.first_name}}</p>
+                  </div>
+                  <div class="d-flex flex-row align-items-center">
+                    <p class="small text-muted mb-0">{{comment.time_created}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Social media and contacts -->
+    <div class="footer">
+      <h4>{% trans 'Follow on social media:' %}</h4>
+      <div class="conteiner col-md-8 justify-content-center align-items-center pt-5 mb-5">
+        <div class="row d-flex justify-content-center align-items-center fst-italic">
+          <div class="wrapper">
+            <a target="_blank" href="https://t.me/+Oo89iONC0Yg5Mjli"><i class="fa fa-3x fa-telegram"></i></a>
+            <a target="_blank" href="https://www.facebook.com/staciewhite22"><i class="fa fa-3x fa-facebook-square"></i></a>
+            <a target="_blank" href="https://www.instagram.com/stacie_white1"><i class="fa fa-3x fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Social Media Links and Contacts -->
+      <div class="social-contacts-container">
+          <!-- <div class="social-media-links">
+            <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+          </div> -->
+          <div class="contacts">
+            <h4>{% trans 'Contact Us:' %}</h4>
+            <!-- <p>Address: 123 Main St, City, State, ZIP</p> -->
+            <p>{% trans 'Phone:' %} 123-456-7890</p>
+            <p>{% trans 'Email:' %}' info@mysite.com</p>
+          </div>
+      </div>
+    </div>
+  
+  </section>  
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content%}
+<head>
+	<title>English</title>
+    <style>
+        body{
+            margin-top: 100px;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-8"><h1>Spanish is one of the world's most widely spoken languages, with over 500 million speakers globally. It's the second-most spoken language in the world, after Mandarin Chinese. Learning Spanish can be beneficial for both personal and professional reasons, as it's a language used in many international business and trade contexts, as well as a popular language for travel and cultural exchange.</h1>
+            </div>
+            <div class="col-md-4" ><a href="{% url 'registr' %}"><img src="/media/photo/espanol.jpg" style="height: 320px; border-radius: 1rem;"></a></div>
+        </div>
+        <p>Here are some key strategies to improve your Spanish language skills:</p>
+        <ul>
+            <li>Practice speaking: One of the most effective ways to improve your Spanish language skills is to practice speaking with other learners and native speakers. Find a language exchange partner or join a language group to practice conversation and pronunciation.</li>
+            <li>Watch Spanish movies and TV shows: Watching Spanish-language movies and TV shows can help improve your listening skills, vocabulary, and understanding of cultural nuances.</li>
+            <li>Read Spanish books and articles: Reading Spanish-language books and articles can help improve your reading comprehension, grammar, and vocabulary skills. Start with materials that are appropriate for your current level of proficiency and gradually work your way up to more challenging texts.</li>
+            <li>Use language learning apps: There are many language learning apps available that can help you practice your Spanish skills, such as Duolingo, Babbel, or Rosetta Stone. These apps offer interactive exercises, vocabulary games, and other language learning tools.</li>
+            <li>Take Spanish language courses: Taking a formal Spanish language course, either in-person or online, can provide you with structured learning opportunities and a supportive environment to practice your skills.</li>
+        </ul>
+        <p>By incorporating these strategies into your language learning routine, you can improve your Spanish language skills and communicate more effectively in both personal and professional settings. <a href="{% url 'registr' %}">Study</a></p>
+    </div>
+</body>
+{% endblock %}

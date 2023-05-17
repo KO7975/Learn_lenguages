@@ -1,0 +1,169 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+  <!DOCTYPE html>
+<html align="center">
+<head>
+	<title>{% trans 'Registration Form' %}</title>
+</head>
+<body>
+  <section class="vh-100" style="background-color:#9A616D ; margin-top: 55px;">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-12 col-xl-11">
+          <div class="card text-black" style="border-radius: 25px;">
+            <div class="card-body p-md-0">
+              <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-5 col-xl-5 order-2 order-lg-1">
+  
+                  <p class="text-center h1 fw-bold mb-3 mx-1 mx-md-4 mt-4">{% trans 'Sign up' %}</p>
+  
+                  <form class="mx-1 mx-md-4" method="post" id="registration-form" onsubmit="return submitForm()">
+                    {% csrf_token %}
+                    <div class="d-flex flex-row align-items-center mb-3">
+                      <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="text"name="name" id="name" class="form-control text-center" />
+                        <label class="form-label" for="name">{% trans 'Your Name' %}</label>
+                      </div>
+                    </div>
+
+                    <div class="d-flex flex-row align-items-center mb-3">
+                      <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="surname" name="surname" id="surname" class="form-control text-center" />
+                        <label class="form-label" for="surname">{% trans 'Your Surname' %}</label>
+                      </div>
+                    </div>
+                    
+                    <div class="d-flex flex-row align-items-center mb-3">
+                      <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="email" name="email" id="email" class="form-control text-center" />
+                        <span id="email-error"></span>
+                        <label class="form-label" for="email">{% trans 'Your Email*' %}</label>
+                      </div>
+                    </div>
+
+                    <div class="d-flex flex-row align-items-center mb-3">
+                      <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="phone" name="phone" id="phone" class="form-control text-center" />
+                        <span id="phone-error"></span>
+                        <label class="form-label" for="phone">{% trans 'Phone number*' %}</label>
+                      </div>
+                    </div>
+
+                    <div class="d-flex flex-row align-items-center mb-3">
+                      <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="password" name="password" id="password" class="form-control text-center" />
+                        <span id="password-error"></span>
+                        <label class="form-label" for="password">{% trans 'Password*' %}</label>
+                      </div>
+                    </div>
+  
+                    <div class="form-check d-flex justify-content-center mb-5">
+                      <input class="form-check-input me-2" type="checkbox" onclick="checkTerms()" value="" id="terms" name="terms"/>
+                      <label class="form-check-label" for="terms">
+                        {% trans 'I agree all statements in' %} <a href="{% url 'terms' %}">{% trans 'Terms of service' %}</a>
+                      </label>
+                    </div>
+  
+                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                      <button type="submit" id='registerButton' class="btn btn-primary btn-lg" onclick="validateForm(event)" disabled>{% trans 'Register' %}</button>
+                    </div>
+  
+                  </form>
+  
+                </div>
+                <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+  
+                  <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+                    class="img-fluid" alt="Sample image">
+  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+<script>
+  // Function to check if the terms are selected
+  function checkTerms() {
+      var termsCheckbox = document.getElementById('terms');
+      var registerButton = document.getElementById('registerButton');
+      
+      if (termsCheckbox.checked) {
+          registerButton.disabled = false;
+      } else {
+          registerButton.disabled = true;
+      }
+  }
+
+  // Function to validate the registration form
+  function validateForm(event) {
+      event.preventDefault(); // Prevent form submission
+      
+      var passwordField = document.getElementById('password');
+      var phoneField = document.getElementById('phone');
+      var emailField = document.getElementById('email');
+      var phoneError = document.getElementById('phone-error');
+      var emailError = document.getElementById('email-error');
+      var passwordError = document.getElementById('password-error');
+
+      
+      phoneError.innerText = ''; // Clear previous error message
+      emailError.innerText = ''; // Clear previous error message
+      
+      if (phoneField.value.trim() === '') {
+          phoneError.innerText = 'Please enter your phone number.';
+          return; // Exit the function
+      }
+      
+      if (!/^\d+$/.test(phoneField.value.trim())) {
+          phoneError.innerText = 'Please enter a valid phone number consisting of digits only.\nIn format 380987654321';
+          return; // Exit the function
+      }
+      
+      if (phoneField.value.trim().length != 12) {
+          phoneError.innerText = 'phone number must be In format 380987654321.';
+          return; // Exit the function
+      }
+
+      if (emailField.value.trim() === '') {
+            emailError.innerText = 'Please enter your email address.';
+            return; // Exit the function
+        }     
+
+      if (passwordField.value.trim() === '') {
+          passwordError.innerText = 'Please enter your password.';
+          return; // Exit the function
+      } 
+      
+        // Check email format using regular expression
+        var emailPattern = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+        if (!emailPattern.test(emailField.value.trim())) {
+            emailError.innerText = 'Please enter a valid email address.';
+            return; // Exit the function
+        }
+
+      // Proceed with form submission if all validations pass
+      document.getElementById('registration-form').submit();
+  }
+
+    // Function to handle the registration form submission
+    function submitForm() {
+      var termsCheckbox = document.getElementById('terms');
+      
+      if (!termsCheckbox.checked) {
+          alert('Please check the terms and conditions before registering.');
+          return false; // Prevent form submission
+      }
+  }
+</script>
+{% endblock %}
