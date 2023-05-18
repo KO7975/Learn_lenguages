@@ -27,6 +27,7 @@ async def make_changes_commands(message: types.Message):
 # @dp.message_handler(commands='Download', state=None)
 async def cm_start(message: types.Message):
     # chack that user is admin
+    print(ID)
     if message.from_user.id == ID: 
         await FSMAdmin.photo.set()
         await message.reply('downloud the photo')

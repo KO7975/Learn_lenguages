@@ -1,1 +1,1 @@
-from keyboards.client_kb import kb_client1, kb_client2
+from keyboards.client_kb import kb_client1, kb_client2, inkb, to_teacher, courses, material_kb

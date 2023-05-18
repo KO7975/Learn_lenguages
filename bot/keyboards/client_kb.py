@@ -1,6 +1,6 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardMarkup, InlineKeyboardButton#, ReplyKeyboardRemove
 from create_bot import dp
-
+import asyncio
 
 #emojis
 teacher_em =u'\U0001F469'
@@ -22,10 +22,6 @@ x = [
     ]
 
 inkb.add(inb1).add(inb2).add(inb3).add(inb4).row(*x)
-inlkb = InlineKeyboardMarkup(row_width=1)\
-    .add(InlineKeyboardButton(text='like', callback_data='ln_1'))\
-    .add(InlineKeyboardButton(text='dislike', callback_data='ln_2'))
-# inkb = InlineKeyboardMarkup(row_width=1).add(InlineKeyboardButton(text='Press me', callback_data='www'))
 to_teacher=InlineKeyboardMarkup(row_width=1).add(InlineKeyboardButton(text='Write Your question', url='https://t.me/@Pirat17'))
 
 #Keybourd buttons
@@ -44,9 +40,9 @@ kb_client1 = ReplyKeyboardMarkup() #(resize_keyboard=True, one_time_keyboard=Tru
 
 # kb_client.add(b1).add(b2).insert(b3).insert(b4)
 # kb_client.row(b1, b2, b3, b4)
-kb_client1.add(b10).row(b1,b4,b7).row(b2, b3).row(b9)#.row(b5,b6)
+kb_client1.add(b10).row(b1,b4).row(b2,b7).row(b9)#.row(b5,b6)
 kb_client2 = ReplyKeyboardMarkup()
-kb_client2.add(b10).row(b1,b4,b7).row(b2, b3).row(b9).add(b11)
+kb_client2.add(b10).row(b1,b4).row(b2,b7).row(b9).add(b11)
 
 #Inline buttons links
 # inb = InlineKeyboardMarkup(row_width=1)
@@ -67,6 +63,11 @@ def courses(lesson, number, cbdt):
     return les
 
 def material_kb(title, callbac_data):
+    mat = InlineKeyboardMarkup(row_width=1)
+    mat_btn = InlineKeyboardButton(text=f'{title}', callback_data=callbac_data)
+    return mat.add(mat_btn)
+
+def courses_kb(title, callbac_data):
     mat = InlineKeyboardMarkup(row_width=1)
     mat_btn = InlineKeyboardButton(text=f'{title}', callback_data=callbac_data)
     return mat.add(mat_btn)

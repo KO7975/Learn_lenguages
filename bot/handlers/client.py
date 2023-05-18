@@ -1,6 +1,6 @@
 from aiogram import types, Dispatcher
 from create_bot import dp, bot, host, my_admin, bot_link, contact_tel, email, facebook
-from keyboards.client_kb import kb_client1, kb_client2, inkb, inlkb, to_teacher, courses, material_kb
+from keyboards.client_kb import kb_client1, kb_client2, inkb, to_teacher, courses, material_kb, courses_kb
 from data_base import mysql_con
 from aiogram.dispatcher.filters.state import State, StatesGroup
 from aiogram.dispatcher import FSMContext
@@ -28,8 +28,8 @@ arr_up_em = u'\U000023EB'
 async def new_chat_members_handler(message: types.Message):
     for user in message.new_chat_members:
         # Send a welcome message with the "/start" button to the new user
-        start_message = f"Hello {user.full_name}! I am a chatbot here to assist you with any questions or concerns you may have. To get started, please click the \"/start\" button below.{arr_down_em}"
-        start_button = types.KeyboardButton("/start_phone")
+        start_message = f"Hello {user.full_name}! I am a chatbot here to assist you with any questions or concerns you may have. To get started, please click the \"/button\" button below.{arr_down_em}"
+        start_button = types.KeyboardButton("/button")
         reply_markup = types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True).add(start_button)
         await bot.send_message(chat_id=user.id, text=start_message, reply_markup=reply_markup, parse_mode=types.ParseMode.HTML)
 
@@ -38,8 +38,8 @@ async def new_chat_members_handler(message: types.Message):
 # @dp.message_handler(commands=['start_phone'])
 async def contact(message: types.Message):
     # Create a new message with the "Request contact" button
-    start_message = f"Please provide your phone number by clicking the \"Request contact\" button below."
-    request_contact_button = types.KeyboardButton(text="/Request contact", request_contact=True)
+    start_message = f"Please provide your phone number by clicking the \n\"Request contact\" button below."
+    request_contact_button = types.KeyboardButton(text="/Request_contact", request_contact=True)
     reply_markup = types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True).add(request_contact_button)
     await bot.send_message(chat_id=message.chat.id, text=start_message, reply_markup=reply_markup, parse_mode=types.ParseMode.HTML)
 
@@ -57,9 +57,11 @@ async def contact_handler(message: types.Message):
 async def commands_start(message: types.Message):
     global aprowed_user_from_db
     aprowed_user_from_db = await mysql_con.CourseData.uprowed_user_from_db(message)
+    
     from_db = await mysql_con.CourseData.user_from_db(message)
     if len(from_db) == 0:
-        await mysql_con.DbLike(message).write()
+        await mysql_con.write_user(message)
+        from_db
     if len(from_db) > 0:
         if len(aprowed_user_from_db) > 0:
             if aprowed_user_from_db[0][0] == 1:
@@ -68,13 +70,13 @@ async def commands_start(message: types.Message):
             # elif len(from_db) > 0:
             elif aprowed_user_from_db[0][0] == 0:
                 await bot.send_message(message.from_user.id, f'\u203C \U000026D4 You haven\'t acces yet! \U000026D4 \u203C\nPlease contact your teacher {arr_down_em}', reply_markup=to_teacher)
-                await bot.send_message(message.from_user.id, f'Touch the buttons below for more information{arr_down_em}', reply_markup=kb_client1)
+                await bot.send_message(message.from_user.id, f'Use the buttons below for more information{arr_down_em}', reply_markup=kb_client1)
                 await message.delete()
-            else:
-                await bot.send_message(message.from_user.id, f'You can find several buttons below for more information{arr_down_em}', reply_markup=kb_client1)
-                await message.delete()
-                # await bot.send_message(message.from_user.id, f'You can find several buttons below for more information{arr_down_em}', reply_markup=kb_client1)
-                # await message.delete()
+        else:
+            await bot.send_message(message.from_user.id, f'You can find several buttons below for more information{arr_down_em}', reply_markup=kb_client1)
+            await message.delete()
+            # await bot.send_message(message.from_user.id, f'You can find several buttons below for more information{arr_down_em}', reply_markup=kb_client1)
+            # await message.delete()
     else:
         await message.reply(f'Write any message to bot: \n{bot_link}')
 
@@ -154,7 +156,6 @@ async def lessons(message: types.CallbackQuery):
 
 # @dp.callback_handler(Text(startswith='amt_')
 async def materials(message: types.CallbackQuery):
-    
     for mat in addition_mat:
         if message.data.endswith(mat[4]):
             await download_photo_handler(message, mat[2], mat[4], mat[1], mat[5], mat[6])
@@ -168,45 +169,64 @@ async def work_time(message: types.Message):
 
 
 #show languages-bottons that user can chouse
-async def languages_to_learn(message: types.CallbackQuery):
-    await message.answer(f'There are languages that you can stady: {arr_down_em}\n', reply_markup=inkb) 
-    # await mysql_con.my_db_read_lang(message)
-    await message.delete()
+async def languages_to_learn(message: types.Message):
+    global ans
+    ans = await mysql_con.my_db_read(message)
+    if type(ans)==tuple:
+        await message.answer(f'There are languages that you can stady: {arr_down_em}\n') 
+        for i in ans:
+            await bot.send_message(
+                message.from_user.id,
+                text='↓', \
+                reply_markup=courses_kb(f'{i[1]}', f'ab_{i[1][1:5]}'))
+
+    # await message.answer(f'There are languages that you can stady: {arr_down_em}\n', reply_markup=inkb) 
+    # # await mysql_con.my_db_read_lang(message)
+    # await message.delete()
 
 
-async def process_callback_button1(callback: types.CallbackQuery):
-    await bot.send_message(
-        callback.from_user.id,
-        text=f"Read more about course {arr_down_em} ",
-        reply_markup=InlineKeyboardMarkup(row_width=1).add(InlineKeyboardButton(text='About',callback_data='ab_en'))
-        )
-    await callback.answer('botton pressed!', show_alert=True)        # desaphired answer   with show_alert=True opened window with alert
+# @dp.callback_handler(Text(startswith='ab_')
+async def course_buttons(callback: types.CallbackQuery):
+    for i in ans:
+        if callback.data.endswith(i[1][1:5]):
+            await bot.send_photo(callback.from_user.id, i[0], f'Name: {i[1]}\nDescription:{i[2]}' )
 
 
-async def process_callback_button2(callback: types.CallbackQuery):
-    await bot.send_message(
-        callback.from_user.id,
-        text=f'Read more about course {arr_down_em}',
-        reply_markup=InlineKeyboardMarkup(row_width=1).add(InlineKeyboardButton(text='About',callback_data='ab_sp'))
-        )
-    await callback.answer('botton pressed!', show_alert=True)        # desaphired answer   with show_alert=True opened window with alert
+
+
+# async def process_callback_button1(callback: types.CallbackQuery):
+#     await bot.send_message(
+#         callback.from_user.id,
+#         text=f"Read more about course {arr_down_em} ",
+#         reply_markup=InlineKeyboardMarkup(row_width=1).add(InlineKeyboardButton(text='About',callback_data='ab_en'))
+#         )
+#     await callback.answer('botton pressed!', show_alert=True)        # desaphired answer   with show_alert=True opened window with alert
+
+
+# async def process_callback_button2(callback: types.CallbackQuery):
+#     await bot.send_message(
+#         callback.from_user.id,
+#         text=f'Read more about course {arr_down_em}',
+#         reply_markup=InlineKeyboardMarkup(row_width=1).add(InlineKeyboardButton(text='About',callback_data='ab_sp'))
+#         )
+#     await callback.answer('botton pressed!', show_alert=True)        # desaphired answer   with show_alert=True opened window with alert
  
-async def process_callback_button3(callback: types.CallbackQuery):
-    await bot.send_message(
-        callback.from_user.id,
-        text=f'Read more about course {arr_down_em}',
-        reply_markup=InlineKeyboardMarkup(row_width=1).add(InlineKeyboardButton(text='About',callback_data='ab_ps'))
-        )
-    await callback.answer('botton pressed!', show_alert=True)        # desaphired answer   with show_alert=True opened window with alert
+# async def process_callback_button3(callback: types.CallbackQuery):
+#     await bot.send_message(
+#         callback.from_user.id,
+#         text=f'Read more about course {arr_down_em}',
+#         reply_markup=InlineKeyboardMarkup(row_width=1).add(InlineKeyboardButton(text='About',callback_data='ab_ps'))
+#         )
+#     await callback.answer('botton pressed!', show_alert=True)        # desaphired answer   with show_alert=True opened window with alert
 
 
-async def process_callback_button4(callback: types.CallbackQuery):
-    await bot.send_message(
-        callback.from_user.id,
-        text=f'Read more about course {arr_down_em}',
-        reply_markup=InlineKeyboardMarkup(row_width=1).add(InlineKeyboardButton(text='About',callback_data='ab_en_s'))
-        )
-    await callback.answer('botton pressed!', show_alert=True)        # desaphired answer   with show_alert=True opened window with alert
+# async def process_callback_button4(callback: types.CallbackQuery):
+#     await bot.send_message(
+#         callback.from_user.id,
+#         text=f'Read more about course {arr_down_em}',
+#         reply_markup=InlineKeyboardMarkup(row_width=1).add(InlineKeyboardButton(text='About',callback_data='ab_en_s'))
+#         )
+#     await callback.answer('botton pressed!', show_alert=True)        # desaphired answer   with show_alert=True opened window with alert
 
 
 
@@ -227,26 +247,22 @@ async def inform(message: types.CallbackQuery):
 
 
 # Get description language from db with class method
-class LangDescription():
-    def __init__(self, name, ) -> None:
-        self.name = name
-    async def desc_lang(self, callback):
-        await mysql_con.Description(callback, self.name).get_desc()
+# class LangDescription():
+#     def __init__(self, name, ) -> None:
+#         self.name = name
+#     async def desc_lang(self, callback):
+#         await mysql_con.Description(callback, self.name).get_desc()
 
 
-description_en = lambda callback=types.CallbackQuery: LangDescription('English').desc_lang(callback)
-description_sp = lambda callback=types.CallbackQuery: LangDescription('Spanish').desc_lang(callback)
-description_ps = lambda callback=types.CallbackQuery: LangDescription('Polish').desc_lang(callback)
-description_ens = lambda callback=types.CallbackQuery: LangDescription('English for seamen').desc_lang(callback)
+# description_en = lambda callback=types.CallbackQuery: LangDescription('English').desc_lang(callback)
+# description_sp = lambda callback=types.CallbackQuery: LangDescription('Spanish').desc_lang(callback)
+# description_ps = lambda callback=types.CallbackQuery: LangDescription('Polish').desc_lang(callback)
+# description_ens = lambda callback=types.CallbackQuery: LangDescription('English for seamen').desc_lang(callback)
 
 
 async def price(message: types.Message):
     await bot.send_message(message.from_user.id, f'Price per 1 hour is 300 UAH')
     await message.delete()
-
-# async def get_contact(message: types.Message, state: FSMContext):
-#     await message.answer(f'phone: {message.contact.phone_number}')
-#     await state.finish()
 
 
 async def contacts(message: types.Message):
@@ -266,20 +282,26 @@ async def all_courses(message: types.Message):
 # @dp.callback_query_handler(Text(startswith='ln_'))
 async def chuse(callback: types.CallbackQuery):
     await mysql_con.DbLike(callback).write()
-    
+    await bot.send_message(callback.from_user.id,'Thank you for your choice.')
 
 
 #dp.mesage_handler(commands=['like'])
 async def test_command(message: types.Message):
+    likes, dislikes = await mysql_con.show_likes()
+    inlkb = InlineKeyboardMarkup(row_width=1)\
+    .add(InlineKeyboardButton(text=f'\U0001F44D {likes[0][0]} ', callback_data='ln_1'))\
+    .add(InlineKeyboardButton(text=f'\U0001F44E {dislikes[0][0]}', callback_data='ln_2'))
     await message.answer('Do you like this bot?', reply_markup=inlkb)
     await message.delete()
-    await mysql_con.DbLike(message).show_likes()
+    
+    
+    
 
 
 #registretion all battons
 def registr_handlers_client(dp: Dispatcher):
     dp.register_message_handler(new_chat_members_handler,content_types=['new_chat_members'])
-    dp.register_message_handler(contact, commands=['start_phone'])
+    dp.register_message_handler(contact, commands=['button'])
     dp.register_message_handler(commands_start, commands=['update', 'start'])
     dp.register_message_handler(work_time, commands=['Working_time⌚'])
     dp.register_message_handler(languages_to_learn, commands=['Course_list\U0001F4D1'])
@@ -289,18 +311,10 @@ def registr_handlers_client(dp: Dispatcher):
     dp.register_message_handler(test_command, commands=['like'])
     dp.register_message_handler(contact_handler, content_types=['contact'])
     dp.register_message_handler(course_data, commands=['Your_course_data'])
-    # dp.register_message_handler (lessons, commands=['ls'])
 
     dp.register_callback_query_handler(materials, Text(startswith='amt_'))
     dp.register_callback_query_handler(lessons, lambda c: c.data.startswith('ls_'))
     dp.register_callback_query_handler(chuse, Text(startswith='ln_'))
-    dp.register_callback_query_handler(process_callback_button1, text=['en'])
-    dp.register_callback_query_handler(process_callback_button2, text=['sp'])
-    dp.register_callback_query_handler(process_callback_button3, text=['ps'])
-    dp.register_callback_query_handler(process_callback_button4, text=['en_s'])
     dp.register_callback_query_handler(inform, text=['rm'])
-    dp.register_callback_query_handler(description_en, text=['ab_en'])
-    dp.register_callback_query_handler(description_sp, text=['ab_sp'])
-    dp.register_callback_query_handler(description_ps, text=['ab_ps'])
-    dp.register_callback_query_handler(description_ens, text=['ab_en_s'])
+    dp.register_callback_query_handler(course_buttons, Text(startswith='ab_'))
 
