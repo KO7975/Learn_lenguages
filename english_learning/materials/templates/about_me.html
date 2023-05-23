@@ -1,12 +1,57 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block sidebar %}
+{% include 'inc/_sidebar.html' %}
+{% endblock %}
+
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>about me</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Language Teacher | Self Presentation</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
 </head>
-<body>
-    <h1>About Me</h1>
+<body style="background-color: #eee;">
+  <div class="container" style="margin-top: 100px; ">
+    <div class="row" style="box-shadow: 1px 0 10px 10px #cac867;">
+      <div class="col-lg-7 col-sm-6 col-md-6" style="margin:auto">
+        <h1>About Me</h1>
+        <p>Hello! I'm a language teacher offering individual and group lessons for students. My main focus is on teaching English, but I'm also well-versed in several other languages. With years of experience working with students from different countries, I've developed an individualized approach that caters to the unique needs of each client.</p>
+        <p>Whether you're a beginner looking to improve your conversational skills or an advanced learner aiming for fluency, I'm here to guide you on your language learning journey. My teaching style is interactive and engaging, ensuring that you stay motivated and enjoy the learning process.</p>
+        <p>I believe that language learning is not just about memorizing vocabulary and grammar rules but also about understanding the culture and context behind the language. I incorporate cultural elements into my lessons to provide a well-rounded learning experience.</p>
+        <p>If you're ready to take your language skills to the next level, I'd love to work with you. Contact me to schedule a lesson or to discuss your specific language goals. Let's embark on this exciting journey together!</p>
+      </div>
+      <div class="col-lg-1 col-sm-0 col-md-1"></div>
+      <div class="col-lg-4 col-sm-6 col-md-5" style="margin:auto" >
+        <!-- <img src="/media/photo/Nastya_course.jpg" alt="Teacher" class="img-fluid" style="height: 420px; border-radius: 5pc;"> -->
+        <img src="/media/photo/Nastya_course.jpg" alt="Teacher" class="img-fluid d-none d-lg-block" style=" border-radius: 5pc;">
+        <img src="/media/photo/Nastya_course.jpg" alt="Teacher" class="img-fluid d-lg-none" style=" border-radius: 5pc;">
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-lg-12">
+        <h2>Contact Me</h2>
+        <p>If you have any questions or would like to book a lesson, feel free to reach out to me via email or phone:</p>
+        <ul>
+          <li>Email: example@email.com</li>
+          <li>Phone: +1 123-456-7890</li>
+        </ul>
+        <h2>Follow Me</h2>
+        <p>Stay updated with my latest language learning tips and resources by following me on social media:</p>
+        <ul>
+          <li><a href="https://www.facebook.com/staciewhite22">Facebook</a></li>
+          <li><a href="https://www.twitter.com/your_profile">Twitter</a></li>
+          <li><a href="https://www.instagram.com/stacie_white1">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/in/your_profile">LinkedIn</a></li>
+          <li><a href="https://t.me/+Oo89iONC0Yg5Mjli">Telegram</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
+{% endblock %}
