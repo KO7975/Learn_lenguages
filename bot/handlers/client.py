@@ -113,27 +113,27 @@ async def download_photo_handler(message, url, title, material_type, text, URL):
         await bot.send_message(chat_id=message.message.chat.id, text=text)
 
     else:
-        ##If your bot in the same machine with web broject
-        # url = url.replace('/', os.sep)
-        # print(url)
-        # file_url = rf"C:\Users\Nadiia\Desktop\English_site\progect\english_learning\media\{url}"
-        # file_f = open(file_url, 'rb')
-        # file_bytes = file_f.read()
-        # file_f.close()
-        # file_bytes = io.BytesIO(file_bytes)
-        # file = types.InputFile(file_bytes, filename=title)
- 
-        # Download the photo from the URL from different machine
-        file_url = f'{host}{url}'
-        # file_url = f'C:\Users\Nadiia\Desktop\English_site\progect\english_learning\{url}'
-        file_request = requests.get(file_url, params=url, data=url)
-        if file_request.status_code != 200:
-            await bot.send_message(chat_id=message.message.chat.id, text=f"Failed to download file: {file_request.status_code}")
-            return
-
-        # Send the photo to Telegram
-        file_bytes = io.BytesIO(file_request.content)
+        #If your bot in the same machine with web broject
+        url = url.replace('/', os.sep)
+        print(url)
+        file_url = rf"C:\Users\Nadiia\Desktop\English_site\progect\english_learning\media\{url}"
+        file_f = open(file_url, 'rb')
+        file_bytes = file_f.read()
+        file_f.close()
+        file_bytes = io.BytesIO(file_bytes)
         file = types.InputFile(file_bytes, filename=title)
+ 
+        # # Download the photo from the URL from different machine
+        # file_url = f'{host}{url}'
+        # # file_url = f'C:\Users\Nadiia\Desktop\English_site\progect\english_learning\{url}'
+        # file_request = requests.get(file_url, params=url, data=url)
+        # if file_request.status_code != 200:
+        #     await bot.send_message(chat_id=message.message.chat.id, text=f"Failed to download file: {file_request.status_code}")
+        #     return
+        # # Send the photo to Telegram
+        # file_bytes = io.BytesIO(file_request.content)
+        # file = types.InputFile(file_bytes, filename=title)
+
         if material_type == 'photo':
             await bot.send_photo(chat_id=message.message.chat.id,caption=text, photo=file)
         elif material_type == 'video':
@@ -302,7 +302,7 @@ async def test_command(message: types.Message):
 def registr_handlers_client(dp: Dispatcher):
     dp.register_message_handler(new_chat_members_handler,content_types=['new_chat_members'])
     dp.register_message_handler(contact, commands=['button'])
-    dp.register_message_handler(commands_start, commands=['update', 'start'])
+    dp.register_message_handler(commands_start, commands=['update', 'start', 'help'])
     dp.register_message_handler(work_time, commands=['Working_time⌚'])
     dp.register_message_handler(languages_to_learn, commands=['Course_list\U0001F4D1'])
     dp.register_message_handler(price, commands=['💰price'])

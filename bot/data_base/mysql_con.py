@@ -180,8 +180,6 @@ class CourseData():
         lesson_materials = await cur.fetchall()
         await cur.execute("SELECT * FROM materials_material WHERE id in (SELECT material_id FROM materials_course_materials WHERE course_id = '%s')"%(course_id,))
         addition_materials = await cur.fetchall()
-        
-
         return course, lessons, lesson_materials, addition_materials
 
     async def addition_inf(course_id):
@@ -201,4 +199,8 @@ class CourseData():
         res = await cur.fetchall()    
         return res
        
+async def get_users():
+    await cur.execute("select * from telegram_like")
+    res = await cur.fetchall()
+    return res
 

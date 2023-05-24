@@ -103,8 +103,26 @@ async def delete_lang(message: types.Message):
                                    add(InlineKeyboardButton( f'Delete {i[1]}', callback_data=f'del {i[1]}')))
 
 
+async def all_users(message:types.Message): 
+    for i in await mysql_con.get_users():
+        if i[4]==1:
+            like = '\U0001F44D'
+        elif i[4]==2:
+            like = '\U0001F44E'
+        else:
+            like = 'Not choosen'
+        await bot.send_message(message.from_user.id, \
+            text=f'username: {i[1]}\nfirst_name: {i[2]}\nlast_name: {i[3]}\nphone: {i[5]}\nlike: {like}')
+       
+
+# async def all_courses(message: types.Message):
+#     await mysql_con.my_db_read(message)
+#     await message.delete()
+
+
 def registr_handlers_admin(dp: Dispatcher):
-    dp.register_message_handler(cm_start, commands=['download'], state=None)
+    # dp.register_message_handler(all_courses, commands=['/Course_list\U0001F4D1'])
+    dp.register_message_handler(cm_start, commands=['download_course'], state=None)
     dp.register_message_handler(load_photo, content_types=['photo'], state=FSMAdmin.photo)
     dp.register_message_handler(load_name, state=FSMAdmin.name)
     dp.register_message_handler(load_description, state=FSMAdmin.description)
@@ -112,4 +130,5 @@ def registr_handlers_admin(dp: Dispatcher):
     dp.register_message_handler(cancel_handler, Text(equals='cancel', ignore_case=True), state="*")
     dp.register_message_handler(make_changes_commands, commands=['moderator'], is_chat_admin=True)
     dp.register_callback_query_handler(del_callback_run, lambda x: x.data and x.data.startswith('del '))
-    dp.register_message_handler(delete_lang, commands=['Delete'])
+    dp.register_message_handler(delete_lang, commands=['Delete_course'])
+    dp.register_message_handler(all_users, commands=['All_users'])
