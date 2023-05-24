@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
             name='Commens',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('comment', models.TextField(blank=True, null=True)),
+                ('comment', models.TextField(blank=True)),
                 ('time_created', models.DateTimeField(auto_now_add=True)),
                 ('time_appdated', models.DateTimeField(auto_now=True)),
                 ('is_published', models.BooleanField(default=True)),

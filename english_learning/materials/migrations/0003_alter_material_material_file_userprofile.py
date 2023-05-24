@@ -19,13 +19,13 @@ class Migration(migrations.Migration):
             name='material_file',
             field=models.FileField(blank=True, null=True, upload_to=materials.models.get_upload_path),
         ),
-        migrations.CreateModel(
-            name='UserProfile',
-            fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('is_approved', models.BooleanField(default=False)),
-                ('courses', models.ManyToManyField(to='materials.course')),
-                ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
-            ],
-        ),
+        # migrations.CreateModel(
+        #     name='UserProfile',
+        #     fields=[
+        #         ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+        #         ('is_approved', models.BooleanField(default=False)),
+        #         ('courses', models.ManyToManyField(to='materials.course')),
+        #         ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+        #     ],
+        # ),
     ]

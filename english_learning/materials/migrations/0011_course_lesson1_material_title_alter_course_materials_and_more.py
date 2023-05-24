@@ -33,18 +33,18 @@ class Migration(migrations.Migration):
         #     name='topic',
         #     field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='materials.topic'),
         # ),
-        migrations.RemoveField(
-            model_name='userprofile',
-            name='courses',
-        ),
+        # migrations.RemoveField(
+        #     model_name='userprofile',
+        #     name='courses',
+        # ),
         migrations.AlterField(
             model_name='userprofile',
             name='user',
             field=models.OneToOneField(null=True, on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL),
         ),
-        migrations.AddField(
-            model_name='userprofile',
-            name='courses',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='materials.course'),
-        ),
+        # migrations.AlterField(
+        #     model_name='userprofile',
+        #     name='courses',
+        #     field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='materials.course'),
+        # ),
     ]

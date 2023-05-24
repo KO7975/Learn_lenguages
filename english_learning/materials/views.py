@@ -13,7 +13,9 @@ from django.http import HttpResponse
 import english_learning.settings as settings
 
 
+
 def photo_view(request, content):
+    ''' this fanction for connection with telegram which return file from path'''
     p = HttpRequest.get_full_path(request)
     index = p.rindex('?') + 1
     res = p[index:]

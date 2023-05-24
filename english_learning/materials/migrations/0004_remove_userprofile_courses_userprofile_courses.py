@@ -11,13 +11,13 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RemoveField(
-            model_name='userprofile',
-            name='courses',
-        ),
-        migrations.AddField(
-            model_name='userprofile',
-            name='courses',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='materials.course'),
-        ),
+        # migrations.RemoveField(
+        #     model_name='userprofile',
+        #     name='courses',
+        # ),
+        # migrations.AddField(
+        #     model_name='userprofile',
+        #     name='courses',
+        #     field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='materials.course'),
+        # ),
     ]

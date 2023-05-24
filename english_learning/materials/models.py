@@ -114,7 +114,7 @@ class UserProfile(models.Model):
     
 class Commens(models.Model):
     user = models.ForeignKey(User,  on_delete=models.CASCADE, null=True,)
-    comment = models.TextField(null=True, blank=True)
+    comment = models.TextField( blank=True)
     time_created = models.DateTimeField(auto_now_add=True)
     time_appdated = models.DateTimeField(auto_now=True)
     is_published = models.BooleanField(default=True)

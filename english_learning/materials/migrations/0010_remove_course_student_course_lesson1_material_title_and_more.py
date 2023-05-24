@@ -17,12 +17,12 @@ class Migration(migrations.Migration):
             model_name='course',
             name='student',
         ),
-                migrations.CreateModel(
+        migrations.CreateModel(
             name='UserProfile',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('is_approved', models.BooleanField(default=False)),
-                ('courses', models.ManyToManyField(to='materials.course')),
+                ('courses', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='materials.course')),
                 ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
                 ('phone', models.IntegerField(null=True))
             ],

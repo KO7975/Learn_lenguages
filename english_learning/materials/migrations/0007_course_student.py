@@ -18,16 +18,16 @@ class Migration(migrations.Migration):
             name='student',
             field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL),
         ),
-         migrations.RemoveField(
-            model_name='userprofile',
-            name='is_approved',
-        ),
-        migrations.RemoveField(
-            model_name='userprofile',
-            name='courses',
-        ),
-        migrations.RemoveField(
-            model_name='userprofile',
-            name='user',
-        ),
+        #  migrations.RemoveField(
+        #     model_name='userprofile',
+        #     name='is_approved',
+        # ),
+        # migrations.RemoveField(
+        #     model_name='userprofile',
+        #     name='courses',
+        # ),
+        # migrations.RemoveField(
+        #     model_name='userprofile',
+        #     name='user',
+        # ),
     ]
