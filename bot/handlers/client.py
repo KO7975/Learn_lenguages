@@ -113,26 +113,26 @@ async def download_photo_handler(message, url, title, material_type, text, URL):
         await bot.send_message(chat_id=message.message.chat.id, text=text)
 
     else:
-        #If your bot in the same machine with web broject
-        url = url.replace('/', os.sep)
-        print(url)
-        file_url = rf"C:\Users\Nadiia\Desktop\English_site\progect\english_learning\media\{url}"
-        file_f = open(file_url, 'rb')
-        file_bytes = file_f.read()
-        file_f.close()
-        file_bytes = io.BytesIO(file_bytes)
-        file = types.InputFile(file_bytes, filename=title)
- 
-        # # Download the photo from the URL from different machine
-        # file_url = f'{host}{url}'
-        # # file_url = f'C:\Users\Nadiia\Desktop\English_site\progect\english_learning\{url}'
-        # file_request = requests.get(file_url, params=url, data=url)
-        # if file_request.status_code != 200:
-        #     await bot.send_message(chat_id=message.message.chat.id, text=f"Failed to download file: {file_request.status_code}")
-        #     return
-        # # Send the photo to Telegram
-        # file_bytes = io.BytesIO(file_request.content)
+        # #If your bot in the same machine with web broject
+        # url = url.replace('/', os.sep)
+        # print(url)
+        # file_url = rf"C:\Users\Nadiia\Desktop\English_site\progect\english_learning\media\{url}"
+        # file_f = open(file_url, 'rb')
+        # file_bytes = file_f.read()
+        # file_f.close()
+        # file_bytes = io.BytesIO(file_bytes)
         # file = types.InputFile(file_bytes, filename=title)
+ 
+        # Download the photo from the URL from different machine
+        file_url = f'{host}{url}'
+        # file_url = f'C:\Users\Nadiia\Desktop\English_site\progect\english_learning\{url}'
+        file_request = requests.get(file_url, params=url, data=url)
+        if file_request.status_code != 200:
+            await bot.send_message(chat_id=message.message.chat.id, text=f"Failed to download file: {file_request.status_code}")
+            return
+        # Send the photo to Telegram
+        file_bytes = io.BytesIO(file_request.content)
+        file = types.InputFile(file_bytes, filename=title)
 
         if material_type == 'photo':
             await bot.send_photo(chat_id=message.message.chat.id,caption=text, photo=file)
@@ -180,54 +180,12 @@ async def languages_to_learn(message: types.Message):
                 text='↓', \
                 reply_markup=courses_kb(f'{i[1]}', f'ab_{i[1][1:5]}'))
 
-    # await message.answer(f'There are languages that you can stady: {arr_down_em}\n', reply_markup=inkb) 
-    # # await mysql_con.my_db_read_lang(message)
-    # await message.delete()
-
 
 # @dp.callback_handler(Text(startswith='ab_')
 async def course_buttons(callback: types.CallbackQuery):
     for i in ans:
         if callback.data.endswith(i[1][1:5]):
             await bot.send_photo(callback.from_user.id, i[0], f'Name: {i[1]}\nDescription:{i[2]}' )
-
-
-
-
-# async def process_callback_button1(callback: types.CallbackQuery):
-#     await bot.send_message(
-#         callback.from_user.id,
-#         text=f"Read more about course {arr_down_em} ",
-#         reply_markup=InlineKeyboardMarkup(row_width=1).add(InlineKeyboardButton(text='About',callback_data='ab_en'))
-#         )
-#     await callback.answer('botton pressed!', show_alert=True)        # desaphired answer   with show_alert=True opened window with alert
-
-
-# async def process_callback_button2(callback: types.CallbackQuery):
-#     await bot.send_message(
-#         callback.from_user.id,
-#         text=f'Read more about course {arr_down_em}',
-#         reply_markup=InlineKeyboardMarkup(row_width=1).add(InlineKeyboardButton(text='About',callback_data='ab_sp'))
-#         )
-#     await callback.answer('botton pressed!', show_alert=True)        # desaphired answer   with show_alert=True opened window with alert
- 
-# async def process_callback_button3(callback: types.CallbackQuery):
-#     await bot.send_message(
-#         callback.from_user.id,
-#         text=f'Read more about course {arr_down_em}',
-#         reply_markup=InlineKeyboardMarkup(row_width=1).add(InlineKeyboardButton(text='About',callback_data='ab_ps'))
-#         )
-#     await callback.answer('botton pressed!', show_alert=True)        # desaphired answer   with show_alert=True opened window with alert
-
-
-# async def process_callback_button4(callback: types.CallbackQuery):
-#     await bot.send_message(
-#         callback.from_user.id,
-#         text=f'Read more about course {arr_down_em}',
-#         reply_markup=InlineKeyboardMarkup(row_width=1).add(InlineKeyboardButton(text='About',callback_data='ab_en_s'))
-#         )
-#     await callback.answer('botton pressed!', show_alert=True)        # desaphired answer   with show_alert=True opened window with alert
-
 
 
 async def inform(message: types.CallbackQuery):
@@ -239,25 +197,6 @@ async def inform(message: types.CallbackQuery):
         callback_data='inf'))
         )
     await message.answer (f'You can write me a private message')
-
-
-# Get description language from db with function
-# async def description_en(callback: types.CallbackQuery):
-#     await mysql_con.Description(callback, 'English').get_desc()
-
-
-# Get description language from db with class method
-# class LangDescription():
-#     def __init__(self, name, ) -> None:
-#         self.name = name
-#     async def desc_lang(self, callback):
-#         await mysql_con.Description(callback, self.name).get_desc()
-
-
-# description_en = lambda callback=types.CallbackQuery: LangDescription('English').desc_lang(callback)
-# description_sp = lambda callback=types.CallbackQuery: LangDescription('Spanish').desc_lang(callback)
-# description_ps = lambda callback=types.CallbackQuery: LangDescription('Polish').desc_lang(callback)
-# description_ens = lambda callback=types.CallbackQuery: LangDescription('English for seamen').desc_lang(callback)
 
 
 async def price(message: types.Message):

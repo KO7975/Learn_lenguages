@@ -6,6 +6,14 @@ To use the WEB Project and telegram_bot, complete the following steps:
 1. Clone or download the repository
 2. For instaletion you wil need Docker and Docker Compose
 3. Write command: 'docker-compose up'. Docker will create 3 containers web, bot and db.
+    -for using web admin page, you need create superuser account, for this yo need come in 
+    working web container:  enter command: docker ps 
+                            then copy container id
+                            and enter next command:  docker exec -it (container id) /bin/bash
+                            inside the container next command: python manage.py createsuperuser
+                            and following the instractions you will create superuser
+                            use superuser data for ligin on web page.
+
 4. For proper work you will need to change Host data in create_bot.py :
 bot = Bot(your_token)
 host= "your_web_host"
@@ -19,7 +27,7 @@ my_admin= "https://t.me/your_admin_profile"
 5. Also you will need to change data in english_learning.settings.py on that what you need: 
     ALLOWED_HOSTS=[]
     DATABASES=[]
-6. In .env need change data also:
+6. Create .env and fill data:
     DB_NAME=example_databasename
     DB_PASS=example_password
     DB_USER=example_databaseuser

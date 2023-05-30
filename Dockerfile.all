@@ -12,7 +12,7 @@ ENV MYSQL_DATABASE: 'mydatabase'
 ENV MYSQL_PORT=3306
 RUN apt-get update && apt-get install -y default-mysql-client
 
-CMD ["sh", "-c", "mysql -u root ${MYSQL_DATABASE} < /app/mysql_dump.sql"]
+CMD ["sh", "-c", "mysql -u mydatabaseuser ${MYSQL_DATABASE} < /app/mysql_dump.sql"]
 
 CMD ["python", "./english_learning/manage.py", "runserver", "0.0.0.0:8000"]
 ADD ./mysql/dump.sql /docker-entrypoint-initdb.d

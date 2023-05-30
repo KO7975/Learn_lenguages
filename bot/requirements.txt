@@ -1,5 +1,6 @@
 # mysql-connector==2.2.9
-mysql-connector-python==8.0.33
+python-dotenv==1.0.0
+# mysql-connector-python==8.0.33
 aiogram==2.25.1
 aiomysql==0.1.1
 requests==2.29.0

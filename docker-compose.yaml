@@ -13,19 +13,23 @@ services:
     depends_on:
       - mysql
     links:
-      - mysql:db
+      - mysql:mysql
   mysql:
-    restart: always
+    container_name: mysql-1
     image: mysql:8.0
+    restart: always
     ports:
       - '3306:3306'
+    expose:
+      - "3306"
     volumes:
       - mysql_data:/var/lib/mysql
-
+      - ./mysql/:/docker-entrypoint-initdb.d
     environment:
-
-      MYSQL_DATABASE: 'mydatabase'
-      
+      MYSQL_ROOT_PASSWORD: '${DB_ROOT_PASSWORD}'
+      MYSQL_DATABASE: '${DB_NAME}'
+      MYSQL_USER: '${DB_USERNAME}'
+      MYSQL_PASSWORD: '${DB_PASSWORD}'
     healthcheck:
       test: ['CMD', '/opt/bitnami/scripts/mysql/healthcheck.sh']
       interval: 15s
@@ -43,8 +47,8 @@ services:
     depends_on:
       - mysql
     links:
-      - mysql:db
+      - mysql:mysql
 
 volumes:
   mysql_data:
-    # driver: local
+    driver: local

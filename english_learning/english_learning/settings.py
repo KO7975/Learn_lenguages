@@ -79,21 +79,13 @@ WSGI_APPLICATION = 'english_learning.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / os.environ.get('DB_NAME'),
-#         'PASSWORD':os.environ.get('DB_PASS')
-#     }
-# }
-
 DATABASES = {  
     'default': {  
-        'ENGINE': 'django.db.backends.mysql', 
+        'ENGINE': 'mysql.connector.django', 
         'NAME':os.environ.get('DB_NAME'), 
         'PASSWORD':os.environ.get('DB_PASS'), 
         'USER': os.environ.get('DB_USER'),
-        # 'HOST': 'mysql',  
+        'HOST': 'mysql', 
         'PORT': '3306',   
     }  
 }  

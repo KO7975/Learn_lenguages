@@ -1,45 +1,39 @@
-import mysql.connector
+# import mysql.connector
 from create_bot import bot
 import aiomysql
 import os
 from dotenv import load_dotenv
 
+
 load_dotenv()
 
 # Connect to the MySQL database
-
-# def db_start():
-#     global base, cur
-#     base = mysql.connector.connect(
-#         # host="mysql",
-#         user="mydatabaseuser",
-#         password="12345",
-#         database="mydatabase",
-#         # auth_plugin='mysql_native_password'
-#     )
-
 async def db_start():
     global base, cur
     base = await aiomysql.connect(
-        # host="mysql",
-        # user=os.environ.get('DB_USER'),
-        # password=os.environ.get('DB_PASSWORD'),
-        # db=os.environ.get('DB_NAME'),
-        password='12345',
-        db='mydatabase',
-        user='mydatabaseuser',
+        host='mysql',
+        user= os.environ.get('DB_USER'),
+        password= os.environ.get('DB_PASS'),
+        db= os.environ.get('DB_NAME'),
         autocommit=True,
-        auth_plugin='mysql_native_password'
     )
-    # Create a cursor object to execute queries
+    # Create a cursor object to execute queries 
     cur = await base.cursor()
     if base:
         print('Data base connected OK')
     else:
         print('DB faile!')
     
-    # await cur.execute("CREATE TABLE if not exists materials_telegram (img VARCHAR(100), name VARCHAR(100), description VARCHAR(1000))")
-    # await base.commit()
+    await cur.execute("CREATE TABLE if not exists materials_telegram (img VARCHAR(100), name VARCHAR(100), description VARCHAR(1000))")
+    await cur.execute("CREATE TABLE if not exists telegram_like (\
+                      user_id VARCHAR(150), \
+                      username VARCHAR(100), \
+                      first_name VARCHAR(100), \
+                      last_name VARCHAR(100), \
+                      res TINYINT(1), \
+                      phone VARCHAR(13))"
+                      )
+    await base.commit()
 
 
 async def write_user(message):
