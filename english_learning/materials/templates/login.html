@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{% load i18n %}
 {% block content %}
 
 <!DOCTYPE html>
 <html align="center">
 <head>
-<title>Login Form</title>
+<title>{% trans "Login Form" %}</title>
 </head>
 <body>
   <section  class="vh-100" style="background-color: #9A616D; margin-top: 55px;">
@@ -21,30 +21,30 @@
               </div>
               <div class="col-md-6 col-lg-7 d-flex align-items-center">
                 <div class="card-body p-4 p-lg-5 text-black">
-                  <p class="text-center h1 fw-bold mb-3 mx-1 mx-md-4 mt-4">Login</p>
+                  <p class="text-center h1 fw-bold mb-3 mx-1 mx-md-4 mt-4">{% trans "Login" %}</p>
                   <form method="POST">
                     {% csrf_token %}
   
-                    <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
+                    <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">{% trans "Sign into your account" %}</h5>
   
                     <div class="form-outline mb-4">
                       <input type="username" id="email" name="email" class="form-control text-center" required autofocus>
-                      <label class="form-label" for="email">Email address</label>
+                      <label class="form-label" for="email">{% trans "Email address" %}</label>
                     </div>
   
                     <div class="form-outline mb-4">
                       <input type="password" id="password" name="password" class="form-control text-center">
-                      <label class="form-label" for="password" required >Password</label>
+                      <label class="form-label" for="password" required >{% trans "Password" %}</label>
                     </div>
   
                     <div class="pt-1 mb-4">
-                      <button class="btn btn-dark btn-lg btn-block" type="submit">Login</button>
+                      <button class="btn btn-dark btn-lg btn-block" type="submit">{% trans "Login" %}</button>
                     </div>
   
-                    <a class="small text-muted" href="/materials/forgot/">Forgot password?</a>
-                    <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account? <a href="{% url 'registr' %}" style="color: #393f81;">Register here</a></p>
-                    <a href="/materials/terms/" class="small text-muted">Terms of use.</a>
-                    <a href="/materials/policy/" class="small text-muted">Privacy policy</a>
+                    <a class="small text-muted" href="{% url 'forgot' %}">{% trans "Forgot password?" %}</a>
+                    <p class="mb-5 pb-lg-2" style="color: #393f81;">{% trans "Don't have an account?" %} <a href="{% url 'registr' %}" style="color: #393f81;">Register here</a></p>
+                    <a href="{% url 'terms' %}" class="small text-muted">{% trans "Terms of use" %}.</a>
+                    <a href="{% url 'policy' %}" class="small text-muted">{% trans "Privacy policy" %}</a>
                   </form>
   
                 </div>

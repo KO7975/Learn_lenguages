@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
-{% block content%}
-<!DOCTYPE html>
-<html>
+{% load i18n %}
+{% block content %}
 <head>
 	<meta charset="utf-8">
     <style>
@@ -26,47 +25,47 @@
             padding-left: 100px;
         }
     </style>
-	<title>Terms of Service</title>
+	<title>{% trans "Terms of Service" %}</title>
 </head>
 <body>
     <div class="conteiner">
-        <h1>Terms of Service</h1>
-        <p>These Terms of Service ("Terms") govern your use of the English Studying Site ("Site"). By accessing or using the Site, you agree to be bound by these Terms.</p>
-        <h2>1. Use of Site</h2>
-        <p>The Site provides English language learning resources, including but not limited to online courses, study materials, and communication tools. You may use the Site for personal, non-commercial use only. You agree to use the Site in a manner consistent with all applicable laws and regulations.</p>
-        <h2>2. User Accounts</h2>
-        <p>To access certain features of the Site, you may need to create a user account. You agree to provide accurate and complete information when creating your account and to keep your login credentials secure. You are responsible for all activity that occurs under your account.</p>
-        <h2>3. Payment and Refunds</h2>
-        <p>Certain features of the Site may require payment, such as enrollment in a course or purchase of study materials. Payment information will be collected by a third-party payment processor and will be subject to their terms and conditions. You agree to pay all fees and charges associated with your use of the Site. Refunds may be available for certain purchases, as outlined in the Company's refund policy.</p>
-        <h2>4. Intellectual Property</h2>
-        <p>The Site and its contents, including but not limited to text, graphics, images, and software, are the property of the Company or its licensors and are protected by copyright and other intellectual property laws. You may not reproduce, modify, distribute, or otherwise use any content from the Site without the express written permission of the Company.</p>
-        <h2>5. User Content</h2>
-        <p>You may have the opportunity to submit content to the Site, such as comments, questions, or assignments. By submitting content, you grant the Company a non-exclusive, royalty-free, perpetual, and irrevocable license to use, display, modify, and distribute your content in any manner the Company chooses, without compensation or attribution to you.</p>
-        <h2>6. Prohibited Conduct</h2>
-        <p>You agree not to use the Site to:</p>
+        <h1>{% trans "Terms of Service" %}</h1>
+        <p>{% trans "These Terms of Service ('Terms') govern your use of the English Studying Site ('Site'). By accessing or using the Site, you agree to be bound by these Terms." %}</p>
+        <h2>1. {% trans "Use of Site" %}</h2>
+        <p>{% trans "The Site provides English language learning resources, including but not limited to online courses, study materials, and communication tools. You may use the Site for personal, non-commercial use only. You agree to use the Site in a manner consistent with all applicable laws and regulations." %}</p>
+        <h2>2. {% trans "User Accounts" %}</h2>
+        <p>{% trans "To access certain features of the Site, you may need to create a user account. You agree to provide accurate and complete information when creating your account and to keep your login credentials secure. You are responsible for all activity that occurs under your account." %}</p>
+        <h2>3. {% trans "Payment and Refunds" %}</h2>
+        <p>{% trans "Certain features of the Site may require payment, such as enrollment in a course or purchase of study materials. Payment information will be collected by a third-party payment processor and will be subject to their terms and conditions. You agree to pay all fees and charges associated with your use of the Site. Refunds may be available for certain purchases, as outlined in the Company's refund policy." %}</p>
+        <h2>4. {% trans "Intellectual Property" %}</h2>
+        <p>{% trans "The Site and its contents, including but not limited to text, graphics, images, and software, are the property of the Company or its licensors and are protected by copyright and other intellectual property laws. You may not reproduce, modify, distribute, or otherwise use any content from the Site without the express written permission of the Company." %}</p>
+        <h2>5. {% trans "User Content" %}</h2>
+        <p>{% trans "You may have the opportunity to submit content to the Site, such as comments, questions, or assignments. By submitting content, you grant the Company a non-exclusive, royalty-free, perpetual, and irrevocable license to use, display, modify, and distribute your content in any manner the Company chooses, without compensation or attribution to you." %}</p>
+        <h2>6. {% trans "Prohibited Conduct" %}</h2>
+        <p>{% trans "You agree not to use the Site to:" %}</p>
         <ul>
-            <li>Harass, threaten, or intimidate others</li>
-            <li>Post or transmit any content that is illegal, harmful, or offensive</li>
-            <li>Use the Site to engage in any fraudulent activity</li>
-            <li>Attempt to gain unauthorized access to the Site or its systems</li>
+            <li>{% trans "Harass, threaten, or intimidate others" %}</li>
+            <li>{% trans "Post or transmit any content that is illegal, harmful, or offensive" %}</li>
+            <li>{% trans "Use the Site to engage in any fraudulent activity" %}</li>
+            <li>{% trans "Attempt to gain unauthorized access to the Site or its systems" %}</li>
         </ul>
-        <h2>7. Termination</h2>
-        <p>The Company may terminate your access to the Site at any time, with or without cause, and without notice. Upon termination, you must immediately cease all use of the Site and any content obtained from it.</p>
-        <h2>8. Disclaimer of Warranties</h2>
-        <p>The Site is provided "as is" and without warranty of any kind. The Company makes no representations or warranties about the accuracy, completeness, or suitability of the Site or its content for any purpose. You use the Site at your own risk.</p>
-        <h2>9. Limitation of Liability</h2>
-        <p>The Company and its affiliates, officers, employees, and agents will not be liable for any damages arising from your use of the Site or its content, including but not limited to direct, indirect, incidental, punitive, and consequential damages. This limitation of liability applies even if the Company has been advised of the possibility of such damages.</p>
-        <h2>10. Indemnification</h2>
-        <p>You agree to indemnify and hold harmless the Company and its affiliates, officers, employees, and agents from any claims, damages, and expenses (including attorneys' fees) arising from your use of the Site or your violation of these Terms.</p>
-        <h2>11. Governing Law</h2>
-        <p>These Terms and any disputes arising from your use of the Site will be governed by and construed in accordance with the laws of [insert state or country], without regard to its conflict of law provisions.</p>
-        <h2>12. Changes to Terms</h2>
-        <p>The Company may update these Terms from time to time. You should review these Terms periodically for any changes. By continuing to use the Site after the Company makes any changes to these Terms, you agree to be bound by the revised Terms.</p>
-        <h2>13. Entire Agreement</h2>
-        <p>These Terms constitute the entire agreement between you and the Company with respect to the Site and supersede all prior or contemporaneous communications and proposals, whether oral or written, between you and the Company.</p>
-        <h2>14. Contact Us</h2>
-        <p>If you have any questions about these Terms, please contact us at  contact information.</p>
+        <h2>7. {% trans "Termination" %}</h2>
+        <p>{% trans "The Company may terminate your access to the Site at any time, with or without cause, and without notice. Upon termination, you must immediately cease all use of the Site and any content obtained from it." %}</p>
+        <h2>8. {% trans "Disclaimer of Warranties" %}</h2>
+        <p>{% trans "The Site is provided 'as is' and without warranty of any kind. The Company makes no representations or warranties about the accuracy, completeness, or suitability of the Site or its content for any purpose. You use the Site at your own risk." %}</p>
+        <h2>9. {% trans "Limitation of Liability" %}</h2>
+        <p>{% trans "The Company and its affiliates, officers, employees, and agents will not be liable for any damages arising from your use of the Site or its content, including but not limited to direct, indirect, incidental, punitive, and consequential damages. This limitation of liability applies even if the Company has been advised of the possibility of such damages." %}</p>
+        <h2>10. {% trans "Indemnification" %}</h2>
+        <p>{% trans "You agree to indemnify and hold harmless the Company and its affiliates, officers, employees, and agents from any claims, damages, and expenses (including attorneys' fees) arising from your use of the Site or your violation of these Terms." %}</p>
+        <h2>11. {% trans "Governing Law" %}</h2>
+        <p>{% trans "These Terms and any disputes arising from your use of the Site will be governed by and construed in accordance with the laws of [insert state or country], without regard to its conflict of law provisions." %}</p>
+        <h2>12. {% trans "Changes to Terms" %}</h2>
+        <p>{% trans "The Company may update these Terms from time to time. You should review these Terms periodically for any changes. By continuing to use the Site after the Company makes any changes to these Terms, you agree to be bound by the revised Terms." %}</p>
+        <h2>13. {% trans "Entire Agreement" %}</h2>
+        <p>{% trans "These Terms constitute the entire agreement between you and the Company with respect to the Site and supersede all prior or contemporaneous communications and proposals, whether oral or written, between you and the Company." %}</p>
+        <h2>14. {% trans "Contact Us" %}</h2>
+        <p>{% trans "If you have any questions about these Terms, please contact us at  contact information." %}</p>
     </div>
-    </body>
-    </html>
+</body>
+
 {% endblock %}

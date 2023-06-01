@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{% load i18n %}
 {% block sidebar %}
 {% include 'inc/_sidebar.html' %}
 {% endblock %}
@@ -8,9 +8,9 @@
 <div class="container" style="margin-top: 100px;">
     <div align=center>
         <div align=center class="col-md-5 col-md-push-3" style="background: #efebeb; padding: 10px;">
-          <h2>Hello <b style="color: #838111;">{{user}}</b></h2>
-          <h2><b style="background-color: #b4e8e7;color: red;">Your are not approved by the admin </b></h2><br>
-          <h2>Please <a href="https://t.me/+Oo89iONC0Yg5Mjli">contact</a> your teacher! </h2>
+          <h2>{% trans "Hello" %} <b style="color: #838111;">{{user}}</b></h2>
+          <h2><b style="background-color: #b4e8e7;color: red;">{% trans "Your are not approved by the admin" %} </b></h2><br>
+          <h2>{% trans "Please" %}<a href="https://t.me/+Oo89iONC0Yg5Mjli">{% trans "contact</a> your teacher!" %} </h2>
 
         </div>
     </div>

@@ -85,7 +85,7 @@ DATABASES = {
         'NAME':os.environ.get('DB_NAME'), 
         'PASSWORD':os.environ.get('DB_PASS'), 
         'USER': os.environ.get('DB_USER'),
-        'HOST': 'mysql', 
+        # 'HOST': 'mysql', 
         'PORT': '3306',   
     }  
 }  
@@ -134,6 +134,7 @@ USE_L10 = True
 USE_TZ = True
 
 LOCALE_PATHS = (
+    # BASE_DIR / 'locale/',
     'locale',
     # os.path.join(PROJECT_DIR, 'locale'),
 )

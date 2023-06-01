@@ -107,7 +107,7 @@ class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
     courses = models.ForeignKey(Course, on_delete=models.CASCADE, null=True, blank=True)
     is_approved = models.BooleanField(default=False)
-    phone = models.CharField(max_length=13, blank=True)
+    phone = models.CharField(max_length=13, blank=True, null=True)
 
     def __str__(self):
         return f'User name: {self.user.last_name} {self.user.first_name}'

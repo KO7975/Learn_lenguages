@@ -2,6 +2,7 @@ from django.contrib import admin
 from .models import Language, LanguageLevel, Topic, Material, Course, Lesson, UserProfile, Commens
 from django.urls import reverse
 from django.utils.http import urlencode
+from modeltranslation.admin import *
 
 
 class MaterialInline(admin.TabularInline):

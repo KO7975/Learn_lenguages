@@ -110,7 +110,7 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'logout' %}"><span class="glyphicon glyphicon-log-in"></span>{% translate 'Logout' %}</a>
+                            <a class="nav-link" href="{% url 'logout' %}"><span class="glyphicon glyphicon-log-in"></span>{% translate "Logout" %}</a>
                         </li>
 
                         {% else %}
@@ -118,9 +118,9 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="{% url 'course' cours_pk %}">{% translate "Course" %}</a>
                                 </li>
-                            {% endif%}
+                            {% endif %}
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'logout' %}"><span class="glyphicon glyphicon-log-in"></span>{% translate 'Logout' %}</a>
+                            <a class="nav-link" href="{% url 'logout' %}"><span class="glyphicon glyphicon-log-in"></span>{% translate "Logout" %}</a>
                         </li>                       
                         {% endif %}
                     {% else %}

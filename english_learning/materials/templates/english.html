@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
+{% load i18n %}
 {% block content%}
 <head>
-	<title>English</title>
+	<title>{% trans "English" %}</title>
     <style>
         body{
             margin-top: 100px;
@@ -12,19 +13,19 @@
 <body>
     <div class="container ">
         <div class="row">
-            <div class="col-md-8"><h1>English is one of the most widely spoken languages in the world, with over 1.5 billion people speaking it globally. It's considered the international language of business, education, and communication, making it an important language to learn for both personal and professional reasons.</h1>
+            <div class="col-md-8"><h1>{% trans "English is one of the most widely spoken languages in the world, with over 1.5 billion people speaking it globally. It's considered the international language of business, education, and communication, making it an important language to learn for both personal and professional reasons." %}</h1>
             </div>
             <div class="col-md-4" ><a href="{% url 'registr' %}"><img src="/media/photo/english.png" style="height: 320px; border-radius: 1rem;"></a></div>
         </div>
-        <p>There are a few key strategies that can help you improve your language skills:</p>
+        <p>{% trans "There are a few key strategies that can help you improve your language skills:" %}</p>
         <ul>
-            <li>Practice speaking: One of the most effective ways to improve your English language skills is to practice speaking as much as possible. Find a language exchange partner or join a language group to practice speaking with other learners and native speakers.</li>
-            <li>Watch English movies and TV shows: Watching English-language movies and TV shows is a fun and engaging way to improve your listening skills and pick up new vocabulary.</li>
-            <li>Read English books and articles: Reading English books and articles can help you improve your reading comprehension and grammar skills. Start with books and articles that are appropriate for your level of English proficiency and gradually work your way up to more challenging texts.</li>
-            <li>Use language learning apps: There are many language learning apps available that can help you practice your English skills. These apps often include interactive exercises, vocabulary games, and other language learning tools.</li>
-            <li>Take English language courses: Taking English language courses at a language school or online can provide you with structured learning opportunities and a supportive learning environment.</li>
+            <li>{% trans "Practice speaking: One of the most effective ways to improve your English language skills is to practice speaking as much as possible. Find a language exchange partner or join a language group to practice speaking with other learners and native speakers." %}</li>
+            <li>{% trans "Watch English movies and TV shows: Watching English-language movies and TV shows is a fun and engaging way to improve your listening skills and pick up new vocabulary." %}</li>
+            <li>{% trans "Read English books and articles: Reading English books and articles can help you improve your reading comprehension and grammar skills. Start with books and articles that are appropriate for your level of English proficiency and gradually work your way up to more challenging texts." %}</li>
+            <li>{% trans "Use language learning apps: There are many language learning apps available that can help you practice your English skills. These apps often include interactive exercises, vocabulary games, and other language learning tools." %}</li>
+            <li>{% trans "Take English language courses: Taking English language courses at a language school or online can provide you with structured learning opportunities and a supportive learning environment." %}</li>
         </ul>
-        <p>By incorporating these strategies into your language learning routine, you can improve your English language skills and communicate more effectively in both personal and professional settings. <a href="{% url 'registr' %}">Study</a></p>
+        <p>{% trans "By incorporating these strategies into your language learning routine, you can improve your English language skills and communicate more effectively in both personal and professional settings. " %}<a href="{% url 'registr' %}">{% trans "Study" %}</a></p>
     </div>
 </body>
 {% endblock %}

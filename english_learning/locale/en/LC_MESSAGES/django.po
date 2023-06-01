@@ -1,45 +1,115 @@
-#: .\english_learning\settings.py:132 .\materials\templates\home.html:224
-#: .\materials\templates\home.html:257
+#: .\english_learning\settings.py:121 .\materials\templates\english.html:5
+#: .\materials\templates\home.html:224 .\materials\templates\home.html:257
 msgid "English"
 msgstr ""
 
-#: .\english_learning\settings.py:133
+#: .\english_learning\settings.py:122
 msgid "Russian"
 msgstr ""
 
-#: .\english_learning\settings.py:134
+#: .\english_learning\settings.py:123
 msgid "Ukrainian"
 msgstr ""
 
-#: .\materials\templates\base.html:83
+#: .\materials\templates\about_me.html:15
+msgid "Language Teacher | Self Presentation"
+msgstr ""
+
+#: .\materials\templates\about_me.html:22
+msgid "About Me"
+msgstr ""
+
+#: .\materials\templates\about_me.html:23
+msgid ""
+"Hello! I'm a language teacher offering individual and group lessons for "
+"students. My main focus is on teaching English, but I'm also well-versed in "
+"several other languages. With years of experience working with students from "
+"different countries, I've developed an individualized approach that caters "
+"to the unique needs of each client."
+msgstr ""
+
+#: .\materials\templates\about_me.html:24
+msgid ""
+"Whether you're a beginner looking to improve your conversational skills or "
+"an advanced learner aiming for fluency, I'm here to guide you on your "
+"language learning journey. My teaching style is interactive and engaging, "
+"ensuring that you stay motivated and enjoy the learning process."
+msgstr ""
+
+#: .\materials\templates\about_me.html:25
+msgid ""
+"I believe that language learning is not just about memorizing vocabulary and "
+"grammar rules but also about understanding the culture and context behind "
+"the language. I incorporate cultural elements into my lessons to provide a "
+"well-rounded learning experience."
+msgstr ""
+
+#: .\materials\templates\about_me.html:26
+msgid ""
+"If you're ready to take your language skills to the next level, I'd love to "
+"work with you. Contact me to schedule a lesson or to discuss your specific "
+"language goals. Let's embark on this exciting journey together!"
+msgstr ""
+
+#: .\materials\templates\about_me.html:37
+msgid "Contact Me"
+msgstr ""
+
+#: .\materials\templates\about_me.html:38
+msgid ""
+"If you have any questions or would like to book a lesson, feel free to reach "
+"out to me via email or phone:"
+msgstr ""
+
+#: .\materials\templates\about_me.html:40 .\materials\templates\forgot.html:32
+msgid "Email"
+msgstr ""
+
+#: .\materials\templates\about_me.html:41
+msgid "Phone"
+msgstr ""
+
+#: .\materials\templates\about_me.html:43
+msgid "Follow Me"
+msgstr ""
+
+#: .\materials\templates\about_me.html:44
+msgid ""
+"Stay updated with my latest language learning tips and resources by "
+"following me on social media:"
+msgstr ""
+
+#: .\materials\templates\base.html:87
 msgid "Lets Learning"
 msgstr ""
 
-#: .\materials\templates\base.html:93
+#: .\materials\templates\base.html:97
 msgid "Admin Page"
 msgstr ""
 
-#: .\materials\templates\base.html:97
+#: .\materials\templates\base.html:101
 msgid "Courses"
 msgstr ""
 
-#: .\materials\templates\base.html:109 .\materials\templates\base.html:119
+#: .\materials\templates\base.html:113 .\materials\templates\base.html:123
 msgid "Logout"
 msgstr ""
 
-#: .\materials\templates\base.html:115
+#: .\materials\templates\base.html:119
 msgid "Course"
 msgstr ""
 
-#: .\materials\templates\base.html:124
+#: .\materials\templates\base.html:128 .\materials\templates\login.html:24
+#: .\materials\templates\login.html:41
 msgid "Login"
 msgstr ""
 
-#: .\materials\templates\base.html:127 .\materials\templates\registr.html:74
+#: .\materials\templates\base.html:131 .\materials\templates\registr.html:74
 msgid "Register"
 msgstr ""
 
 #: .\materials\templates\course_detail.html:67
+#: .\materials\templates\not_approved.html:11
 msgid "Hello"
 msgstr ""
 
@@ -62,6 +132,90 @@ msgstr ""
 
 #: .\materials\templates\course_detail.html:107
 msgid "Additional  Materials"
+msgstr ""
+
+#: .\materials\templates\english.html:16
+msgid ""
+"English is one of the most widely spoken languages in the world, with over "
+"1.5 billion people speaking it globally. It's considered the international "
+"language of business, education, and communication, making it an important "
+"language to learn for both personal and professional reasons."
+msgstr ""
+
+#: .\materials\templates\english.html:20
+msgid ""
+"There are a few key strategies that can help you improve your language "
+"skills:"
+msgstr ""
+
+#: .\materials\templates\english.html:22
+msgid ""
+"Practice speaking: One of the most effective ways to improve your English "
+"language skills is to practice speaking as much as possible. Find a language "
+"exchange partner or join a language group to practice speaking with other "
+"learners and native speakers."
+msgstr ""
+
+#: .\materials\templates\english.html:23
+msgid ""
+"Watch English movies and TV shows: Watching English-language movies and TV "
+"shows is a fun and engaging way to improve your listening skills and pick up "
+"new vocabulary."
+msgstr ""
+
+#: .\materials\templates\english.html:24
+msgid ""
+"Read English books and articles: Reading English books and articles can help "
+"you improve your reading comprehension and grammar skills. Start with books "
+"and articles that are appropriate for your level of English proficiency and "
+"gradually work your way up to more challenging texts."
+msgstr ""
+
+#: .\materials\templates\english.html:25
+msgid ""
+"Use language learning apps: There are many language learning apps available "
+"that can help you practice your English skills. These apps often include "
+"interactive exercises, vocabulary games, and other language learning tools."
+msgstr ""
+
+#: .\materials\templates\english.html:26
+msgid ""
+"Take English language courses: Taking English language courses at a language "
+"school or online can provide you with structured learning opportunities and "
+"a supportive learning environment."
+msgstr ""
+
+#: .\materials\templates\english.html:28
+msgid ""
+"By incorporating these strategies into your language learning routine, you "
+"can improve your English language skills and communicate more effectively in "
+"both personal and professional settings. "
+msgstr ""
+
+#: .\materials\templates\english.html:28 .\materials\templates\poland.html:27
+#: .\materials\templates\seamen.html:29 .\materials\templates\spanish.html:28
+msgid "Study"
+msgstr ""
+
+#: .\materials\templates\forgot.html:20 .\materials\templates\forgot.html:24
+#: .\materials\templates\password_reset_done.html:7
+msgid "Forgot Password"
+msgstr ""
+
+#: .\materials\templates\forgot.html:25
+msgid ""
+"Please enter the email address associated with your account and we will send "
+"you a link to reset your password."
+msgstr ""
+
+#: .\materials\templates\forgot.html:36
+msgid "Reset Password"
+msgstr ""
+
+#: .\materials\templates\forgot.html:44
+msgid ""
+"If you do not receive an email within a few minutes, please check your spam "
+"folder or contact me."
 msgstr ""
 
 #: .\materials\templates\home.html:160
@@ -196,6 +350,65 @@ msgstr ""
 msgid "Email:"
 msgstr ""
 
+#: .\materials\templates\login.html:9
+msgid "Login Form"
+msgstr ""
+
+#: .\materials\templates\login.html:28
+msgid "Sign into your account"
+msgstr ""
+
+#: .\materials\templates\login.html:32
+msgid "Email address"
+msgstr ""
+
+#: .\materials\templates\login.html:37
+msgid "Password"
+msgstr ""
+
+#: .\materials\templates\login.html:44
+msgid "Forgot password?"
+msgstr ""
+
+#: .\materials\templates\login.html:45
+msgid "Don't have an account?"
+msgstr ""
+
+#: .\materials\templates\login.html:46
+msgid "Terms of use"
+msgstr ""
+
+#: .\materials\templates\login.html:47
+msgid "Privacy policy"
+msgstr ""
+
+#: .\materials\templates\not_approved.html:12
+msgid "Your are not approved by the admin"
+msgstr ""
+
+#: .\materials\templates\not_approved.html:13
+msgid "Please"
+msgstr ""
+
+#: .\materials\templates\not_approved.html:13
+msgid "contact</a> your teacher!"
+msgstr ""
+
+#: .\materials\templates\password_reset_done.html:11
+msgid "Password reset email sent"
+msgstr ""
+
+#: .\materials\templates\password_reset_done.html:12
+msgid ""
+"We have sent you an email with instructions on how to reset your password."
+msgstr ""
+
+#: .\materials\templates\password_reset_done.html:14
+msgid ""
+"If you do not receive an email within a few minutes, please check your spam "
+"folder or contact us at [insert contact information]."
+msgstr ""
+
 #: .\materials\templates\poland.html:5
 msgid "Poland"
 msgstr ""
@@ -261,8 +474,105 @@ msgid ""
 "personal and professional settings."
 msgstr ""
 
-#: .\materials\templates\poland.html:27 .\materials\templates\seamen.html:29
-msgid "Study"
+#: .\materials\templates\policy.html:7 .\materials\templates\policy.html:34
+msgid "Privacy Policy"
+msgstr ""
+
+#: .\materials\templates\policy.html:35
+msgid "Last updated: 20.03.2023"
+msgstr ""
+
+#: .\materials\templates\policy.html:36
+msgid ""
+"This page informs you of our policies regarding the collection, use and "
+"disclosure of Personal Information we receive from users of the Site."
+msgstr ""
+
+#: .\materials\templates\policy.html:37
+msgid "Information Collection and Use"
+msgstr ""
+
+#: .\materials\templates\policy.html:38
+msgid ""
+"While using our Site, we may ask you to provide us with certain personally "
+"identifiable information that can be used to contact or identify you. "
+"Personally identifiable information may include, but is not limited to, your "
+"name, email address, phone number, and mailing address (\"Personal "
+"Information\")."
+msgstr ""
+
+#: .\materials\templates\policy.html:39
+msgid "Log Data"
+msgstr ""
+
+#: .\materials\templates\policy.html:40
+msgid ""
+"Like many site operators, we collect information that your browser sends "
+"whenever you visit our Site (\"Log Data\"). This Log Data may include "
+"information such as your computers Internet Protocol (\"IP\") address, "
+"browser type, browser version, the pages of our Site that you visit, the "
+"time and date of your visit, the time spent on those pages and other "
+"statistics. In addition, we may use third party services such as Google "
+"Analytics that collect, monitor and analyze this data."
+msgstr ""
+
+#: .\materials\templates\policy.html:41
+msgid "Cookies"
+msgstr ""
+
+#: .\materials\templates\policy.html:42
+msgid ""
+"Cookies are files with small amount of data, which may include an anonymous "
+"unique identifier. Cookies are sent to your browser from a web site and "
+"stored on your computers hard drive. Like many sites, we use \"cookies\" to "
+"collect information. You can instruct your browser to refuse all cookies or "
+"to indicate when a cookie is being sent. However, if you do not accept "
+"cookies, you may not be able to use some portions of our Site."
+msgstr ""
+
+#: .\materials\templates\policy.html:43
+msgid "Security"
+msgstr ""
+
+#: .\materials\templates\policy.html:44
+#, python-format
+msgid ""
+"The security of your Personal Information is important to us, but remember "
+"that no method of transmission over the Internet, or method of electronic "
+"storage, is 100%% secure. While we strive to use commercially acceptable "
+"means to protect your Personal Information, we cannot guarantee its absolute "
+"security."
+msgstr ""
+
+#: .\materials\templates\policy.html:45
+msgid "Disclosure of Personal Information"
+msgstr ""
+
+#: .\materials\templates\policy.html:46
+msgid ""
+"We may disclose your Personal Information if we are required by law to do so "
+"or if you violate our Terms of Service."
+msgstr ""
+
+#: .\materials\templates\policy.html:47
+msgid "Changes to This Privacy Policy"
+msgstr ""
+
+#: .\materials\templates\policy.html:48
+msgid ""
+"We may update this Privacy Policy from time to time. We will notify you of "
+"any changes by posting the new Privacy Policy on the Site. You are advised "
+"to review this Privacy Policy periodically for any changes."
+msgstr ""
+
+#: .\materials\templates\policy.html:49 .\materials\templates\terms.html:66
+msgid "Contact Us"
+msgstr ""
+
+#: .\materials\templates\policy.html:50
+msgid ""
+"If you have any questions about this Privacy Policy, please contact us at "
+"contact information."
 msgstr ""
 
 #: .\materials\templates\registr.html:7
@@ -365,4 +675,251 @@ msgid ""
 "yourself and focus on making incremental progress. With consistent effort, "
 "you can improve your English language skills and become a better "
 "communicator both on and off the job."
+msgstr ""
+
+#: .\materials\templates\spanish.html:16
+msgid ""
+"Spanish is one of the world's most widely spoken languages, with over 500 "
+"million speakers globally. It's the second-most spoken language in the "
+"world, after Mandarin Chinese. Learning Spanish can be beneficial for both "
+"personal and professional reasons, as it's a language used in many "
+"international business and trade contexts, as well as a popular language for "
+"travel and cultural exchange."
+msgstr ""
+
+#: .\materials\templates\spanish.html:20
+msgid "Here are some key strategies to improve your Spanish language skills:"
+msgstr ""
+
+#: .\materials\templates\spanish.html:22
+msgid ""
+"Practice speaking: One of the most effective ways to improve your Spanish "
+"language skills is to practice speaking with other learners and native "
+"speakers. Find a language exchange partner or join a language group to "
+"practice conversation and pronunciation."
+msgstr ""
+
+#: .\materials\templates\spanish.html:23
+msgid ""
+"Watch Spanish movies and TV shows: Watching Spanish-language movies and TV "
+"shows can help improve your listening skills, vocabulary, and understanding "
+"of cultural nuances."
+msgstr ""
+
+#: .\materials\templates\spanish.html:24
+msgid ""
+"Read Spanish books and articles: Reading Spanish-language books and articles "
+"can help improve your reading comprehension, grammar, and vocabulary skills. "
+"Start with materials that are appropriate for your current level of "
+"proficiency and gradually work your way up to more challenging texts."
+msgstr ""
+
+#: .\materials\templates\spanish.html:25
+msgid ""
+"Use language learning apps: There are many language learning apps available "
+"that can help you practice your Spanish skills, such as Duolingo, Babbel, or "
+"Rosetta Stone. These apps offer interactive exercises, vocabulary games, and "
+"other language learning tools."
+msgstr ""
+
+#: .\materials\templates\spanish.html:26
+msgid ""
+"Take Spanish language courses: Taking a formal Spanish language course, "
+"either in-person or online, can provide you with structured learning "
+"opportunities and a supportive environment to practice your skills."
+msgstr ""
+
+#: .\materials\templates\spanish.html:28
+msgid ""
+"By incorporating these strategies into your language learning routine, you "
+"can improve your Spanish language skills and communicate more effectively in "
+"both personal and professional settings."
+msgstr ""
+
+#: .\materials\templates\terms.html:28 .\materials\templates\terms.html:32
+msgid "Terms of Service"
+msgstr ""
+
+#: .\materials\templates\terms.html:33
+msgid ""
+"These Terms of Service ('Terms') govern your use of the English Studying "
+"Site ('Site'). By accessing or using the Site, you agree to be bound by "
+"these Terms."
+msgstr ""
+
+#: .\materials\templates\terms.html:34
+msgid "Use of Site"
+msgstr ""
+
+#: .\materials\templates\terms.html:35
+msgid ""
+"The Site provides English language learning resources, including but not "
+"limited to online courses, study materials, and communication tools. You may "
+"use the Site for personal, non-commercial use only. You agree to use the "
+"Site in a manner consistent with all applicable laws and regulations."
+msgstr ""
+
+#: .\materials\templates\terms.html:36
+msgid "User Accounts"
+msgstr ""
+
+#: .\materials\templates\terms.html:37
+msgid ""
+"To access certain features of the Site, you may need to create a user "
+"account. You agree to provide accurate and complete information when "
+"creating your account and to keep your login credentials secure. You are "
+"responsible for all activity that occurs under your account."
+msgstr ""
+
+#: .\materials\templates\terms.html:38
+msgid "Payment and Refunds"
+msgstr ""
+
+#: .\materials\templates\terms.html:39
+msgid ""
+"Certain features of the Site may require payment, such as enrollment in a "
+"course or purchase of study materials. Payment information will be collected "
+"by a third-party payment processor and will be subject to their terms and "
+"conditions. You agree to pay all fees and charges associated with your use "
+"of the Site. Refunds may be available for certain purchases, as outlined in "
+"the Company's refund policy."
+msgstr ""
+
+#: .\materials\templates\terms.html:40
+msgid "Intellectual Property"
+msgstr ""
+
+#: .\materials\templates\terms.html:41
+msgid ""
+"The Site and its contents, including but not limited to text, graphics, "
+"images, and software, are the property of the Company or its licensors and "
+"are protected by copyright and other intellectual property laws. You may not "
+"reproduce, modify, distribute, or otherwise use any content from the Site "
+"without the express written permission of the Company."
+msgstr ""
+
+#: .\materials\templates\terms.html:42
+msgid "User Content"
+msgstr ""
+
+#: .\materials\templates\terms.html:43
+msgid ""
+"You may have the opportunity to submit content to the Site, such as "
+"comments, questions, or assignments. By submitting content, you grant the "
+"Company a non-exclusive, royalty-free, perpetual, and irrevocable license to "
+"use, display, modify, and distribute your content in any manner the Company "
+"chooses, without compensation or attribution to you."
+msgstr ""
+
+#: .\materials\templates\terms.html:44
+msgid "Prohibited Conduct"
+msgstr ""
+
+#: .\materials\templates\terms.html:45
+msgid "You agree not to use the Site to:"
+msgstr ""
+
+#: .\materials\templates\terms.html:47
+msgid "Harass, threaten, or intimidate others"
+msgstr ""
+
+#: .\materials\templates\terms.html:48
+msgid "Post or transmit any content that is illegal, harmful, or offensive"
+msgstr ""
+
+#: .\materials\templates\terms.html:49
+msgid "Use the Site to engage in any fraudulent activity"
+msgstr ""
+
+#: .\materials\templates\terms.html:50
+msgid "Attempt to gain unauthorized access to the Site or its systems"
+msgstr ""
+
+#: .\materials\templates\terms.html:52
+msgid "Termination"
+msgstr ""
+
+#: .\materials\templates\terms.html:53
+msgid ""
+"The Company may terminate your access to the Site at any time, with or "
+"without cause, and without notice. Upon termination, you must immediately "
+"cease all use of the Site and any content obtained from it."
+msgstr ""
+
+#: .\materials\templates\terms.html:54
+msgid "Disclaimer of Warranties"
+msgstr ""
+
+#: .\materials\templates\terms.html:55
+msgid ""
+"The Site is provided 'as is' and without warranty of any kind. The Company "
+"makes no representations or warranties about the accuracy, completeness, or "
+"suitability of the Site or its content for any purpose. You use the Site at "
+"your own risk."
+msgstr ""
+
+#: .\materials\templates\terms.html:56
+msgid "Limitation of Liability"
+msgstr ""
+
+#: .\materials\templates\terms.html:57
+msgid ""
+"The Company and its affiliates, officers, employees, and agents will not be "
+"liable for any damages arising from your use of the Site or its content, "
+"including but not limited to direct, indirect, incidental, punitive, and "
+"consequential damages. This limitation of liability applies even if the "
+"Company has been advised of the possibility of such damages."
+msgstr ""
+
+#: .\materials\templates\terms.html:58
+msgid "Indemnification"
+msgstr ""
+
+#: .\materials\templates\terms.html:59
+msgid ""
+"You agree to indemnify and hold harmless the Company and its affiliates, "
+"officers, employees, and agents from any claims, damages, and expenses "
+"(including attorneys' fees) arising from your use of the Site or your "
+"violation of these Terms."
+msgstr ""
+
+#: .\materials\templates\terms.html:60
+msgid "Governing Law"
+msgstr ""
+
+#: .\materials\templates\terms.html:61
+msgid ""
+"These Terms and any disputes arising from your use of the Site will be "
+"governed by and construed in accordance with the laws of [insert state or "
+"country], without regard to its conflict of law provisions."
+msgstr ""
+
+#: .\materials\templates\terms.html:62
+msgid "Changes to Terms"
+msgstr ""
+
+#: .\materials\templates\terms.html:63
+msgid ""
+"The Company may update these Terms from time to time. You should review "
+"these Terms periodically for any changes. By continuing to use the Site "
+"after the Company makes any changes to these Terms, you agree to be bound by "
+"the revised Terms."
+msgstr ""
+
+#: .\materials\templates\terms.html:64
+msgid "Entire Agreement"
+msgstr ""
+
+#: .\materials\templates\terms.html:65
+msgid ""
+"These Terms constitute the entire agreement between you and the Company with "
+"respect to the Site and supersede all prior or contemporaneous "
+"communications and proposals, whether oral or written, between you and the "
+"Company."
+msgstr ""
+
+#: .\materials\templates\terms.html:67
+msgid ""
+"If you have any questions about these Terms, please contact us at  contact "
+"information."
 msgstr ""

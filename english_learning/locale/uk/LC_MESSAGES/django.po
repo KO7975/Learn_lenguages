@@ -3,12 +3,11 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-17 13:45+0300\n"
+"POT-Creation-Date: 2023-05-31 17:20+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,48 +20,137 @@ msgstr ""
 "100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
 "(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
-#: .\english_learning\settings.py:132 .\materials\templates\home.html:224
-#: .\materials\templates\home.html:257
+#: .\english_learning\settings.py:121 .\materials\templates\english.html:5
+#: .\materials\templates\home.html:224 .\materials\templates\home.html:257
 msgid "English"
 msgstr "Англійська"
 
-#: .\english_learning\settings.py:133
+#: .\english_learning\settings.py:122
 msgid "Russian"
 msgstr "Російська"
 
-#: .\english_learning\settings.py:134
+#: .\english_learning\settings.py:123
 msgid "Ukrainian"
 msgstr "Українська"
 
-#: .\materials\templates\base.html:83
+#: .\materials\templates\about_me.html:15
+msgid "Language Teacher | Self Presentation"
+msgstr "Вчитель мови | Самопрезентація"
+
+#: .\materials\templates\about_me.html:22
+msgid "About Me"
+msgstr "Про мене"
+
+#: .\materials\templates\about_me.html:23
+msgid ""
+"Hello! I'm a language teacher offering individual and group lessons for "
+"students. My main focus is on teaching English, but I'm also well-versed in "
+"several other languages. With years of experience working with students from "
+"different countries, I've developed an individualized approach that caters "
+"to the unique needs of each client."
+msgstr ""
+"Привіт! Я вчитель мов, пропоную індивідуальні та групові заняття для "
+"студентів. Моя основна увага приділяється викладанню англійської мови, але я "
+"також добре володію кількома іншими мовами. Маючи багаторічний досвід роботи "
+"зі студентами з різних країн, я розробила індивідуальний підхід, який "
+"відповідає унікальним потребам кожного клієнта."
+
+#: .\materials\templates\about_me.html:24
+msgid ""
+"Whether you're a beginner looking to improve your conversational skills or "
+"an advanced learner aiming for fluency, I'm here to guide you on your "
+"language learning journey. My teaching style is interactive and engaging, "
+"ensuring that you stay motivated and enjoy the learning process."
+msgstr ""
+"Незалежно від того, чи ви новачок, який прагне вдосконалити свої розмовні "
+"навички, чи просунутий учень, який прагне вільно говорити, я тут, щоб "
+"скерувати вас на вашому шляху вивчення мови. Мій стиль викладання є "
+"інтерактивним та захоплюючим, що гарантує, що ви залишаєтесь мотивованими та "
+"отримуєте задоволення від процесу навчання."
+
+#: .\materials\templates\about_me.html:25
+msgid ""
+"I believe that language learning is not just about memorizing vocabulary and "
+"grammar rules but also about understanding the culture and context behind "
+"the language. I incorporate cultural elements into my lessons to provide a "
+"well-rounded learning experience."
+msgstr ""
+"Я вважаю, що мова та культура взаємопов’язані, і я прагну включити культурні "
+"елементи в свої уроки, щоб забезпечити більш цілісне навчання для моїх учнів."
+
+#: .\materials\templates\about_me.html:26
+msgid ""
+"If you're ready to take your language skills to the next level, I'd love to "
+"work with you. Contact me to schedule a lesson or to discuss your specific "
+"language goals. Let's embark on this exciting journey together!"
+msgstr ""
+"Якщо ви готові вивести свої мовні знання на новий рівень, я буду рада "
+"працювати з вами. Зв’яжіться зі мною, щоб запланувати урок або обговорити "
+"ваші конкретні мовні цілі. Давайте разом вирушимо в цю захоплюючу подорож!"
+
+#: .\materials\templates\about_me.html:37
+msgid "Contact Me"
+msgstr "Зв'яжіться з нами"
+
+#: .\materials\templates\about_me.html:38
+msgid ""
+"If you have any questions or would like to book a lesson, feel free to reach "
+"out to me via email or phone:"
+msgstr ""
+"Якщо у вас виникли запитання або ви хочете замовити урок, не соромтеся "
+"зв’язатися зі мною електронною поштою або телефоном:"
+
+#: .\materials\templates\about_me.html:40 .\materials\templates\forgot.html:32
+msgid "Email"
+msgstr "Емаіл"
+
+#: .\materials\templates\about_me.html:41
+msgid "Phone"
+msgstr "Телефон"
+
+#: .\materials\templates\about_me.html:43
+msgid "Follow Me"
+msgstr "Підписуйся на мене"
+
+#: .\materials\templates\about_me.html:44
+msgid ""
+"Stay updated with my latest language learning tips and resources by "
+"following me on social media:"
+msgstr ""
+"Будьте в курсі моїх останніх порад щодо вивчення мови та ресурсів, "
+"підписавшись на мене в соціальних мережах:"
+
+#: .\materials\templates\base.html:87
 msgid "Lets Learning"
 msgstr "Давайте вчитись"
 
-#: .\materials\templates\base.html:93
+#: .\materials\templates\base.html:97
 msgid "Admin Page"
 msgstr "Адмін сторінка"
 
-#: .\materials\templates\base.html:97
+#: .\materials\templates\base.html:101
 msgid "Courses"
 msgstr "Курси"
 
-#: .\materials\templates\base.html:109 .\materials\templates\base.html:119
+#: .\materials\templates\base.html:113 .\materials\templates\base.html:123
 msgid "Logout"
 msgstr "Вийти"
 
-#: .\materials\templates\base.html:115
+#: .\materials\templates\base.html:119
 msgid "Course"
 msgstr "Курс"
 
-#: .\materials\templates\base.html:124
+#: .\materials\templates\base.html:128 .\materials\templates\login.html:24
+#: .\materials\templates\login.html:41
 msgid "Login"
 msgstr "Увійти"
 
-#: .\materials\templates\base.html:127 .\materials\templates\registr.html:74
+#: .\materials\templates\base.html:131 .\materials\templates\registr.html:74
 msgid "Register"
 msgstr "Зареєструватись"
 
 #: .\materials\templates\course_detail.html:67
+#: .\materials\templates\not_approved.html:11
 msgid "Hello"
 msgstr "Вітаю"
 
@@ -86,6 +174,121 @@ msgstr "Натисніть на іконку нижче."
 #: .\materials\templates\course_detail.html:107
 msgid "Additional  Materials"
 msgstr "Додаткові матеріали"
+
+#: .\materials\templates\english.html:16
+msgid ""
+"English is one of the most widely spoken languages in the world, with over "
+"1.5 billion people speaking it globally. It's considered the international "
+"language of business, education, and communication, making it an important "
+"language to learn for both personal and professional reasons."
+msgstr ""
+"«Англійська мова є однією з найпоширеніших мов у світі,нею розмовляють понад "
+"1,5 мільярда людей у всьому світі. Вона вважається міжнародною мовою "
+"бізнесу, освіти та спілкування,що робить її важливою мовою для вивчення як з "
+"особистих, так і з професійних причин."
+
+#: .\materials\templates\english.html:20
+msgid ""
+"There are a few key strategies that can help you improve your language "
+"skills:"
+msgstr "Ось кілька ключових стратегій покращення ваших мовних навичок:"
+
+#: .\materials\templates\english.html:22
+msgid ""
+"Practice speaking: One of the most effective ways to improve your English "
+"language skills is to practice speaking as much as possible. Find a language "
+"exchange partner or join a language group to practice speaking with other "
+"learners and native speakers."
+msgstr ""
+"Потренуйтеся розмовляти: один із найефективніших способів покращити свої "
+"навички англійської мови – попрактикуватися розмовляти з іншими учнями та "
+"носіями мови.Знайдіть партнера по обміну мовами або приєднайтеся до мовної "
+"групи, щоб практикувати розмову та вимову."
+
+#: .\materials\templates\english.html:23
+msgid ""
+"Watch English movies and TV shows: Watching English-language movies and TV "
+"shows is a fun and engaging way to improve your listening skills and pick up "
+"new vocabulary."
+msgstr ""
+"Дивіться англомовні фільми та телешоу.Перегляд англомовних фільмів і телешоу "
+"може допомогти покращити ваші навички слухання, словниковий запас і "
+"розуміння культурних нюансів."
+
+#: .\materials\templates\english.html:24
+msgid ""
+"Read English books and articles: Reading English books and articles can help "
+"you improve your reading comprehension and grammar skills. Start with books "
+"and articles that are appropriate for your level of English proficiency and "
+"gradually work your way up to more challenging texts."
+msgstr ""
+"Читайте англомовні книги та статті: читання англомовних книг і статей може "
+"допомогти покращити ваше розуміння прочитаного, граматику та словниковий "
+"запас.Почніть з матеріалів, які відповідають вашому поточному рівню "
+"володіння, і поступово переходьте до більш складних текстів."
+
+#: .\materials\templates\english.html:25
+msgid ""
+"Use language learning apps: There are many language learning apps available "
+"that can help you practice your English skills. These apps often include "
+"interactive exercises, vocabulary games, and other language learning tools."
+msgstr ""
+"Використовуйте програми для вивчення мов.Є багато доступних програм для "
+"вивчення мов, які можуть допомогти вам відпрацювати навички англійської, "
+"наприклад Duolingo, Babbel або Rosetta Stone. Ці програми пропонують "
+"інтерактивні вправи, ігри зі словниковим запасом та інші інструменти для "
+"вивчення мови."
+
+#: .\materials\templates\english.html:26
+msgid ""
+"Take English language courses: Taking English language courses at a language "
+"school or online can provide you with structured learning opportunities and "
+"a supportive learning environment."
+msgstr ""
+"Відвідайте мої курси англійської мови: відвідування курсів англійської мови "
+"в мовній школі або онлайн може забезпечити вам структуроване навчання та "
+"сприятливе навчальне середовище."
+
+#: .\materials\templates\english.html:28
+msgid ""
+"By incorporating these strategies into your language learning routine, you "
+"can improve your English language skills and communicate more effectively in "
+"both personal and professional settings. "
+msgstr ""
+"Візьміть курси іспанської мови: відвідування офіційних курсів англійської "
+"мови, очних або онлайн, може надати вам структуровані можливості навчання та "
+"сприятливе середовище для практики ваших навичок."
+
+#: .\materials\templates\english.html:28 .\materials\templates\poland.html:27
+#: .\materials\templates\seamen.html:29 .\materials\templates\spanish.html:28
+msgid "Study"
+msgstr "Вивчати"
+
+#: .\materials\templates\forgot.html:20 .\materials\templates\forgot.html:24
+#: .\materials\templates\password_reset_done.html:7
+msgid "Forgot Password"
+msgstr "Забули пароль"
+
+#: .\materials\templates\forgot.html:25
+msgid ""
+"Please enter the email address associated with your account and we will send "
+"you a link to reset your password."
+msgstr ""
+"Будь ласка, введіть адресу електронної пошти, пов’язану з вашим обліковим "
+"записом, і ми надішлемо вам посилання для зміни пароля."
+
+#: .\materials\templates\forgot.html:36
+msgid "Reset Password"
+msgstr "Скинути пароль"
+
+#: .\materials\templates\forgot.html:44
+msgid ""
+"If you do not receive an email within a few minutes, please check your spam "
+"folder or contact me."
+msgstr ""
+"Якщо ви не отримаєте електронний лист протягом кількох хвилин, перевірте "
+"папку зі спамом або зв’яжіться з нами за адресою [вставте контактну "
+"інформацію]."
 
 #: .\materials\templates\home.html:160
 msgid "Hello. Nice to meet you here. My Name is"
@@ -208,8 +411,6 @@ msgid "Comments"
 msgstr "Коментарі"
 
 #: .\materials\templates\home.html:306
-#, fuzzy
-#| msgid "Comment"
 msgid "Add comment"
 msgstr "коментар"
 
@@ -232,6 +433,68 @@ msgstr "Телефон"
 #: .\materials\templates\home.html:359
 msgid "Email:"
 msgstr "Емаіл:"
+
+#: .\materials\templates\login.html:9
+msgid "Login Form"
+msgstr "Увійти"
+
+#: .\materials\templates\login.html:28
+msgid "Sign into your account"
+msgstr "Увійдіть у свій обліковий запис"
+
+#: .\materials\templates\login.html:32
+msgid "Email address"
+msgstr "Електронна пошта"
+
+#: .\materials\templates\login.html:37
+msgid "Password"
+msgstr "Пароль"
+
+#: .\materials\templates\login.html:44
+msgid "Forgot password?"
+msgstr "Забули пароль?"
+
+#: .\materials\templates\login.html:45
+msgid "Don't have an account?"
+msgstr "Немає облікового запису?"
+
+#: .\materials\templates\login.html:46
+msgid "Terms of use"
+msgstr "Умови використання."
+
+#: .\materials\templates\login.html:47
+msgid "Privacy policy"
+msgstr "Політика конфіденційності"
+
+#: .\materials\templates\not_approved.html:12
+msgid "Your are not approved by the admin"
+msgstr "Ви не схвалені адміністратором"
+
+#: .\materials\templates\not_approved.html:13
+msgid "Please"
+msgstr "Будь ласка"
+
+#: .\materials\templates\not_approved.html:13
+msgid "contact</a> your teacher!"
+msgstr "зверніться до</a> свого вчителя!"
+
+#: .\materials\templates\password_reset_done.html:11
+msgid "Password reset email sent"
+msgstr "Електронний лист для зміни пароля надіслано"
+
+#: .\materials\templates\password_reset_done.html:12
+msgid ""
+"We have sent you an email with instructions on how to reset your password."
+msgstr "Ми надіслали вам електронний лист з інструкціями щодо скидання пароля."
+
+#: .\materials\templates\password_reset_done.html:14
+msgid ""
+"If you do not receive an email within a few minutes, please check your spam "
+"folder or contact us at [insert contact information]."
+msgstr ""
+"Якщо ви не отримаєте електронний лист протягом кількох хвилин, перевірте "
+"папку зі спамом або зв’яжіться з нами за адресою [вставте контактну "
+"інформацію]."
 
 #: .\materials\templates\poland.html:5
 msgid "Poland"
@@ -269,21 +532,15 @@ msgstr ""
 "але важливо правильно їх зрозуміти, щоб вони були правильно зрозумілі."
 
 #: .\materials\templates\poland.html:22
-#, fuzzy
-#| msgid ""
-#| "Practice speaking: One of the most effective ways to improve your Spanish "
-#| "language skills is to practice speaking with other learners and native "
-#| "speakers. Find a language exchange partner or join a language group to "
-#| "practice conversation and pronunciation."
 msgid ""
 "Practice speaking: To improve your speaking skills, practice speaking with "
 "native speakers or language exchange partners. Join language groups, attend "
 "language meetups, or find a tutor to practice speaking with regularly."
 msgstr ""
 "Потренуйтеся розмовляти: один із найефективніших способів покращити свої "
-"навички іспанської мови – попрактикуватися розмовляти з іншими учнями та "
-"носіями мови.Знайдіть партнера по обміну мовами або приєднайтеся до мовної "
-"групи, щоб практикувати розмову та вимову."
+"навички любої мови – попрактикуватися розмовляти з іншими учнями та носіями "
+"мови.Знайдіть партнера по обміну мовами або приєднайтеся до мовної групи, "
+"щоб практикувати розмову та вимову."
 
 #: .\materials\templates\poland.html:23
 msgid ""
@@ -298,19 +555,13 @@ msgstr ""
 "і фільмів і поступово переходьте до складніших у міру вдосконалення."
 
 #: .\materials\templates\poland.html:24
-#, fuzzy
-#| msgid ""
-#| "Use language learning apps: There are many language learning apps "
-#| "available that can help you practice your Spanish skills, such as "
-#| "Duolingo, Babbel, or Rosetta Stone. These apps offer interactive "
-#| "exercises, vocabulary games, and other language learning tools."
 msgid ""
 "Use language learning apps: There are many language learning apps available "
 "that can help you practice your Polish skills. These apps often include "
 "interactive exercises, vocabulary games, and other language learning tools."
 msgstr ""
 "Використовуйте програми для вивчення мов.Є багато доступних програм для "
-"вивчення мов, які можуть допомогти вам відпрацювати навички іспанської, "
+"вивчення мов, які можуть допомогти вам відпрацювати навички польської, "
 "наприклад Duolingo, Babbel або Rosetta Stone.Ці програми пропонують "
 "інтерактивні вправи, ігри зі словниковим запасом та інші інструменти для "
 "вивчення мови."
@@ -327,11 +578,6 @@ msgstr ""
 "телешоу та розмову польською мовою, коли це можливо."
 
 #: .\materials\templates\poland.html:27
-#, fuzzy
-#| msgid ""
-#| "By incorporating these strategies into your language learning routine, "
-#| "you can improve your Spanish language skills and communicate more "
-#| "effectively in both personal and professional settings."
 msgid ""
 "By following these strategies, you can improve your Polish language skills "
 "and communicate more effectively with native speakers. Polish is a "
@@ -339,13 +585,148 @@ msgid ""
 "your Polish language skills and communicate more effectively in both "
 "personal and professional settings."
 msgstr ""
-"Візьміть курси іспанської мови: відвідування офіційних курсів іспанської "
-"мови, очних або онлайн, може надати вам структуровані можливості навчання та "
+"Візьміть курси польської мови: відвідування офіційних курсів польської мови, "
+"очних або онлайн, може надати вам структуровані можливості навчання та "
 "сприятливе середовище для практики ваших навичок."
 
-#: .\materials\templates\poland.html:27 .\materials\templates\seamen.html:29
-msgid "Study"
-msgstr "Вивчати"
+#: .\materials\templates\policy.html:7 .\materials\templates\policy.html:34
+msgid "Privacy Policy"
+msgstr "Політика конфіденційності"
+
+#: .\materials\templates\policy.html:35
+msgid "Last updated: 20.03.2023"
+msgstr "Останнє оновлення:"
+
+#: .\materials\templates\policy.html:36
+msgid ""
+"This page informs you of our policies regarding the collection, use and "
+"disclosure of Personal Information we receive from users of the Site."
+msgstr ""
+"Ця сторінка інформує вас про нашу політику щодо збору, використання та "
+"розкриття особистої інформації, яку ми отримуємо від користувачів Сайту."
+
+#: .\materials\templates\policy.html:37
+msgid "Information Collection and Use"
+msgstr "Збір і використання інформації"
+
+#: .\materials\templates\policy.html:38
+msgid ""
+"While using our Site, we may ask you to provide us with certain personally "
+"identifiable information that can be used to contact or identify you. "
+"Personally identifiable information may include, but is not limited to, your "
+"name, email address, phone number, and mailing address (\"Personal "
+"Information\")."
+msgstr ""
+"Під час користування нашим сайтом ми можемо попросити вас надати нам певну "
+"особисту інформацію, яка може бути використана для зв’язку або ідентифікації "
+"вас. Особиста інформація може включати, але не обмежуватися цим, ваше ім’я, "
+"адресу електронної пошти, номер телефону та поштову адресу (\"Особиста "
+"«інформація\").Особиста інформація може включати, але не обмежуватися цим, "
+"ваше ім’я, адресу електронної пошти, номер телефону та поштову адресу @mail ."
+
+#: .\materials\templates\policy.html:39
+#, fuzzy
+#| msgid "2. Log Data"
+msgid "Log Data"
+msgstr "2. Дані журналу"
+
+#: .\materials\templates\policy.html:40
+msgid ""
+"Like many site operators, we collect information that your browser sends "
+"whenever you visit our Site (\"Log Data\"). This Log Data may include "
+"information such as your computers Internet Protocol (\"IP\") address, "
+"browser type, browser version, the pages of our Site that you visit, the "
+"time and date of your visit, the time spent on those pages and other "
+"statistics. In addition, we may use third party services such as Google "
+"Analytics that collect, monitor and analyze this data."
+msgstr ""
+"Як і багато операторів сайтів, ми збираємо інформацію, яку ваш браузер "
+"надсилає щоразу, коли ви відвідуєте наш сайт (Дані сессії).Ці дані журналу "
+"можуть містити таку інформацію, як адреса Інтернет-протоколу (IP) вашого "
+"комп’ютера, тип браузера, версія браузера, сторінки нашого сайту, які ви "
+"відвідуєте, час і дата вашого відвідування, час, проведений на цих "
+"сторінках, та інше статистика. Крім того, ми можемо використовувати сторонні "
+"служби, такі як Google Analytics, які збирають, відстежують і аналізують ці "
+"дані."
+
+#: .\materials\templates\policy.html:41
+msgid "Cookies"
+msgstr "Файли cookie"
+
+#: .\materials\templates\policy.html:42
+msgid ""
+"Cookies are files with small amount of data, which may include an anonymous "
+"unique identifier. Cookies are sent to your browser from a web site and "
+"stored on your computers hard drive. Like many sites, we use \"cookies\" to "
+"collect information. You can instruct your browser to refuse all cookies or "
+"to indicate when a cookie is being sent. However, if you do not accept "
+"cookies, you may not be able to use some portions of our Site."
+msgstr ""
+"Файли cookie – це файли з невеликою кількістю даних, які можуть містити "
+"анонімний унікальний ідентифікатор. Файли cookie надсилаються у ваш браузер "
+"із веб-сайту та зберігаються на жорсткому диску вашого комп’ютера.Як і "
+"багато інших сайтів, ми використовуємо файли cookie для збору інформації. Ви "
+"можете наказати своєму браузеру відхиляти всі файли cookie або вказувати, "
+"коли надсилається файл cookie. Однак, якщо ви не приймаєте файли cookie, ви "
+"не зможете використовувати деякі частини нашого сайту."
+
+#: .\materials\templates\policy.html:43
+msgid "Security"
+msgstr "Безпека"
+
+#: .\materials\templates\policy.html:44
+#, python-format
+msgid ""
+"The security of your Personal Information is important to us, but remember "
+"that no method of transmission over the Internet, or method of electronic "
+"storage, is 100%% secure. While we strive to use commercially acceptable "
+"means to protect your Personal Information, we cannot guarantee its absolute "
+"security."
+msgstr ""
+"Безпека вашої Особистої інформації важлива для нас, але пам’ятайте, що жоден "
+"метод передачі через Інтернет або метод електронного зберігання не є на 100 "
+"відсотків безпечним.Хоча ми прагнемо використовувати комерційно прийнятні "
+"засоби захисту вашої Особистої інформації, ми не можемо гарантувати її "
+"абсолютну безпеку."
+
+#: .\materials\templates\policy.html:45
+msgid "Disclosure of Personal Information"
+msgstr "Розкриття особистої інформації"
+
+#: .\materials\templates\policy.html:46
+msgid ""
+"We may disclose your Personal Information if we are required by law to do so "
+"or if you violate our Terms of Service."
+msgstr ""
+"Ми можемо розкрити вашу особисту інформацію, якщо цього вимагає закон або "
+"якщо ви порушуєте наші Умови надання послуг."
+
+#: .\materials\templates\policy.html:47
+msgid "Changes to This Privacy Policy"
+msgstr "Зміни в цій Політиці конфіденційності"
+
+#: .\materials\templates\policy.html:48
+msgid ""
+"We may update this Privacy Policy from time to time. We will notify you of "
+"any changes by posting the new Privacy Policy on the Site. You are advised "
+"to review this Privacy Policy periodically for any changes."
+msgstr ""
+"Час від часу ми можемо оновлювати цю Політику конфіденційності. Ми "
+"повідомимо вас про будь-які зміни, опублікувавши нову Політику "
+"конфіденційності на Сайті.Рекомендуємо періодично переглядати цю Політику "
+"конфіденційності на предмет будь-яких змін."
+
+#: .\materials\templates\policy.html:49 .\materials\templates\terms.html:66
+msgid "Contact Us"
+msgstr "Зв'яжіться з нами"
+
+#: .\materials\templates\policy.html:50
+msgid ""
+"If you have any questions about this Privacy Policy, please contact us at "
+"contact information."
+msgstr ""
+"Якщо у вас виникли запитання щодо цієї Політики конфіденційності, зв’яжіться "
+"з нами за контактною інформацією."
 
 #: .\materials\templates\registr.html:7
 msgid "Registration Form"
@@ -364,20 +745,14 @@ msgid "Your Surname"
 msgstr "Ваше Прізвище"
 
 #: .\materials\templates\registr.html:44
-#, fuzzy
-#| msgid "Your Email"
 msgid "Your Email*"
 msgstr "Ваш Емаіл"
 
 #: .\materials\templates\registr.html:53
-#, fuzzy
-#| msgid "Phone number"
 msgid "Phone number*"
 msgstr "Ваш номер"
 
 #: .\materials\templates\registr.html:62
-#, fuzzy
-#| msgid "Password"
 msgid "Password*"
 msgstr "Пароль"
 
@@ -390,8 +765,6 @@ msgid "Terms of service"
 msgstr "Умовах  використання"
 
 #: .\materials\templates\seamen.html:5
-#, fuzzy
-#| msgid "For seamen"
 msgid "For Seamen"
 msgstr "Для моряків"
 
@@ -414,34 +787,22 @@ msgstr ""
 "записатись на курси, спеціально розроблені для моряків."
 
 #: .\materials\templates\seamen.html:22
-#, fuzzy
-#| msgid ""
-#| "Watch Spanish movies and TV shows: Watching Spanish-language movies and "
-#| "TV shows can help improve your listening skills, vocabulary, and "
-#| "understanding of cultural nuances."
 msgid ""
 "Watch English movies and TV shows: Watching English movies and TV shows can "
 "help you improve your listening skills and expose you to different accents "
 "and dialects."
 msgstr ""
-"Дивіться англомовні фільми та телешоу.Перегляд іспаномовних фільмів і "
-"телешоу може допомогти покращити ваші навички слухання, словниковий запас і "
+"Дивіться англомовні фільми та телешоу.Перегляд англомовних фільмів і телешоу "
+"може допомогти покращити ваші навички слухання, словниковий запас і "
 "розуміння культурних нюансів."
 
 #: .\materials\templates\seamen.html:23
-#, fuzzy
-#| msgid ""
-#| "Read Spanish books and articles: Reading Spanish-language books and "
-#| "articles can help improve your reading comprehension, grammar, and "
-#| "vocabulary skills. Start with materials that are appropriate for your "
-#| "current level of proficiency and gradually work your way up to more "
-#| "challenging texts."
 msgid ""
 "Read English books and news articles: Reading in English can help you "
 "develop your vocabulary and comprehension skills. Start with simple books "
 "and gradually move to more advanced materials."
 msgstr ""
-"Читайте англомовні книги та статті: читання іспаномовних книг і статей може "
+"Читайте англомовні книги та статті: читання англомовних книг і статей може "
 "допомогти покращити ваше розуміння прочитаного, граматику та словниковий "
 "запас.Почніть з матеріалів, які відповідають вашому поточному рівню "
 "володіння, і поступово переходьте до більш складних текстів."
@@ -497,721 +858,337 @@ msgstr ""
 "зусиль, ви зможете покращити свої знання англійської мови та стати кращим "
 "комунікатором як на роботі, так і поза нею."
 
-#~ msgid "Hello, my name is Anastasiia"
-#~ msgstr "Привіт, мене звуть Анастасія"
-
-#~ msgid ""
-#~ "and I am a multi-languages teacher with experience teaching children and "
-#~ "adults of different ages."
-#~ msgstr ""
-#~ "і я вчителька з різних мов, з досвідом навчання дітей і дорослих різного "
-#~ "віку."
-
-#~ msgid ""
-#~ "I am excited to share my love for languages and cultures with my students."
-#~ msgstr ""
-#~ "Я завжди рада поділитися своєю любов’ю до мов і культур зі своїми "
-#~ "студентами."
-
-#~ msgid ""
-#~ "As a multi-languages teacher, I possess excellent communication skills "
-#~ "that enable me to effectively convey language concepts to my students."
-#~ msgstr ""
-#~ "Як вчителька з різних мов, я володію відмінними навичками спілкування, "
-#~ "якід озволяють мені ефективно передавати мовні концепції моїм студентам."
-
-#~ msgid ""
-#~ "I am able to explain complex grammar rules and vocabulary in a clear and "
-#~ "concise manner, making it easier for my students to understand and retain "
-#~ "the information."
-#~ msgstr ""
-#~ "Я можу пояснити складні граматичні правила та лексику чітко та лаконічно,"
-#~ "що полегшує моїм учням розуміння та запам’ятовування інформації."
-
-#~ msgid ""
-#~ "In addition to my strong communication skills, I have experience working "
-#~ "with students of different age groups, from young children to adults."
-#~ msgstr ""
-#~ "Крім моїх сильних комунікативних навичок, я маю досвід роботи "
-#~ "зістудентами різних вікових груп, від маленьких дітей до дорослих."
-
-#~ msgid ""
-#~ "This has allowed me to develop a teaching style that is adaptable to the "
-#~ "needs and learning styles of each individual student."
-#~ msgstr ""
-#~ "Це дозволило мені розробити стиль викладання, який адаптувався до потреб "
-#~ "і стилю навчання кожного окремого учня."
-
-#~ msgid ""
-#~ "I believe that every student is unique, and I strive to create a "
-#~ "personalized learning experience that is engaging and effective."
-#~ msgstr ""
-#~ "Я вважаю, що кожен студент унікальний, і я прагну створити "
-#~ "персоналізований підход для навчання, який буде цікавим і ефективним."
-
-#~ msgid ""
-#~ "One of my greatest strengths as a multi-languages teacher is my "
-#~ "experience teaching in different countries and working with students from "
-#~ "diverse cultural backgrounds."
-#~ msgstr ""
-#~ "Однією з моїх найбільших сильних сторін як викладача багатьох мов є мій "
-#~ "досвід викладання в різних країнах і робота зі студентами з різних "
-#~ "культур."
-
-#~ msgid ""
-#~ "This has given me a deep appreciation and understanding of the cultural "
-#~ "nuances that are often intertwined with language learning."
-#~ msgstr ""
-#~ "Це дало мені глибоку оцінку та розуміння культурних нюансів, які часто "
-#~ "переплітаються з вивченням мови."
-
-#~ msgid ""
-#~ "I believe that language and culture are interconnected, and I strive to "
-#~ "incorporate cultural elements into my lessons to provide a more holistic "
-#~ "learning experience for my students."
-#~ msgstr ""
-#~ "Я вважаю, що мова та культура взаємопов’язані, і я прагну включити "
-#~ "культурні елементи в свої уроки, щоб забезпечити більш цілісне навчання "
-#~ "для моїх учнів."
-
-#~ msgid ""
-#~ "Overall, I am passionate about teaching languages and helping my students "
-#~ "achieve their language learning goals."
-#~ msgstr ""
-#~ "Загалом я обожнюю викладати мови та допомагати своїм учням досягати їхніх "
-#~ "цілей у вивченні мови."
-
-#~ msgid ""
-#~ "Whether you are a beginner or an advanced learner, I am confident that I "
-#~ "can help you improve your language skills and deepen your understanding "
-#~ "of different cultures."
-#~ msgstr ""
-#~ "Незалежно від того, початківець ви чи досвідчений, я впевнений, що зможу "
-#~ "допомогти вам покращити свої мовні навички та поглибити розуміння різних "
-#~ "культур."
-
-#, fuzzy
-#~| msgid "Languages"
-#~ msgid "Language"
-#~ msgstr "Мови"
-
-#~ msgid ""
-#~ "English is one of the most widely spoken languages in the world, with "
-#~ "over 1.5 billion people speaking it globally. It's considered the "
-#~ "international language of business, education, and communication, making "
-#~ "it an important language to learn for both personal and professional "
-#~ "reasons."
-#~ msgstr ""
-#~ "«Англійська мова є однією з найпоширеніших мов у світі,нею розмовляють "
-#~ "понад 1,5 мільярда людей у всьому світі. Вона вважається міжнародною "
-#~ "мовою бізнесу, освіти та спілкування,що робить її важливою мовою для "
-#~ "вивчення як з особистих, так і з професійних причин."
-
-#, fuzzy
-#~| msgid ""
-#~| "Here are some key strategies to improve your Spanish language skills:"
-#~ msgid ""
-#~ "There are a few key strategies that can help you improve your language "
-#~ "skills:"
-#~ msgstr ""
-#~ "Ось кілька ключових стратегій покращення ваших навичок іспанської мови:"
-
-#, fuzzy
-#~| msgid ""
-#~| "Practice speaking: One of the most effective ways to improve your "
-#~| "Spanish language skills is to practice speaking with other learners and "
-#~| "native speakers. Find a language exchange partner or join a language "
-#~| "group to practice conversation and pronunciation."
-#~ msgid ""
-#~ "Practice speaking: One of the most effective ways to improve your English "
-#~ "language skills is to practice speaking as much as possible. Find a "
-#~ "language exchange partner or join a language group to practice speaking "
-#~ "with other learners and native speakers."
-#~ msgstr ""
-#~ "Потренуйтеся розмовляти: один із найефективніших способів покращити свої "
-#~ "навички іспанської мови – попрактикуватися розмовляти з іншими учнями та "
-#~ "носіями мови.Знайдіть партнера по обміну мовами або приєднайтеся до "
-#~ "мовної групи, щоб практикувати розмову та вимову."
-
-#, fuzzy
-#~| msgid ""
-#~| "Watch Spanish movies and TV shows: Watching Spanish-language movies and "
-#~| "TV shows can help improve your listening skills, vocabulary, and "
-#~| "understanding of cultural nuances."
-#~ msgid ""
-#~ "Watch English movies and TV shows: Watching English-language movies and "
-#~ "TV shows is a fun and engaging way to improve your listening skills and "
-#~ "pick up new vocabulary."
-#~ msgstr ""
-#~ "Дивіться іспаномовні фільми та телешоу.Перегляд іспаномовних фільмів і "
-#~ "телешоу може допомогти покращити ваші навички слухання, словниковий запас "
-#~ "і розуміння культурних нюансів."
-
-#, fuzzy
-#~| msgid ""
-#~| "Read Spanish books and articles: Reading Spanish-language books and "
-#~| "articles can help improve your reading comprehension, grammar, and "
-#~| "vocabulary skills. Start with materials that are appropriate for your "
-#~| "current level of proficiency and gradually work your way up to more "
-#~| "challenging texts."
-#~ msgid ""
-#~ "Read English books and articles: Reading English books and articles can "
-#~ "help you improve your reading comprehension and grammar skills. Start "
-#~ "with books and articles that are appropriate for your level of English "
-#~ "proficiency and gradually work your way up to more challenging texts."
-#~ msgstr ""
-#~ "Читайте іспаномовні книги та статті: читання іспаномовних книг і статей "
-#~ "може допомогти покращити ваше розуміння прочитаного, граматику та "
-#~ "словниковий запас.Почніть з матеріалів, які відповідають вашому поточному "
-#~ "рівню володіння, і поступово переходьте до більш складних текстів."
-
-#, fuzzy
-#~| msgid ""
-#~| "Use language learning apps: There are many language learning apps "
-#~| "available that can help you practice your Spanish skills, such as "
-#~| "Duolingo, Babbel, or Rosetta Stone. These apps offer interactive "
-#~| "exercises, vocabulary games, and other language learning tools."
-#~ msgid ""
-#~ "Use language learning apps: There are many language learning apps "
-#~ "available that can help you practice your English skills. These apps "
-#~ "often include interactive exercises, vocabulary games, and other language "
-#~ "learning tools."
-#~ msgstr ""
-#~ "Використовуйте програми для вивчення мов.Є багато доступних програм для "
-#~ "вивчення мов, які можуть допомогти вам відпрацювати навички іспанської, "
-#~ "наприклад Duolingo, Babbel або Rosetta Stone.Ці програми пропонують "
-#~ "інтерактивні вправи, ігри зі словниковим запасом та інші інструменти для "
-#~ "вивчення мови."
-
-#, fuzzy
-#~| msgid ""
-#~| "Take English language courses: Taking English language courses at a "
-#~| "language school or online can provide you with structured learning and a "
-#~| "supportive learning environment."
-#~ msgid ""
-#~ "Take English language courses: Taking English language courses at a "
-#~ "language school or online can provide you with structured learning "
-#~ "opportunities and a supportive learning environment."
-#~ msgstr ""
-#~ "Відвідайте мої курси англійської мови: відвідування курсів англійської "
-#~ "мови в мовній школі або онлайн може забезпечити вам структуроване "
-#~ "навчання та сприятливе навчальне середовище."
-
-#, fuzzy
-#~| msgid ""
-#~| "By incorporating these strategies into your language learning routine, "
-#~| "you can improve your Spanish language skills and communicate more "
-#~| "effectively in both personal and professional settings."
-#~ msgid ""
-#~ "By incorporating these strategies into your language learning routine, "
-#~ "you can improve your English language skills and communicate more "
-#~ "effectively in both personal and professional settings. "
-#~ msgstr ""
-#~ "Візьміть курси іспанської мови: відвідування офіційних курсів іспанської "
-#~ "мови, очних або онлайн, може надати вам структуровані можливості навчання "
-#~ "та сприятливе середовище для практики ваших навичок."
-
-#~ msgid "Forgot Password"
-#~ msgstr "Забули пароль"
-
-#~ msgid ""
-#~ "Please enter the email address associated with your account and we will "
-#~ "send you a link to reset your password."
-#~ msgstr ""
-#~ "Будь ласка, введіть адресу електронної пошти, пов’язану з вашим обліковим "
-#~ "записом, і ми надішлемо вам посилання для зміни пароля."
-
-#~ msgid "Email"
-#~ msgstr "Емаіл"
-
-#~ msgid "Reset Password"
-#~ msgstr "Скинути пароль"
-
-#~ msgid ""
-#~ "If you do not receive an email within a few minutes, please check your "
-#~ "spam folder or contact us at [insert contact information]."
-#~ msgstr ""
-#~ "Якщо ви не отримаєте електронний лист протягом кількох хвилин, перевірте "
-#~ "папку зі спамом або зв’яжіться з нами за адресою [вставте контактну "
-#~ "інформацію]."
-
-#, fuzzy
-#~| msgid "Login"
-#~ msgid "Login Form"
-#~ msgstr "Увійти"
-
-#~ msgid "Sign into your account"
-#~ msgstr "Увійдіть у свій обліковий запис"
-
-#~ msgid "Email address"
-#~ msgstr "Електронна пошта"
-
-#~ msgid "Forgot password?"
-#~ msgstr "Забули пароль?"
-
-#~ msgid "Don't have an account?"
-#~ msgstr "Немає облікового запису?"
-
-#~ msgid "Terms of use."
-#~ msgstr "Умови використання."
-
-#~ msgid "Privacy policy"
-#~ msgstr "Політика конфіденційності"
-
-#~ msgid "Privacy Policy"
-#~ msgstr "Політика конфіденційності"
-
-#~ msgid "Last updated:"
-#~ msgstr "Останнє оновлення:"
-
-#~ msgid ""
-#~ "This page informs you of our policies regarding the collection, use and "
-#~ "disclosure of Personal Information we receive from users of the Site."
-#~ msgstr ""
-#~ "Ця сторінка інформує вас про нашу політику щодо збору, використання та "
-#~ "розкриття особистої інформації, яку ми отримуємо від користувачів Сайту."
-
-#~ msgid "Information Collection and Use"
-#~ msgstr "Збір і використання інформації"
-
-#, fuzzy
-#~| msgid ""
-#~| "While using our Site, we may ask you to provide us with certain "
-#~| "personally identifiable information that can be used to contact or "
-#~| "identify you. Personally identifiable information may include, but is "
-#~| "not limited to, your name, email address, phone number, and mailing "
-#~| "address (\"Personal Information\")."
-#~ msgid ""
-#~ "While using our Site, we may ask you to provide us with certain "
-#~ "personally identifiable information that can be used to contact or "
-#~ "identify you. Personally identifiable information may include, but is not "
-#~ "limited to, your name, email address, phone number, and mailing address "
-#~ "@mail."
-#~ msgstr ""
-#~ "Під час користування нашим сайтом ми можемо попросити вас надати нам "
-#~ "певну особисту інформацію, яка може бути використана для зв’язку або "
-#~ "ідентифікації вас. Особиста інформація може включати, але не обмежуватися "
-#~ "цим, ваше ім’я, адресу електронної пошти, номер телефону та поштову "
-#~ "адресу (\"Особиста «інформація\").Особиста інформація може включати, але "
-#~ "не обмежуватися цим, ваше ім’я, адресу електронної пошти, номер телефону "
-#~ "та поштову адресу @mail ."
-
-#~ msgid "2. Log Data"
-#~ msgstr "2. Дані журналу"
-
-#, fuzzy
-#~| msgid ""
-#~| "Like many site operators, we collect information that your browser sends "
-#~| "whenever you visit our Site (Log Data). This Log Data may include "
-#~| "information such as your computer's Internet Protocol (IP) address, "
-#~| "browser type, browser version, the pages of our Site that you visit, the "
-#~| "time and date of your visit, the time spent on those pages and other "
-#~| "statistics. In addition, we may use third party services such as Google "
-#~| "Analytics that collect, monitor and analyze this data."
-#~ msgid ""
-#~ "Like many site operators, we collect information that your browser sends "
-#~ "whenever you visit our Site (Log Data). This Log Data may include "
-#~ "information such as your computers Internet Protocol (IP) address, "
-#~ "browser type, browser version, the pages of our Site that you visit, the "
-#~ "time and date of your visit, the time spent on those pages and other "
-#~ "statistics. In addition, we may use third party services such as Google "
-#~ "Analytics that collect, monitor and analyze this data."
-#~ msgstr ""
-#~ "Як і багато операторів сайтів, ми збираємо інформацію, яку ваш браузер "
-#~ "надсилає щоразу, коли ви відвідуєте наш сайт (Дані сессії).Ці дані "
-#~ "журналу можуть містити таку інформацію, як адреса Інтернет-протоколу (IP) "
-#~ "вашого комп’ютера, тип браузера, версія браузера, сторінки нашого сайту, "
-#~ "які ви відвідуєте, час і дата вашого відвідування, час, проведений на цих "
-#~ "сторінках, та інше статистика. Крім того, ми можемо використовувати "
-#~ "сторонні служби, такі як Google Analytics, які збирають, відстежують і "
-#~ "аналізують ці дані."
-
-#~ msgid "Cookies"
-#~ msgstr "Файли cookie"
-
-#, fuzzy
-#~| msgid ""
-#~| "Cookies are files with small amount of data, which may include an "
-#~| "anonymous unique identifier. Cookies are sent to your browser from a web "
-#~| "site and stored on your computers hard drive. Like many sites, we use "
-#~| "'cookies' to collect information. You can instruct your browser to "
-#~| "refuse all cookies or to indicate when a cookie is being sent. However, "
-#~| "if you do not accept cookies, you may not be able to use some portions "
-#~| "of our Site."
-#~ msgid ""
-#~ "Cookies are files with small amount of data, which may include an "
-#~ "anonymous unique identifier. Cookies are sent to your browser from a web "
-#~ "site and stored on your computer's hard drive. Like many sites, we use "
-#~ "'cookies' to collect information. You can instruct your browser to refuse "
-#~ "all cookies or to indicate when a cookie is being sent. However, if you "
-#~ "do not accept cookies, you may not be able to use some portions of our "
-#~ "Site."
-#~ msgstr ""
-#~ "Файли cookie – це файли з невеликою кількістю даних, які можуть містити "
-#~ "анонімний унікальний ідентифікатор. Файли cookie надсилаються у ваш "
-#~ "браузер із веб-сайту та зберігаються на жорсткому диску вашого комп’ютера."
-#~ "Як і багато інших сайтів, ми використовуємо файли cookie для збору "
-#~ "інформації. Ви можете наказати своєму браузеру відхиляти всі файли cookie "
-#~ "або вказувати, коли надсилається файл cookie. Однак, якщо ви не приймаєте "
-#~ "файли cookie, ви не зможете використовувати деякі частини нашого сайту."
-
-#~ msgid "Security"
-#~ msgstr "Безпека"
-
-#, python-format
-#~ msgid ""
-#~ "The security of your Personal Information is important to us, but "
-#~ "remember that no method of transmission over the Internet, or method of "
-#~ "electronic storage, is 100%% secure. While we strive to use commercially "
-#~ "acceptable means to protect your Personal Information, we cannot "
-#~ "guarantee its absolute security."
-#~ msgstr ""
-#~ "Безпека вашої Особистої інформації важлива для нас, але пам’ятайте, що "
-#~ "жоден метод передачі через Інтернет або метод електронного зберігання не "
-#~ "є на 100 відсотків безпечним.Хоча ми прагнемо використовувати комерційно "
-#~ "прийнятні засоби захисту вашої Особистої інформації, ми не можемо "
-#~ "гарантувати її абсолютну безпеку."
-
-#~ msgid "Disclosure of Personal Information"
-#~ msgstr "Розкриття особистої інформації"
-
-#~ msgid ""
-#~ "We may disclose your Personal Information if we are required by law to do "
-#~ "so or if you violate our Terms of Service."
-#~ msgstr ""
-#~ "Ми можемо розкрити вашу особисту інформацію, якщо цього вимагає закон або "
-#~ "якщо ви порушуєте наші Умови надання послуг."
-
-#~ msgid "Changes to This Privacy Policy"
-#~ msgstr "Зміни в цій Політиці конфіденційності"
-
-#~ msgid ""
-#~ "We may update this Privacy Policy from time to time. We will notify you "
-#~ "of any changes by posting the new Privacy Policy on the Site. You are "
-#~ "advised to review this Privacy Policy periodically for any changes."
-#~ msgstr ""
-#~ "Час від часу ми можемо оновлювати цю Політику конфіденційності. Ми "
-#~ "повідомимо вас про будь-які зміни, опублікувавши нову Політику "
-#~ "конфіденційності на Сайті.Рекомендуємо періодично переглядати цю Політику "
-#~ "конфіденційності на предмет будь-яких змін."
-
-#~ msgid "Contact Us"
-#~ msgstr "Зв'яжіться з нами"
-
-#~ msgid ""
-#~ "If you have any questions about this Privacy Policy, please contact us at "
-#~ "contact information."
-#~ msgstr ""
-#~ "Якщо у вас виникли запитання щодо цієї Політики конфіденційності, "
-#~ "зв’яжіться з нами за контактною інформацією."
-
-#, fuzzy
-#~| msgid ""
-#~| "Spanish is one of the worlds most widely spoken languages, with over 500 "
-#~| "million speakers globally. It's the second-most spoken language in the "
-#~| "world, after Mandarin Chinese. Learning Spanish can be beneficial for "
-#~| "both personal and professional reasons, as it's a language used in many "
-#~| "international business and trade contexts, as well as a popular language "
-#~| "for travel and cultural exchange."
-#~ msgid ""
-#~ "Spanish is one of the world's most widely spoken languages, with over 500 "
-#~ "million speakers globally. It's the second-most spoken language in the "
-#~ "world, after Mandarin Chinese. Learning Spanish can be beneficial for "
-#~ "both personal and professional reasons, as it's a language used in many "
-#~ "international business and trade contexts, as well as a popular language "
-#~ "for travel and cultural exchange."
-#~ msgstr ""
-#~ "Іспанська мова є однією з найпоширеніших мов світу, нею розмовляють понад "
-#~ "500 мільйонів у всьому світі.Це друга за поширеністю мова у світі після "
-#~ "китайської.Вивчення іспанської може бути корисним як з особистих, так і з "
-#~ "професійних причин, оскільки це мова, яка використовується в багатьох "
-#~ "міжнародних ділових і торгових контекстах, а також популярна мова для "
-#~ "подорожей і культурного обміну."
-
-#~ msgid ""
-#~ "Here are some key strategies to improve your Spanish language skills:"
-#~ msgstr ""
-#~ "Ось кілька ключових стратегій покращення ваших навичок іспанської мови:"
-
-#~ msgid ""
-#~ "Practice speaking: One of the most effective ways to improve your Spanish "
-#~ "language skills is to practice speaking with other learners and native "
-#~ "speakers. Find a language exchange partner or join a language group to "
-#~ "practice conversation and pronunciation."
-#~ msgstr ""
-#~ "Потренуйтеся розмовляти: один із найефективніших способів покращити свої "
-#~ "навички іспанської мови – попрактикуватися розмовляти з іншими учнями та "
-#~ "носіями мови.Знайдіть партнера по обміну мовами або приєднайтеся до "
-#~ "мовної групи, щоб практикувати розмову та вимову."
-
-#~ msgid ""
-#~ "Watch Spanish movies and TV shows: Watching Spanish-language movies and "
-#~ "TV shows can help improve your listening skills, vocabulary, and "
-#~ "understanding of cultural nuances."
-#~ msgstr ""
-#~ "Дивіться іспаномовні фільми та телешоу.Перегляд іспаномовних фільмів і "
-#~ "телешоу може допомогти покращити ваші навички слухання, словниковий запас "
-#~ "і розуміння культурних нюансів."
-
-#~ msgid ""
-#~ "Read Spanish books and articles: Reading Spanish-language books and "
-#~ "articles can help improve your reading comprehension, grammar, and "
-#~ "vocabulary skills. Start with materials that are appropriate for your "
-#~ "current level of proficiency and gradually work your way up to more "
-#~ "challenging texts."
-#~ msgstr ""
-#~ "Читайте іспаномовні книги та статті: читання іспаномовних книг і статей "
-#~ "може допомогти покращити ваше розуміння прочитаного, граматику та "
-#~ "словниковий запас.Почніть з матеріалів, які відповідають вашому поточному "
-#~ "рівню володіння, і поступово переходьте до більш складних текстів."
-
-#~ msgid ""
-#~ "Use language learning apps: There are many language learning apps "
-#~ "available that can help you practice your Spanish skills, such as "
-#~ "Duolingo, Babbel, or Rosetta Stone. These apps offer interactive "
-#~ "exercises, vocabulary games, and other language learning tools."
-#~ msgstr ""
-#~ "Використовуйте програми для вивчення мов.Є багато доступних програм для "
-#~ "вивчення мов, які можуть допомогти вам відпрацювати навички іспанської, "
-#~ "наприклад Duolingo, Babbel або Rosetta Stone.Ці програми пропонують "
-#~ "інтерактивні вправи, ігри зі словниковим запасом та інші інструменти для "
-#~ "вивчення мови."
-
-#~ msgid ""
-#~ "Take Spanish language courses: Taking a formal Spanish language course, "
-#~ "either in-person or online, can provide you with structured learning "
-#~ "opportunities and a supportive environment to practice your skills."
-#~ msgstr ""
-#~ "Візьміть курси іспанської мови: проходження офіційних курсів іспанської "
-#~ "мови, очних або онлайн, може надати вам структуровані можливості навчання "
-#~ "та сприятливе середовище для практики ваших навичок."
-
-#~ msgid ""
-#~ "By incorporating these strategies into your language learning routine, "
-#~ "you can improve your Spanish language skills and communicate more "
-#~ "effectively in both personal and professional settings."
-#~ msgstr ""
-#~ "Візьміть курси іспанської мови: відвідування офіційних курсів іспанської "
-#~ "мови, очних або онлайн, може надати вам структуровані можливості навчання "
-#~ "та сприятливе середовище для практики ваших навичок."
-
-#~ msgid "Terms of Service"
-#~ msgstr "Умови використання"
-
-#~ msgid ""
-#~ "These Terms of Service (\"Terms\") govern your use of the English "
-#~ "Studying Site (\"Site\"). By accessing or using the Site, you agree to be "
-#~ "bound by these Terms."
-#~ msgstr ""
-#~ "Ці Умови надання послуг (\"Умови\") регулюють використання вами Сайту для "
-#~ "вивчення англійської мови (\"Сайт\").Отримуючи доступ або використовуючи "
-#~ "Сайт, ви погоджуєтеся дотримуватися цих Умов."
-
-#~ msgid "Use of Site"
-#~ msgstr "Використання сайту"
-
-#~ msgid ""
-#~ "The Site provides English language learning resources, including but not "
-#~ "limited to online courses, study materials, and communication tools. You "
-#~ "may use the Site for personal, non-commercial use only. You agree to use "
-#~ "the Site in a manner consistent with all applicable laws and regulations."
-#~ msgstr ""
-#~ "Сайт надає ресурси для вивчення англійської мови, включаючи, але не "
-#~ "обмежуючись, онлайн-курси, навчальні матеріали та засоби спілкування.Ви "
-#~ "можете використовувати Сайт лише для особистого, некомерційного "
-#~ "використання.Ви погоджуєтеся використовувати Сайт відповідно до всіх "
-#~ "чинних законів і правил."
-
-#~ msgid "User Accounts"
-#~ msgstr "Облікові записи користувачів"
-
-#~ msgid ""
-#~ "To access certain features of the Site, you may need to create a user "
-#~ "account. You agree to provide accurate and complete information when "
-#~ "creating your account and to keep your login credentials secure. You are "
-#~ "responsible for all activity that occurs under your account."
-#~ msgstr ""
-#~ "Щоб отримати доступ до певних функцій Сайту, вам може знадобитися "
-#~ "створити обліковий запис користувача.Ви погоджуєтеся надавати точну та "
-#~ "повну інформацію під час створення свого облікового запису та зберігати "
-#~ "свої облікові дані для входу в безпеці.Ви несете відповідальність за всі "
-#~ "дії, які відбуваються у вашому обліковому записі."
-
-#~ msgid "Payment and Refunds"
-#~ msgstr "Оплата та повернення коштів"
-
-#~ msgid ""
-#~ "Certain features of the Site may require payment, such as enrollment in a "
-#~ "course or purchase of study materials. Payment information will be "
-#~ "collected by a third-party payment processor and will be subject to their "
-#~ "terms and conditions. You agree to pay all fees and charges associated "
-#~ "with your use of the Site. Refunds may be available for certain "
-#~ "purchases, as outlined in the Company's refund policy."
-#~ msgstr ""
-#~ "Деякі функції Сайту можуть вимагати оплати, наприклад, зарахування на "
-#~ "курс або придбання навчальних матеріалів. Платіжна інформація "
-#~ "збиратиметься стороннім платіжним процесором і відповідатиме їхнім умовам."
-#~ "Ви погоджуєтесь сплачувати всі збори та збори, пов’язані з використанням "
-#~ "Сайту.Відшкодування може бути доступним для певних покупок, як зазначено "
-#~ "в політиці відшкодування Компанії."
-
-#~ msgid "Intellectual Property"
-#~ msgstr "Інтелектуальна власність"
-
-#~ msgid ""
-#~ "The Site and its contents, including but not limited to text, graphics, "
-#~ "images, and software, are the property of the Company or its licensors "
-#~ "and are protected by copyright and other intellectual property laws. You "
-#~ "may not reproduce, modify, distribute, or otherwise use any content from "
-#~ "the Site without the express written permission of the Company."
-#~ msgstr ""
-#~ "Сайт і його вміст, включаючи, але не обмежуючись, текст, графіку, "
-#~ "зображення та програмне забезпечення, є власністю Компанії або її "
-#~ "ліцензіарів і захищені авторським правом та іншими законами про "
-#~ "інтелектуальну власність.Ви не маєте права відтворювати, змінювати, "
-#~ "поширювати чи іншим чином використовувати будь-який вміст Сайту без "
-#~ "прямого письмового дозволу Компанії."
-
-#~ msgid "User Content"
-#~ msgstr "Контент для користувача"
-
-#~ msgid ""
-#~ "You may have the opportunity to submit content to the Site, such as "
-#~ "comments, questions, or assignments. By submitting content, you grant the "
-#~ "Company a non-exclusive, royalty-free, perpetual, and irrevocable license "
-#~ "to use, display, modify, and distribute your content in any manner the "
-#~ "Company chooses, without compensation or attribution to you."
-#~ msgstr ""
-#~ "У вас може бути можливість надіслати на Сайт вміст, наприклад коментарі, "
-#~ "запитання чи завдання.Надсилаючи вміст, ви надаєте Компанії невиключну, "
-#~ "безоплатну, безстрокову та безвідкличну ліцензію на використання,"
-#~ "відображення, зміну та розповсюдження вашого вмісту будь-яким способом, "
-#~ "який вибере Компанія, без компенсації чи посилання на вас."
-
-#~ msgid "Prohibited Conduct"
-#~ msgstr "Заборонена поведінка"
-
-#~ msgid "You agree not to use the Site to:"
-#~ msgstr "Ви погоджуєтеся не використовувати Сайт для:"
-
-#~ msgid "Harass, threaten, or intimidate others"
-#~ msgstr "Переслідувати, погрожувати або залякувати інших"
-
-#~ msgid "Post or transmit any content that is illegal, harmful, or offensive"
-#~ msgstr ""
-#~ "Розміщувати або передавати будь-який вміст, який є незаконним, шкідливим "
-#~ "або образливим"
-
-#~ msgid "Use the Site to engage in any fraudulent activity"
-#~ msgstr "Використовуйте Сайт для участі в будь-якій шахрайській діяльності"
-
-#~ msgid "Attempt to gain unauthorized access to the Site or its systems"
-#~ msgstr "Спроба отримати несанкціонований доступ до Сайту або його систем"
-
-#~ msgid "Termination"
-#~ msgstr "Припинення доступу"
-
-#~ msgid ""
-#~ "The Company may terminate your access to the Site at any time, with or "
-#~ "without cause, and without notice. Upon termination, you must immediately "
-#~ "cease all use of the Site and any content obtained from it."
-#~ msgstr ""
-#~ "Компанія може припинити ваш доступ до Сайту в будь-який час, з причиною "
-#~ "або без неї та без попередження.Після припинення ви повинні негайно "
-#~ "припинити будь-яке використання Сайту та будь-якого отриманого з нього "
-#~ "вмісту."
-
-#~ msgid "Disclaimer of Warranties"
-#~ msgstr "Відмова від гарантій"
-
-#~ msgid ""
-#~ "The Site is provided \"as is\" and without warranty of any kind. The "
-#~ "Company makes no representations or warranties about the accuracy, "
-#~ "completeness, or suitability of the Site or its content for any purpose. "
-#~ "You use the Site at your own risk."
-#~ msgstr ""
-#~ "Сайт надається \"як є\" і без будь-яких гарантій.Компанія не робить заяв "
-#~ "або гарантій щодо точності, повноти або придатності Сайту чи його вмісту "
-#~ "для будь-яких цілей.Ви використовуєте Сайт на власний ризик."
-
-#~ msgid "Limitation of Liability"
-#~ msgstr "Обмеження відповідальності"
-
-#~ msgid ""
-#~ "The Company and its affiliates, officers, employees, and agents will not "
-#~ "be liable for any damages arising from your use of the Site or its "
-#~ "content, including but not limited to direct, indirect, incidental, "
-#~ "punitive, and consequential damages. This limitation of liability applies "
-#~ "even if the Company has been advised of the possibility of such damages."
-#~ msgstr ""
-#~ "Компанія та її філії, посадові особи, співробітники та агенти не несуть "
-#~ "відповідальності за будь-які збитки, спричинені використанням вами "
-#~ "Сайтуабо його вмісту, включаючи, але не обмежуючись, прямі, непрямі, "
-#~ "випадкові, штрафні та непрямі збитки.Це обмеження відповідальності "
-#~ "застосовується, навіть якщо Компанію було повідомлено про можливість "
-#~ "таких збитків."
-
-#~ msgid "Indemnification"
-#~ msgstr "Відшкодування"
-
-#~ msgid ""
-#~ "You agree to indemnify and hold harmless the Company and its affiliates, "
-#~ "officers, employees, and agents from any claims, damages, and expenses "
-#~ "(including attorneys' fees) arising from your use of the Site or your "
-#~ "violation of these Terms."
-#~ msgstr ""
-#~ "Ви погоджуєтеся звільнити Компанію та її філії, посадових осіб, "
-#~ "співробітників і агентів від будь-яких претензій, збитків і витрат "
-#~ "(включаючи гонорари адвокатів),що виникають у результаті використання "
-#~ "вами Сайту або порушення вами цих Умов."
-
-#~ msgid "Governing Law"
-#~ msgstr "Правом, що регулює"
-
-#, fuzzy
-#~| msgid ""
-#~| "These Terms and any disputes arising from your use of the Site will be "
-#~| "governed by and construed in accordance with the laws of Ukraine without "
-#~| "regard to its conflict of law provisions."
-#~ msgid ""
-#~ "These Terms and any disputes arising from your use of the Site will be "
-#~ "governed by and construed in accordance with the laws of Ukraine, without "
-#~ "regard to its conflict of law provisions."
-#~ msgstr ""
-#~ "Ці Умови та будь-які суперечки, що виникають у зв’язку з використанням "
-#~ "вами Сайту,регулюватимуться та тлумачитимуться відповідно до законів "
-#~ "України без урахування положень про колізійне право."
-
-#~ msgid "Changes to Terms"
-#~ msgstr "Зміни Умов"
-
-#~ msgid ""
-#~ "The Company may update these Terms from time to time. You should review "
-#~ "these Terms periodically for any changes. By continuing to use the Site "
-#~ "after the Company makes any changes to these Terms, you agree to be bound "
-#~ "by the revised Terms."
-#~ msgstr ""
-#~ "Компанія може час від часу оновлювати ці Умови.Ви повинні періодично "
-#~ "переглядати ці Умови на предмет будь-яких змін.Продовжуючи "
-#~ "використовувати Сайт після того, як Компанія внесе будь-які зміни в ці "
-#~ "Умови, ви погоджуєтеся дотримуватися переглянутих Умов."
-
-#~ msgid "Entire Agreement"
-#~ msgstr "Повна угода"
-
-#~ msgid ""
-#~ "These Terms constitute the entire agreement between you and the Company "
-#~ "with respect to the Site and supersede all prior or contemporaneous "
-#~ "communications and proposals, whether oral or written, between you and "
-#~ "the Company."
-#~ msgstr ""
-#~ "Ці Умови складають повну угоду між вами та Компанією щодо Сайту та "
-#~ "замінюють собою всі попередні чипоточні повідомлення та пропозиції, усні "
-#~ "чи письмові, між вами та Компанією."
-
-#~ msgid ""
-#~ "If you have any questions about these Terms, please contact us at  "
-#~ "contact information."
-#~ msgstr ""
-#~ "Якщо у вас виникли запитання щодо цих Умов, зв’яжіться з нами за "
-#~ "контактною інформацією."
+#: .\materials\templates\spanish.html:16
+msgid ""
+"Spanish is one of the world's most widely spoken languages, with over 500 "
+"million speakers globally. It's the second-most spoken language in the "
+"world, after Mandarin Chinese. Learning Spanish can be beneficial for both "
+"personal and professional reasons, as it's a language used in many "
+"international business and trade contexts, as well as a popular language for "
+"travel and cultural exchange."
+msgstr ""
+"Іспанська мова є однією з найпоширеніших мов світу, нею розмовляють понад "
+"500 мільйонів у всьому світі.Це друга за поширеністю мова у світі після "
+"китайської.Вивчення іспанської може бути корисним як з особистих, так і з "
+"професійних причин, оскільки це мова, яка використовується в багатьох "
+"міжнародних ділових і торгових контекстах, а також популярна мова для "
+"подорожей і культурного обміну."
+
+#: .\materials\templates\spanish.html:20
+msgid "Here are some key strategies to improve your Spanish language skills:"
+msgstr ""
+"Ось кілька ключових стратегій покращення ваших навичок іспанської мови:"
+
+#: .\materials\templates\spanish.html:22
+msgid ""
+"Practice speaking: One of the most effective ways to improve your Spanish "
+"language skills is to practice speaking with other learners and native "
+"speakers. Find a language exchange partner or join a language group to "
+"practice conversation and pronunciation."
+msgstr ""
+"Потренуйтеся розмовляти: один із найефективніших способів покращити свої "
+"навички іспанської мови – попрактикуватися розмовляти з іншими учнями та "
+"носіями мови.Знайдіть партнера по обміну мовами або приєднайтеся до мовної "
+"групи, щоб практикувати розмову та вимову."
+
+#: .\materials\templates\spanish.html:23
+msgid ""
+"Watch Spanish movies and TV shows: Watching Spanish-language movies and TV "
+"shows can help improve your listening skills, vocabulary, and understanding "
+"of cultural nuances."
+msgstr ""
+"Дивіться іспаномовні фільми та телешоу.Перегляд іспаномовних фільмів і "
+"телешоу може допомогти покращити ваші навички слухання, словниковий запас і "
+"розуміння культурних нюансів."
+
+#: .\materials\templates\spanish.html:24
+msgid ""
+"Read Spanish books and articles: Reading Spanish-language books and articles "
+"can help improve your reading comprehension, grammar, and vocabulary skills. "
+"Start with materials that are appropriate for your current level of "
+"proficiency and gradually work your way up to more challenging texts."
+msgstr ""
+"Читайте іспаномовні книги та статті: читання іспаномовних книг і статей може "
+"допомогти покращити ваше розуміння прочитаного, граматику та словниковий "
+"запас.Почніть з матеріалів, які відповідають вашому поточному рівню "
+"володіння, і поступово переходьте до більш складних текстів."
+
+#: .\materials\templates\spanish.html:25
+msgid ""
+"Use language learning apps: There are many language learning apps available "
+"that can help you practice your Spanish skills, such as Duolingo, Babbel, or "
+"Rosetta Stone. These apps offer interactive exercises, vocabulary games, and "
+"other language learning tools."
+msgstr ""
+"Використовуйте програми для вивчення мов.Є багато доступних програм для "
+"вивчення мов, які можуть допомогти вам відпрацювати навички іспанської, "
+"наприклад Duolingo, Babbel або Rosetta Stone.Ці програми пропонують "
+"інтерактивні вправи, ігри зі словниковим запасом та інші інструменти для "
+"вивчення мови."
+
+#: .\materials\templates\spanish.html:26
+msgid ""
+"Take Spanish language courses: Taking a formal Spanish language course, "
+"either in-person or online, can provide you with structured learning "
+"opportunities and a supportive environment to practice your skills."
+msgstr ""
+"Візьміть курси іспанської мови: проходження офіційних курсів іспанської "
+"мови, очних або онлайн, може надати вам структуровані можливості навчання та "
+"сприятливе середовище для практики ваших навичок."
+
+#: .\materials\templates\spanish.html:28
+msgid ""
+"By incorporating these strategies into your language learning routine, you "
+"can improve your Spanish language skills and communicate more effectively in "
+"both personal and professional settings."
+msgstr ""
+"Візьміть курси іспанської мови: відвідування офіційних курсів іспанської "
+"мови, очних або онлайн, може надати вам структуровані можливості навчання та "
+"сприятливе середовище для практики ваших навичок."
+
+#: .\materials\templates\terms.html:28 .\materials\templates\terms.html:32
+msgid "Terms of Service"
+msgstr "Умови використання"
+
+#: .\materials\templates\terms.html:33
+msgid ""
+"These Terms of Service ('Terms') govern your use of the English Studying "
+"Site ('Site'). By accessing or using the Site, you agree to be bound by "
+"these Terms."
+msgstr ""
+"Ці Умови надання послуг (\"Умови\") регулюють використання вами Сайту для "
+"вивчення англійської мови (\"Сайт\").Отримуючи доступ або використовуючи "
+"Сайт, ви погоджуєтеся дотримуватися цих Умов."
+
+#: .\materials\templates\terms.html:34
+msgid "Use of Site"
+msgstr "Використання сайту"
+
+#: .\materials\templates\terms.html:35
+msgid ""
+"The Site provides English language learning resources, including but not "
+"limited to online courses, study materials, and communication tools. You may "
+"use the Site for personal, non-commercial use only. You agree to use the "
+"Site in a manner consistent with all applicable laws and regulations."
+msgstr ""
+"Сайт надає ресурси для вивчення англійської мови, включаючи, але не "
+"обмежуючись, онлайн-курси, навчальні матеріали та засоби спілкування.Ви "
+"можете використовувати Сайт лише для особистого, некомерційного використання."
+"Ви погоджуєтеся використовувати Сайт відповідно до всіх чинних законів і "
+"правил."
+
+#: .\materials\templates\terms.html:36
+msgid "User Accounts"
+msgstr "Облікові записи користувачів"
+
+#: .\materials\templates\terms.html:37
+msgid ""
+"To access certain features of the Site, you may need to create a user "
+"account. You agree to provide accurate and complete information when "
+"creating your account and to keep your login credentials secure. You are "
+"responsible for all activity that occurs under your account."
+msgstr ""
+"Щоб отримати доступ до певних функцій Сайту, вам може знадобитися створити "
+"обліковий запис користувача.Ви погоджуєтеся надавати точну та повну "
+"інформацію під час створення свого облікового запису та зберігати свої "
+"облікові дані для входу в безпеці.Ви несете відповідальність за всі дії, які "
+"відбуваються у вашому обліковому записі."
+
+#: .\materials\templates\terms.html:38
+msgid "Payment and Refunds"
+msgstr "Оплата та повернення коштів"
+
+#: .\materials\templates\terms.html:39
+msgid ""
+"Certain features of the Site may require payment, such as enrollment in a "
+"course or purchase of study materials. Payment information will be collected "
+"by a third-party payment processor and will be subject to their terms and "
+"conditions. You agree to pay all fees and charges associated with your use "
+"of the Site. Refunds may be available for certain purchases, as outlined in "
+"the Company's refund policy."
+msgstr ""
+"Деякі функції Сайту можуть вимагати оплати, наприклад, зарахування на курс "
+"або придбання навчальних матеріалів. Платіжна інформація збиратиметься "
+"стороннім платіжним процесором і відповідатиме їхнім умовам.Ви погоджуєтесь "
+"сплачувати всі збори та збори, пов’язані з використанням Сайту.Відшкодування "
+"може бути доступним для певних покупок, як зазначено в політиці "
+"відшкодування Компанії."
+
+#: .\materials\templates\terms.html:40
+msgid "Intellectual Property"
+msgstr "Інтелектуальна власність"
+
+#: .\materials\templates\terms.html:41
+msgid ""
+"The Site and its contents, including but not limited to text, graphics, "
+"images, and software, are the property of the Company or its licensors and "
+"are protected by copyright and other intellectual property laws. You may not "
+"reproduce, modify, distribute, or otherwise use any content from the Site "
+"without the express written permission of the Company."
+msgstr ""
+"Сайт і його вміст, включаючи, але не обмежуючись, текст, графіку, зображення "
+"та програмне забезпечення, є власністю Компанії або її ліцензіарів і "
+"захищені авторським правом та іншими законами про інтелектуальну власність."
+"Ви не маєте права відтворювати, змінювати, поширювати чи іншим чином "
+"використовувати будь-який вміст Сайту без прямого письмового дозволу "
+"Компанії."
+
+#: .\materials\templates\terms.html:42
+msgid "User Content"
+msgstr "Контент для користувача"
+
+#: .\materials\templates\terms.html:43
+msgid ""
+"You may have the opportunity to submit content to the Site, such as "
+"comments, questions, or assignments. By submitting content, you grant the "
+"Company a non-exclusive, royalty-free, perpetual, and irrevocable license to "
+"use, display, modify, and distribute your content in any manner the Company "
+"chooses, without compensation or attribution to you."
+msgstr ""
+"У вас може бути можливість надіслати на Сайт вміст, наприклад коментарі, "
+"запитання чи завдання.Надсилаючи вміст, ви надаєте Компанії невиключну, "
+"безоплатну, безстрокову та безвідкличну ліцензію на використання,"
+"відображення, зміну та розповсюдження вашого вмісту будь-яким способом, який "
+"вибере Компанія, без компенсації чи посилання на вас."
+
+#: .\materials\templates\terms.html:44
+msgid "Prohibited Conduct"
+msgstr "Заборонена поведінка"
+
+#: .\materials\templates\terms.html:45
+msgid "You agree not to use the Site to:"
+msgstr "Ви погоджуєтеся не використовувати Сайт для:"
+
+#: .\materials\templates\terms.html:47
+msgid "Harass, threaten, or intimidate others"
+msgstr "Переслідувати, погрожувати або залякувати інших"
+
+#: .\materials\templates\terms.html:48
+msgid "Post or transmit any content that is illegal, harmful, or offensive"
+msgstr ""
+"Розміщувати або передавати будь-який вміст, який є незаконним, шкідливим або "
+"образливим"
+
+#: .\materials\templates\terms.html:49
+msgid "Use the Site to engage in any fraudulent activity"
+msgstr "Використовуйте Сайт для участі в будь-якій шахрайській діяльності"
+
+#: .\materials\templates\terms.html:50
+msgid "Attempt to gain unauthorized access to the Site or its systems"
+msgstr "Спроба отримати несанкціонований доступ до Сайту або його систем"
+
+#: .\materials\templates\terms.html:52
+msgid "Termination"
+msgstr "Припинення доступу"
+
+#: .\materials\templates\terms.html:53
+msgid ""
+"The Company may terminate your access to the Site at any time, with or "
+"without cause, and without notice. Upon termination, you must immediately "
+"cease all use of the Site and any content obtained from it."
+msgstr ""
+"Компанія може припинити ваш доступ до Сайту в будь-який час, з причиною або "
+"без неї та без попередження.Після припинення ви повинні негайно припинити "
+"будь-яке використання Сайту та будь-якого отриманого з нього вмісту."
+
+#: .\materials\templates\terms.html:54
+msgid "Disclaimer of Warranties"
+msgstr "Відмова від гарантій"
+
+#: .\materials\templates\terms.html:55
+msgid ""
+"The Site is provided 'as is' and without warranty of any kind. The Company "
+"makes no representations or warranties about the accuracy, completeness, or "
+"suitability of the Site or its content for any purpose. You use the Site at "
+"your own risk."
+msgstr ""
+"Сайт надається \"як є\" і без будь-яких гарантій.Компанія не робить заяв або "
+"гарантій щодо точності, повноти або придатності Сайту чи його вмісту для "
+"будь-яких цілей.Ви використовуєте Сайт на власний ризик."
+
+#: .\materials\templates\terms.html:56
+msgid "Limitation of Liability"
+msgstr "Обмеження відповідальності"
+
+#: .\materials\templates\terms.html:57
+msgid ""
+"The Company and its affiliates, officers, employees, and agents will not be "
+"liable for any damages arising from your use of the Site or its content, "
+"including but not limited to direct, indirect, incidental, punitive, and "
+"consequential damages. This limitation of liability applies even if the "
+"Company has been advised of the possibility of such damages."
+msgstr ""
+"Компанія та її філії, посадові особи, співробітники та агенти не несуть "
+"відповідальності за будь-які збитки, спричинені використанням вами Сайтуабо "
+"його вмісту, включаючи, але не обмежуючись, прямі, непрямі, випадкові, "
+"штрафні та непрямі збитки.Це обмеження відповідальності застосовується, "
+"навіть якщо Компанію було повідомлено про можливість таких збитків."
+
+#: .\materials\templates\terms.html:58
+msgid "Indemnification"
+msgstr "Відшкодування"
+
+#: .\materials\templates\terms.html:59
+msgid ""
+"You agree to indemnify and hold harmless the Company and its affiliates, "
+"officers, employees, and agents from any claims, damages, and expenses "
+"(including attorneys' fees) arising from your use of the Site or your "
+"violation of these Terms."
+msgstr ""
+"Ви погоджуєтеся звільнити Компанію та її філії, посадових осіб, "
+"співробітників і агентів від будь-яких претензій, збитків і витрат "
+"(включаючи гонорари адвокатів),що виникають у результаті використання вами "
+"Сайту або порушення вами цих Умов."
+
+#: .\materials\templates\terms.html:60
+msgid "Governing Law"
+msgstr "Правом, що регулює"
+
+#: .\materials\templates\terms.html:61
+msgid ""
+"These Terms and any disputes arising from your use of the Site will be "
+"governed by and construed in accordance with the laws of [insert state or "
+"country], without regard to its conflict of law provisions."
+msgstr ""
+"Ці Умови та будь-які суперечки, що виникають у зв’язку з використанням вами "
+"Сайту,регулюватимуться та тлумачитимуться відповідно до законів України без "
+"урахування положень про колізійне право."
+
+#: .\materials\templates\terms.html:62
+msgid "Changes to Terms"
+msgstr "Зміни Умов"
+
+#: .\materials\templates\terms.html:63
+msgid ""
+"The Company may update these Terms from time to time. You should review "
+"these Terms periodically for any changes. By continuing to use the Site "
+"after the Company makes any changes to these Terms, you agree to be bound by "
+"the revised Terms."
+msgstr ""
+"Компанія може час від часу оновлювати ці Умови.Ви повинні періодично "
+"переглядати ці Умови на предмет будь-яких змін.Продовжуючи використовувати "
+"Сайт після того, як Компанія внесе будь-які зміни в ці Умови, ви "
+"погоджуєтеся дотримуватися переглянутих Умов."
+
+#: .\materials\templates\terms.html:64
+msgid "Entire Agreement"
+msgstr "Повна угода"
+
+#: .\materials\templates\terms.html:65
+msgid ""
+"These Terms constitute the entire agreement between you and the Company with "
+"respect to the Site and supersede all prior or contemporaneous "
+"communications and proposals, whether oral or written, between you and the "
+"Company."
+msgstr ""
+"Ці Умови складають повну угоду між вами та Компанією щодо Сайту та замінюють "
+"собою всі попередні чипоточні повідомлення та пропозиції, усні чи письмові, "
+"між вами та Компанією."
+
+#: .\materials\templates\terms.html:67
+msgid ""
+"If you have any questions about these Terms, please contact us at  contact "
+"information."
+msgstr ""
+"Якщо у вас виникли запитання щодо цих Умов, зв’яжіться з нами за контактною "
+"інформацією."
