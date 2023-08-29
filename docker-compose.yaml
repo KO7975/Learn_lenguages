@@ -7,7 +7,7 @@ services:
       sh -c "python manage.py migrate --noinput &&
              python manage.py runserver 0.0.0.0:8000"
     ports:
-      - 80:8000
+      - 8000:8000
     volumes:
       - ./english_learning:/app
     depends_on:
@@ -15,7 +15,7 @@ services:
     links:
       - mysql:mysql
   mysql:
-    container_name: mysql-1
+    container_name: mysql
     image: mysql:8.0
     restart: always
     ports:
@@ -26,10 +26,10 @@ services:
       - mysql_data:/var/lib/mysql
       - ./mysql/:/docker-entrypoint-initdb.d
     environment:
-      MYSQL_ROOT_PASSWORD: '${DB_ROOT_PASSWORD}'
-      MYSQL_DATABASE: '${DB_NAME}'
-      MYSQL_USER: '${DB_USERNAME}'
-      MYSQL_PASSWORD: '${DB_PASSWORD}'
+      MYSQL_ROOT_PASSWORD: '12345' 
+      MYSQL_DATABASE: 'mydatabase' 
+      MYSQL_USER: 'mydatabaseuser' 
+      MYSQL_PASSWORD: '12345' 
     healthcheck:
       test: ['CMD', '/opt/bitnami/scripts/mysql/healthcheck.sh']
       interval: 15s

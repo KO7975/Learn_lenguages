@@ -15,21 +15,22 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 
 # Generating security key from os.urandom and encode utf-8
-KEY = os.urandom(32)
-SECRET_KEY = b32encode(KEY).decode('utf-8')
+# KEY = os.urandom(32)
+# SECRET_KEY = b32encode(KEY).decode('utf-8')
 
 # or keep created key in different directory
-# SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.localhost', '127.0.0.1', '[::1]', 'bot', '172.23.0.1']
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    "corsheaders",
     'modeltranslation',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -49,7 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    
+    "corsheaders.middleware.CorsMiddleware",
 ]
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
@@ -85,12 +86,10 @@ DATABASES = {
         'NAME':os.environ.get('DB_NAME'), 
         'PASSWORD':os.environ.get('DB_PASS'), 
         'USER': os.environ.get('DB_USER'),
-        # 'HOST': 'mysql', 
+        'HOST': 'mysql', 
         'PORT': '3306',   
     }  
 }  
-
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -154,3 +153,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CORS_ORIGIN_ALLOW_ALL = True

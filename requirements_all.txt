@@ -8,3 +8,4 @@ python-dotenv==1.0.0
 django-bootstrap-v5==1.0.11
 django-modeltranslation==0.18.9
 mysqlclient==2.1.1
+django-cors-headers==4.2.0

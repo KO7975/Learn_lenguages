@@ -1,8 +1,16 @@
 from django.contrib import admin
-from .models import Language, LanguageLevel, Topic, Material, Course, Lesson, UserProfile, Commens
-from django.urls import reverse
-from django.utils.http import urlencode
+from django.utils.safestring import mark_safe
 from modeltranslation.admin import *
+from .models import (
+    Language,
+    LanguageLevel,
+    Topic,
+    Material,
+    Course,
+    Lesson,
+    UserProfile,
+    Commens,
+)
 
 
 class MaterialInline(admin.TabularInline):
@@ -13,8 +21,15 @@ class MaterialInline(admin.TabularInline):
     
 
 class MaterialAdmin(admin.ModelAdmin):
-    # list_display = ('title', 'material_type')
+    list_display = ('title', 'material_type', 'image_tag')
     search_fields = ('material_type','title',)
+
+    def image_tag(self, obj):
+        if obj.material_type == 'photo':
+            return mark_safe(f'<img src="{obj.material_file.url}" width="50" height="60" />')
+        else:
+            return 'Not img'
+        
 
 class LessonsAdminInline(admin.TabularInline):
     model=Lesson
@@ -24,6 +39,7 @@ class LessonsAdminInline(admin.TabularInline):
     filter_horizontal = ('materials',)
     # list_display = ('number', )
     # search_fields = ('number', 'materials')
+
 
 class TopicAdmin(admin.ModelAdmin):
     inlines = [LessonsAdminInline, MaterialInline]
@@ -46,10 +62,6 @@ class UserProfileAdmin(admin.ModelAdmin):
 
 class CommentsAdmin(admin.ModelAdmin):
     list_display = ('comment', 'user', 'time_created' )
-
-
-
-    
 
 
 admin.site.register(Lesson)
