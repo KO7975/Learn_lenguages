@@ -1,4 +1,3 @@
-# import mysql.connector
 from create_bot import bot
 import aiomysql
 import os
@@ -12,11 +11,12 @@ async def db_start():
     global base, cur
     base = await aiomysql.connect(
         host='mysql',
-        user= os.environ.get('DB_USER'),
-        password= os.environ.get('DB_PASS'),
-        db= os.environ.get('DB_NAME'),
+        user= os.getenv('DB_USER'),
+        password= os.getenv('DB_PASS'),
+        db= os.getenv('DB_NAME'),
         autocommit=True,
     )
+      
     # Create a cursor object to execute queries 
     cur = await base.cursor()
     if base:
