@@ -2,13 +2,11 @@ from aiogram import types, Dispatcher
 from create_bot import dp, bot, host, my_admin, bot_link, contact_tel, email, facebook
 from keyboards.client_kb import kb_client1, kb_client2, inkb, to_teacher, courses, material_kb, courses_kb
 from data_base import mysql_con
-from aiogram.dispatcher.filters.state import State, StatesGroup
-from aiogram.dispatcher import FSMContext
 from aiogram.dispatcher.filters import Text
-from aiogram.types import  ReplyKeyboardRemove, InlineKeyboardButton, InlineKeyboardMarkup, KeyboardButton, ReplyKeyboardMarkup
+from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 import requests
 import io
-import os
+
 
 phone_number = ''
 user_from_db = []
@@ -56,18 +54,20 @@ async def contact_handler(message: types.Message):
 # @dp.message_handler(commands=['update'])
 async def commands_start(message: types.Message):
     global aprowed_user_from_db
+
     aprowed_user_from_db = await mysql_con.CourseData.uprowed_user_from_db(message)
-    
+
     from_db = await mysql_con.CourseData.user_from_db(message)
     if len(from_db) == 0:
         await mysql_con.write_user(message)
         from_db
     if len(from_db) > 0:
         if len(aprowed_user_from_db) > 0:
+ 
             if aprowed_user_from_db[0][0] == 1:
                 await bot.send_message(message.from_user.id, f'Press /Your_course_data and begin to stady!{arr_down_em}', reply_markup=kb_client2)
                 await message.delete()
-            # elif len(from_db) > 0:
+
             elif aprowed_user_from_db[0][0] == 0:
                 await bot.send_message(message.from_user.id, f'\u203C \U000026D4 You haven\'t acces yet! \U000026D4 \u203C\nPlease contact your teacher {arr_down_em}', reply_markup=to_teacher)
                 await bot.send_message(message.from_user.id, f'Use the buttons below for more information{arr_down_em}', reply_markup=kb_client1)
@@ -75,8 +75,6 @@ async def commands_start(message: types.Message):
         else:
             await bot.send_message(message.from_user.id, f'You can find several buttons below for more information{arr_down_em}', reply_markup=kb_client1)
             await message.delete()
-            # await bot.send_message(message.from_user.id, f'You can find several buttons below for more information{arr_down_em}', reply_markup=kb_client1)
-            # await message.delete()
     else:
         await message.reply(f'Write any message to bot: \n{bot_link}')
 
@@ -112,34 +110,26 @@ async def download_photo_handler(message, url, title, material_type, text, URL):
     elif material_type == 'text':
         await bot.send_message(chat_id=message.message.chat.id, text=text)
 
-    else:
-        # #If your bot in the same machine with web broject
-        # url = url.replace('/', os.sep)
-        # print(url)
-        # file_url = rf"C:\Users\Nadiia\Desktop\English_site\progect\english_learning\media\{url}"
-        # file_f = open(file_url, 'rb')
-        # file_bytes = file_f.read()
-        # file_f.close()
-        # file_bytes = io.BytesIO(file_bytes)
-        # file = types.InputFile(file_bytes, filename=title)
- 
-        # Download the photo from the URL from different machine
-        file_url = f'{host}{url}'
-        # file_url = f'C:\Users\Nadiia\Desktop\English_site\progect\english_learning\{url}'
-        file_request = requests.get(file_url, params=url, data=url)
-        if file_request.status_code != 200:
-            await bot.send_message(chat_id=message.message.chat.id, text=f"Failed to download file: {file_request.status_code}")
+    else: 
+        # Download the photo from the URL
+        file_url = f'{host}en/{url}'
+        file_request = requests.get(file_url, params=url)
+        code = file_request.status_code
+        content = file_request.content
+
+        if code != 200:
+            await bot.send_message(chat_id=message.message.chat.id, text=f"Failed to download file: {code}")
             return
         # Send the photo to Telegram
-        file_bytes = io.BytesIO(file_request.content)
+        file_bytes = io.BytesIO(content)
         file = types.InputFile(file_bytes, filename=title)
 
         if material_type == 'photo':
-            await bot.send_photo(chat_id=message.message.chat.id,caption=text, photo=file)
+            await bot.send_photo(chat_id=message.message.chat.id, caption=text, photo=file)
         elif material_type == 'video':
-            await bot.send_video(chat_id=message.message.chat.id,caption=text, video=file)
+            await bot.send_video(chat_id=message.message.chat.id, caption=text, video=file)
         elif material_type == 'audio':
-            await bot.send_audio(chat_id=message.message.chat.id,caption=text, audio=file)
+            await bot.send_audio(chat_id=message.message.chat.id, caption=text, audio=file)
 
 
 
