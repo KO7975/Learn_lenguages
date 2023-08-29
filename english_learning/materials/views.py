@@ -1,27 +1,50 @@
+import os 
+import mimetypes
 from django.shortcuts import render, redirect, get_object_or_404
-from django.contrib.auth.views import LoginView, LogoutView, PasswordChangeView, PasswordChangeDoneView, PasswordResetView, PasswordResetDoneView, PasswordResetConfirmView, PasswordResetCompleteView
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.views import (
+    PasswordChangeView,
+    PasswordChangeDoneView,
+    PasswordResetView,
+    PasswordResetConfirmView,
+    PasswordResetCompleteView,
+)
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
-from .models import Course, UserProfile, Material, Commens
 from django.core.exceptions import ObjectDoesNotExist
-from .templatetags.password import *
-from django.contrib.auth.hashers import make_password
 from django.views.defaults import page_not_found
 from django.http import HttpRequest
 from django.http import HttpResponse
+from .models import (
+    Course,
+    UserProfile,
+    Material,
+    Commens,
+)
+from .templatetags.password import *
 import english_learning.settings as settings
 
 
 
-def photo_view(request, content):
+def photo(request, content):
     ''' this fanction for connection with telegram which return file from path'''
     p = HttpRequest.get_full_path(request)
     index = p.rindex('?') + 1
     res = p[index:]
-    photo_path = f"{settings.MEDIA_ROOT}/{res}"
+    photo_path = os.path.join(settings.MEDIA_ROOT, res) 
+
+    if not os.path.exists(photo_path):
+            return HttpResponse("File not found", status=404)
+    
     with open(photo_path, 'rb') as f:
-        response = HttpResponse(f.read())
+        data = f.read()
+
+    content_type, _ = mimetypes.guess_type(photo_path)
+    
+    if content_type is None:
+        content_type = 'application/octet-stream'
+
+    # Create an HttpResponse with the file's data and content type
+    response = HttpResponse(data, content_type=content_type)
     return response
 
 

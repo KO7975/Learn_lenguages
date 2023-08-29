@@ -4,12 +4,12 @@ from django.urls import reverse
 from django.utils.safestring import mark_safe
 
 
-
 class Language(models.Model):
     language = models.CharField(max_length=100)
 
     def __str__(self):
         return self.language
+
 
 class LanguageLevel(models.Model):
     LEVEL_CHOICES = [
@@ -26,6 +26,7 @@ class LanguageLevel(models.Model):
 
     def __str__(self):
         return f"{self.language} - {self.level}"
+
 
 class Topic(models.Model):
     name = models.CharField(max_length=100,)
@@ -49,10 +50,10 @@ class Lesson(models.Model):
         
         return f"Lesson  {self.number} - {self.name} - {self.topic}"
 
-    
 
 def get_upload_path(instance, filename):
     return f'materials/{instance.material_type}/{filename}'
+
 
 class Material(models.Model):
     title = models.CharField(max_length=80, null=True,)
@@ -89,7 +90,6 @@ class Material(models.Model):
         return ''
 
 
-
 class Course(models.Model):
     title = models.CharField(max_length=50, null=True,)
     language = models.ForeignKey(Language, on_delete=models.CASCADE)
@@ -103,6 +103,7 @@ class Course(models.Model):
     def __str__(self):
         return f"{self.title} - {self.topic}"
     
+    
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
     courses = models.ForeignKey(Course, on_delete=models.CASCADE, null=True, blank=True)
@@ -112,6 +113,7 @@ class UserProfile(models.Model):
     def __str__(self):
         return f'User name: {self.user.last_name} {self.user.first_name}'
     
+
 class Commens(models.Model):
     user = models.ForeignKey(User,  on_delete=models.CASCADE, null=True,)
     comment = models.TextField( blank=True)
