@@ -16,7 +16,7 @@ async def db_start():
         db= os.getenv('DB_NAME'),
         autocommit=True,
     )
-      
+
     # Create a cursor object to execute queries 
     cur = await base.cursor()
     if base:
@@ -106,6 +106,7 @@ async def show_likes():
     # await bot.send_message(self.message.from_user.id , f'\U0001F44D {likes[0][0]}   \U0001F44E {dislikes[0][0]}')
     return likes, dislikes
 
+
 class DbLike():
     def __init__(self, message) -> None:
         self.message = message
@@ -121,8 +122,6 @@ class DbLike():
         elif rep[0][0] == 0:
             await self.message.answer('You already chose')
             # await DbLike.show_likes(self)
-    
-
 
     async def show_likes():
         await cur.execute("SELECT COUNT(res) FROM telegram_like WHERE res = '1'")
@@ -153,7 +152,6 @@ class CourseData():
             await base.commit()
         await cur.execute("UPDATE telegram_like SET phone = '%s' WHERE user_id = '%s'"%(phone, message.from_user.id))
         await base.commit()
-
 
     async def user_from_db(message):
         await cur.execute("SELECT * FROM telegram_like WHERE user_id ='%s'"%(message.from_user.id,))
@@ -193,6 +191,7 @@ class CourseData():
         res = await cur.fetchall()    
         return res
        
+
 async def get_users():
     await cur.execute("select * from telegram_like")
     res = await cur.fetchall()

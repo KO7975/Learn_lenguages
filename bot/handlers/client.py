@@ -1,22 +1,39 @@
-from aiogram import types, Dispatcher
-from create_bot import dp, bot, host, my_admin, bot_link, contact_tel, email, facebook
-from keyboards.client_kb import kb_client1, kb_client2, inkb, to_teacher, courses, material_kb, courses_kb
-from data_base import mysql_con
-from aiogram.dispatcher.filters import Text
-from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 import requests
 import io
+from aiogram import types, Dispatcher
+from aiogram.dispatcher.filters import Text
+from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from data_base import mysql_con
+from create_bot import (
+    dp,
+    bot,
+    host,
+    my_admin,
+    bot_link,
+    contact_tel,
+    email,
+    facebook,
+)
+from keyboards.client_kb import (
+    kb_client1,
+    kb_client2,
+    inkb,
+    to_teacher,
+    courses,
+    material_kb,
+    courses_kb,
+)
 
 
 phone_number = ''
 user_from_db = []
+
 # #emojis
 teacher_em =u'\U0001F469'
 arr_down_em = u'\U00002b07'
 arr_right_em =u'\U000027a1'
 arr_left_em = u'\U00002b05'
 arr_up_em = u'\U000023EB'
-
 
 """Client side"""
 #give bottons acces
@@ -40,6 +57,7 @@ async def contact(message: types.Message):
     request_contact_button = types.KeyboardButton(text="/Request_contact", request_contact=True)
     reply_markup = types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True).add(request_contact_button)
     await bot.send_message(chat_id=message.chat.id, text=start_message, reply_markup=reply_markup, parse_mode=types.ParseMode.HTML)
+
 
 # Define a handler for receiving a user's phone number
 # @dp.message_handler(content_types=['contact'])
@@ -132,7 +150,6 @@ async def download_photo_handler(message, url, title, material_type, text, URL):
             await bot.send_audio(chat_id=message.message.chat.id, caption=text, audio=file)
 
 
-
 # @dp.callback_handler(commands=['ls_'])
 async def lessons(message: types.CallbackQuery):
     res = await mysql_con.CourseData.new(aprowed_user_from_db[0][2])
@@ -202,6 +219,7 @@ async def contacts(message: types.Message):
         )
     await message.delete()
 
+
 # dp.message_handler(commands=['All Courses'])
 async def all_courses(message: types.Message):
     await mysql_con.my_db_read(message)
@@ -223,9 +241,6 @@ async def test_command(message: types.Message):
     await message.answer('Do you like this bot?', reply_markup=inlkb)
     await message.delete()
     
-    
-    
-
 
 #registretion all battons
 def registr_handlers_client(dp: Dispatcher):
