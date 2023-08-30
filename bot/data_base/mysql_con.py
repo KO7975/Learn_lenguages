@@ -10,7 +10,7 @@ load_dotenv()
 async def db_start():
     global base, cur
     base = await aiomysql.connect(
-        host='mysql',
+        host=os.getenv('DB_HOST'),
         user= os.getenv('DB_USER'),
         password= os.getenv('DB_PASS'),
         db= os.getenv('DB_NAME'),
