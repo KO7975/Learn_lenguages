@@ -48,6 +48,7 @@ def photo(request, content):
     return response
 
 
+@csrf_exempt
 def home(request):
     cours_pk = 0
     usr = request.user
@@ -82,6 +83,7 @@ def not_approved(request):
     return render(request, 'not_approved.html',{'user':user})
 
 
+@csrf_exempt
 def course(request, course_id):
     user = request.user
     if course_id != 0:
