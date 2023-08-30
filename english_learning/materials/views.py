@@ -14,6 +14,7 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.views.defaults import page_not_found
 from django.http import HttpRequest
 from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
 from .models import (
     Course,
     UserProfile,
@@ -22,7 +23,6 @@ from .models import (
 )
 from .templatetags.password import *
 import english_learning.settings as settings
-
 
 
 def photo(request, content):
@@ -76,9 +76,11 @@ def home(request):
     # Render the home template if the request method is GET    
     return render(request, 'home.html', {'comments': comments, 'cours_pk': cours_pk})
 
+
 def not_approved(request):
     user = request.user
     return render(request, 'not_approved.html',{'user':user})
+
 
 def course(request, course_id):
     user = request.user
@@ -110,6 +112,7 @@ def course(request, course_id):
     return redirect(home)
 
 
+@csrf_exempt
 def registr(request):
     if request.method == 'POST':
         # Get form data from POST request
@@ -132,6 +135,7 @@ def registr(request):
     return render(request, 'registr.html')
 
 
+@csrf_exempt
 def login_view(request):
     try: 
         if request.method == 'POST':
@@ -161,35 +165,45 @@ def login_view(request):
     except ObjectDoesNotExist:
         return redirect(page_not_found)
 
+
 def logout_view(request):
     logout(request)
     return redirect('home')
 
+
 def password_change_view(request):
     return PasswordChangeView.as_view()(request, template_name='password_change.html')
+
 
 def password_change_done_view(request):
     return PasswordChangeDoneView.as_view()(request, template_name='password_change_done.html')
 
+
 def password_reset_view(request):
     return PasswordResetView.as_view()(request, template_name='password_reset.html')
+
 
 def password_reset_done_view(request):
     return render(request, 'password_reset_done.html')
 
+
 def password_reset_confirm_view(request, uidb64, token):
     return PasswordResetConfirmView.as_view()(request, uidb64=uidb64, token=token, template_name='password_reset_confirm.html')
+
 
 def password_reset_complete_view(request):
     return PasswordResetCompleteView.as_view()(request, template_name='password_reset_complete.html')
 
+
 def terms(request):
     return render(request, 'terms.html')
+
 
 def policy(request):
     return render(request, 'policy.html')
 
 
+@csrf_exempt
 def forgot(request):
     # This function recovers the user's password
     try:
@@ -208,17 +222,22 @@ def forgot(request):
     # Render the recovery form template if the request method is GET
     return render(request, 'forgot.html')
 
+
 def english(request):
     return render(request, 'english.html')
+
 
 def spanish(request):
     return render(request, 'spanish.html')
 
+
 def poland(request):
     return render(request, 'poland.html')
 
+
 def seamen(request):
     return render(request, 'seamen.html')
+
 
 def about_me(request):
     return render(request, 'about_me.html')
