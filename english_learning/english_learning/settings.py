@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG =  True#os.getenv("DEBUG")
 
 ALLOWED_HOSTS = ["*"]
 
@@ -82,11 +82,11 @@ WSGI_APPLICATION = 'english_learning.wsgi.application'
 
 DATABASES = {  
     'default': {  
-        'ENGINE': 'mysql.connector.django', 
-        'NAME':os.environ.get('DB_NAME'), 
-        'PASSWORD':os.environ.get('DB_PASS'), 
+        'ENGINE': 'django.db.backends.mysql', 
+        'NAME': os.environ.get('DB_NAME'), 
+        'PASSWORD': os.environ.get('DB_PASS'), 
         'USER': os.environ.get('DB_USER'),
-        'HOST': 'mysql', 
+        'HOST': os.environ.get('DB_HOST'), 
         'PORT': '3306',   
     }  
 }  
