@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.utils.safestring import mark_safe
 from modeltranslation.admin import *
+from django.views.decorators.csrf import csrf_exempt
 from .models import (
     Language,
     LanguageLevel,
@@ -19,7 +20,7 @@ class MaterialInline(admin.TabularInline):
     classes = ('collapse', )
     extra = 0
     
-
+@csrf_exempt
 class MaterialAdmin(admin.ModelAdmin):
     list_display = ('title', 'material_type', 'image_tag')
     search_fields = ('material_type','title',)
