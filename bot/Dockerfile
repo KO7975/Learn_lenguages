@@ -4,6 +4,8 @@ COPY . /bot/
 RUN pip install --upgrade pip
 RUN pip3 install -r ./requirements.txt
 
-CMD [ "python", "lang_bot.py" ]
+EXPOSE 5000
+
+CMD [ "python", "lang_bot.py" "0.0.0.0:5000"]
 
  
