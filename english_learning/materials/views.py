@@ -61,6 +61,9 @@ def photo(request, content):
 
     # Create an HttpResponse with the file's data and content type
     response = HttpResponse(data, content_type=content_type)
+
+    # Enforce HTTPS by setting the 'Strict-Transport-Security' header
+    response['Strict-Transport-Security'] = 'max-age=31536000; includeSubDomains; preload'
     return response
 
 
@@ -103,8 +106,8 @@ def not_approved(request):
 def course(request, course_id):
     try:
         user = request.user
-        if course_id != 0:
-            course = Course.objects.ge(id=course_id)
+        if course_id != 0 and user:
+            course = Course.objects.get(id=course_id)
             if user.is_superuser:
                 topic = course.topic.pk
                 mat = course.materials.filter()
