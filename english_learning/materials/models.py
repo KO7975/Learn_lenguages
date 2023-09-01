@@ -42,12 +42,8 @@ class Lesson(models.Model):
     number = models.IntegerField(null=True,)
     materials = models.ManyToManyField('Material', blank=True, related_name='lessonsm',)
     topic = models.ForeignKey('Topic', on_delete=models.CASCADE,null=True)
-    # Create a new lesson
-    # lesson = Lesson.objects.create()
-    # topic = Topic.objects
 
-    def __str__(self):
-        
+    def __str__(self):  
         return f"Lesson  {self.number} - {self.name} - {self.topic}"
 
 
@@ -106,7 +102,7 @@ class Course(models.Model):
     
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
-    courses = models.ForeignKey(Course, on_delete=models.CASCADE, null=True, blank=True)
+    courses = models.ForeignKey(Course, on_delete=models.SET_NULL, null=True, blank=True)
     is_approved = models.BooleanField(default=False)
     phone = models.CharField(max_length=13, blank=True, null=True)
 
