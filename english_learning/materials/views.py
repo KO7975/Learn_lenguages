@@ -24,6 +24,22 @@ from .models import (
 from .templatetags.password import *
 import english_learning.settings as settings
 
+from rest_framework.parsers import MultiPartParser
+from rest_framework.response import Response
+from rest_framework.views import APIView
+from rest_framework import status
+
+
+class FileUploadView(APIView):
+
+    def get(self, request, *args, **kwargs):
+        file_type = request.data['material_type']
+        url = request.data['url']
+        if file_type != "photo":
+            file_path = os.path.join(settings.MEDIA_ROOT, url) 
+            return Response({'url': f"{settings.BASE_URL}{file_path}"},status.HTTP_200_OK)
+
+
 
 def photo(request, content):
     ''' this fanction for connection with telegram which return file from path'''
@@ -99,17 +115,18 @@ def course(request, course_id):
             }
             return render(request, 'course_detail.html', context)
         url = get_object_or_404(UserProfile,user=user)
-        if user.is_authenticated and url.courses.pk == course_id and url.is_approved or user.is_superuser:
-            topic = course.topic.pk
-            mat = course.materials.filter()
-            materials = Material.objects.filter(topic_id=topic)
-            lessons = course.lesson1.all()
-            context = {
-                'course': course,'lessons': lessons,
-                'user': user, 'mat': mat, 'materials': materials, 
-            }
-            return render(request, 'course_detail.html', context)
-        else:
+        try:
+            if user.is_authenticated and url.courses.pk == course_id and url.is_approved or user.is_superuser:
+                topic = course.topic.pk
+                mat = course.materials.filter()
+                materials = Material.objects.filter(topic_id=topic)
+                lessons = course.lesson1.all()
+                context = {
+                    'course': course,'lessons': lessons,
+                    'user': user, 'mat': mat, 'materials': materials, 
+                }
+                return render(request, 'course_detail.html', context)
+        except:
             return redirect(not_approved)
     return redirect(home)
 

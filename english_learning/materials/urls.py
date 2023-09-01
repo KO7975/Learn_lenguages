@@ -24,6 +24,6 @@ urlpatterns = [
     path('seamen/',seamen, name='seamen'),
     path('about_me/',about_me, name='about_me'),
     path('photo/<str:content>', photo, name='photo_view'),
-    path('video/<str:content>', photo, name='photo_view'),
-    path('audio/<str:content>', photo, name='photo_view'),
+    path('video/<str:content>', FileUploadView.as_view(), name='photo_view'),
+    path('audio/<str:content>', FileUploadView.as_view(), name='photo_view'),
 ]

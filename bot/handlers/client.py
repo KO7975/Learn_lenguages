@@ -128,7 +128,7 @@ async def download_photo_handler(message, url, title, material_type, text, URL):
     elif material_type == 'text':
         await bot.send_message(chat_id=message.message.chat.id, text=text)
 
-    else: 
+    elif material_type == 'photo':
         # Download the photo from the URL
         file_url = f'{host}en/{url}'
         file_request = requests.get(file_url, params=url)
@@ -141,13 +141,15 @@ async def download_photo_handler(message, url, title, material_type, text, URL):
         # Send the photo to Telegram
         file_bytes = io.BytesIO(content)
         file = types.InputFile(file_bytes, filename=title)
+        await bot.send_photo(chat_id=message.message.chat.id, caption=text, photo=file)
+    else:
+        link = f'{host}en/materials/course/{course[0][0]}'
 
-        if material_type == 'photo':
-            await bot.send_photo(chat_id=message.message.chat.id, caption=text, photo=file)
-        elif material_type == 'video':
-            await bot.send_video(chat_id=message.message.chat.id, caption=text, video=file)
-        elif material_type == 'audio':
-            await bot.send_audio(chat_id=message.message.chat.id, caption=text, audio=file)
+        await bot.send_message(
+            chat_id=message.message.chat.id,
+            text=f'{text}\nUse link {arr_down_em}',
+            reply_markup=InlineKeyboardMarkup(row_width=1).add(InlineKeyboardButton(text=title, url=link)))
+
 
 
 # @dp.callback_handler(commands=['ls_'])
