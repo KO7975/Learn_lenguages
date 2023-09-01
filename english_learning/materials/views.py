@@ -101,21 +101,22 @@ def not_approved(request):
 
 @csrf_exempt
 def course(request, course_id):
-    user = request.user
-    if course_id != 0:
-        course = get_object_or_404(Course, id=course_id)
-        if user.is_superuser:
-            topic = course.topic.pk
-            mat = course.materials.filter()
-            materials = Material.objects.filter(topic_id=topic)
-            lessons = course.lesson1.all()
-            context = {
-                'course': course,'lessons': lessons,
-                'user': user, 'mat': mat, 'materials': materials, 
-            }
-            return render(request, 'course_detail.html', context)
-        url = get_object_or_404(UserProfile,user=user)
-        try:
+    try:
+        user = request.user
+        if course_id != 0:
+            course = get_object_or_404(Course, id=course_id)
+            if user.is_superuser:
+                topic = course.topic.pk
+                mat = course.materials.filter()
+                materials = Material.objects.filter(topic_id=topic)
+                lessons = course.lesson1.all()
+                context = {
+                    'course': course,'lessons': lessons,
+                    'user': user, 'mat': mat, 'materials': materials, 
+                }
+                return render(request, 'course_detail.html', context)
+            url = get_object_or_404(UserProfile,user=user)
+
             if user.is_authenticated and url.courses.pk == course_id and url.is_approved or user.is_superuser:
                 topic = course.topic.pk
                 mat = course.materials.filter()
@@ -126,9 +127,11 @@ def course(request, course_id):
                     'user': user, 'mat': mat, 'materials': materials, 
                 }
                 return render(request, 'course_detail.html', context)
-        except:
-            return redirect(not_approved)
-    return redirect(home)
+            else:
+                return redirect(not_approved)
+        return redirect(home)
+    except:
+        return redirect(home)
 
 
 @csrf_exempt
