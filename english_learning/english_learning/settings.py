@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv("DEBUG")
+DEBUG =  True#os.getenv("DEBUG")
 
 ALLOWED_HOSTS = ["*"]
 
@@ -157,4 +157,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ORIGIN_ALLOW_ALL = True
 
+
 CSRF_TRUSTED_ORIGINS = ['https://nayalen.onrender.com']
+
