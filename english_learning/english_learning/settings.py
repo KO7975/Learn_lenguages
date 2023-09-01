@@ -158,5 +158,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ORIGIN_ALLOW_ALL = True
 
 
-CSRF_TRUSTED_ORIGINS = ['https://nayalen.onrender.com']
+CSRF_TRUSTED_ORIGINS = ['https://nayalang.onrender.com']
 
