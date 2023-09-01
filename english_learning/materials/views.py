@@ -106,7 +106,7 @@ def not_approved(request):
 def course(request, course_id):
     try:
         user = request.user
-        if course_id != 0 and user:
+        if course_id != 0:
             course = Course.objects.get(id=course_id)
             if user.is_superuser:
                 topic = course.topic.pk
