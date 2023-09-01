@@ -11,7 +11,6 @@ from django.contrib.auth.views import (
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.core.exceptions import ObjectDoesNotExist
-from django.views.defaults import page_not_found
 from django.http import HttpRequest
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -134,7 +133,7 @@ def course(request, course_id):
                 return redirect(not_approved)
         return redirect(home)
     except:
-        return redirect(page_not_found)
+        return render(request, '404.html')
 
 
 @csrf_exempt
@@ -188,7 +187,7 @@ def login_view(request):
 
         return render(request, 'login.html')
     except ObjectDoesNotExist:
-        return redirect(page_not_found)
+        return render(request, '404.html')
 
 
 def logout_view(request):
