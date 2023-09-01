@@ -311,13 +311,13 @@
               <div class="card-body p-4">
 
                 <div class="d-flex ">
-                  <div class="d-flex flex-row align-items-center"><h4 style="color:#000000">{{comment.comment}}</h4></div>
+                  <div class="d-flex flex-row align-items-center"><h5 style="color:#000000">{{comment.comment}}</h5></div>
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="d-flex flex-row align-items-center">
                     <img src="/media/photo/wem.png" alt="avatar" width="25"
                       height="25" />
-                    <h3 class="small mb-0 ms-2">{{comment.user.first_name}}</h3>
+                    <h5 class="small mb-0 ms-2">{{comment.user.first_name}}</h5>
                   </div>
                   <div class="d-flex flex-row align-items-center">
                     <h3 class="small text-muted mb-0">{{comment.time_created}}</h3>
@@ -334,24 +334,24 @@
     <!-- Social media and contacts -->
     <div class="row footer">
       <div class=" col-sm-3 ">
-        <h4>{% trans 'Follow on social media:' %}</h4>
+        <h5>{% trans 'Follow on social media:' %}</h5>
       </div>
       <div class="conteiner col-sm-6 col-md-6 justify-content-center align-items-center pt-5 mb-5">
         <div class="row d-flex justify-content-center align-items-center fst-italic">
-          <div class="wrapper">
-            <a target="_blank" href="https://t.me/+Oo89iONC0Yg5Mjli"><i class="fa fa-5x fa-telegram"></i></a>
-            <a target="_blank" href="https://www.facebook.com/staciewhite22"><i class="fa fa-5x fa-facebook-square"></i></a>
-            <a target="_blank" href="https://www.instagram.com/stacie_white1"><i class="fa fa-5x fa-instagram"></i></a>
+          <div class="wrapper col-sm-12">
+            <a target="_blank" href="https://t.me/+Oo89iONC0Yg5Mjli"><i class="fa fa-4x fa-telegram"></i></a>
+            <a target="_blank" href="https://www.facebook.com/staciewhite22"><i class="fa fa-4x fa-facebook-square"></i></a>
+            <a target="_blank" href="https://www.instagram.com/stacie_white1"><i class="fa fa-4x fa-instagram"></i></a>
           </div>
         </div>
       </div>
         <!-- Social Media Links and Contacts -->
       <div class="social-contacts-container col-sm-3">
           <div class="contacts">
-            <h2>{% trans 'Contact Us:' %}</h2>
+            <h3>{% trans 'Contact Us:' %}</h3>
             <!-- <p>Address: 123 Main St, City, State, ZIP</p> -->
-            <h4>{% trans 'Phone:' %} 123-456-7890</h4>
-            <h4>{% trans 'Email:' %}' info@mysite.com</h4>
+            <h5>{% trans 'Phone:' %} 123-456-7890</h5>
+            <h5>{% trans 'Email:' %}' info@mysite.com</h5>
           </div>
       </div>
     </div>
