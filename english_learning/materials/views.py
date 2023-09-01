@@ -104,7 +104,7 @@ def course(request, course_id):
     try:
         user = request.user
         if course_id != 0:
-            course = get_object_or_404(Course, id=course_id)
+            course = Course.objects.ge(id=course_id)
             if user.is_superuser:
                 topic = course.topic.pk
                 mat = course.materials.filter()
@@ -115,7 +115,7 @@ def course(request, course_id):
                     'user': user, 'mat': mat, 'materials': materials, 
                 }
                 return render(request, 'course_detail.html', context)
-            url = get_object_or_404(UserProfile,user=user)
+            url = UserProfile.objects.get(user=user)
 
             if user.is_authenticated and url.courses.pk == course_id and url.is_approved or user.is_superuser:
                 topic = course.topic.pk
@@ -131,7 +131,7 @@ def course(request, course_id):
                 return redirect(not_approved)
         return redirect(home)
     except:
-        return redirect(home)
+        return redirect(page_not_found)
 
 
 @csrf_exempt
