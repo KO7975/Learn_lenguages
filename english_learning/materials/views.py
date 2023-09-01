@@ -104,7 +104,7 @@ def course(request, course_id):
     try:
         user = request.user
         if course_id != 0:
-            course = Course.objects.ge(id=course_id)
+            course = Course.objects.get(id=course_id)
             if user.is_superuser:
                 topic = course.topic.pk
                 mat = course.materials.filter()
