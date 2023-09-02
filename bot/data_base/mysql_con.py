@@ -24,16 +24,16 @@ async def db_start():
     else:
         print('DB faile!')
     
-    # await cur.execute("CREATE TABLE if not exists materials_telegram (img VARCHAR(100), name VARCHAR(100), description VARCHAR(1000))")
-    # await cur.execute("CREATE TABLE if not exists telegram_like (\
-    #                   user_id VARCHAR(150), \
-    #                   username VARCHAR(100), \
-    #                   first_name VARCHAR(100), \
-    #                   last_name VARCHAR(100), \
-    #                   res TINYINT(1), \
-    #                   phone VARCHAR(13))"
-    #                   )
-    # await base.commit()
+    await cur.execute("CREATE TABLE if not exists materials_telegram (img VARCHAR(100), name VARCHAR(100), description VARCHAR(1000))")
+    await cur.execute("CREATE TABLE if not exists telegram_like (\
+                      user_id VARCHAR(150), \
+                      username VARCHAR(100), \
+                      first_name VARCHAR(100), \
+                      last_name VARCHAR(100), \
+                      res TINYINT(1), \
+                      phone VARCHAR(13))"
+                      )
+    await base.commit()
 
 
 async def write_user(message):
