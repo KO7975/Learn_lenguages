@@ -83,109 +83,109 @@
 # bot.infinity_polling()
 # # asyncio.run(bot.polling())
 
-import requests
-import telegram
-import mysql.connector
-from extractor_phone_email import extractor
-# from peewee import *
-# from playhouse.reflection import generate_models
+# import requests
+# import telegram
+# import mysql.connector
+# from extractor_phone_email import extractor
+# # from peewee import *
+# # from playhouse.reflection import generate_models
 
-# Connect to the MySQL database
+# # Connect to the MySQL database
 
-db = mysql.connector.connect(
-    host="mysql",
-    user="mydatabaseuser",
-    password="12345",
-    database="mydatabase"
-)
+# db = mysql.connector.connect(
+#     host="host",
+#     user="databaseuser",
+#     password="password",
+#     database="database"
+# )
 
-# Create a cursor object to execute queries
-cursor = db.cursor()
-
-
-# Set up the Telegram bot with your API token
-token = '6096355050:AAEgZHfIr7WQDQ7s0uEIGZRgp-oLBD31Nrk'
-bot = telegram.Bot(token=token)
+# # Create a cursor object to execute queries
+# cursor = db.cursor()
 
 
-# Define a function to get the user's phone number by user ID
-def get_phone_number(user_id):
-    # Get the user's profile photos
-    photos = bot.get_user_profile_photos(user_id)
+# # Set up the Telegram bot with your API token
+# token = 'token'
+# bot = telegram.Bot(token=token)
 
-    # If the user has profile photos, get the last photo
-    if photos.total_count > 0:
-        last_photo = photos.photos[-1][-1]
 
-        # Get the file ID of the last photo
-        file_id = last_photo.file_id
+# # Define a function to get the user's phone number by user ID
+# def get_phone_number(user_id):
+#     # Get the user's profile photos
+#     photos = bot.get_user_profile_photos(user_id)
 
-        # Use the file ID to get the file object
-        file = bot.get_file(file_id)
+#     # If the user has profile photos, get the last photo
+#     if photos.total_count > 0:
+#         last_photo = photos.photos[-1][-1]
 
-        # Get the file path of the file object
-        file_path = file.file_path
+#         # Get the file ID of the last photo
+#         file_id = last_photo.file_id
 
-        # Construct the URL for the file
-        url = f'https://api.telegram.org/file/bot{bot.token}/{file_path}'
+#         # Use the file ID to get the file object
+#         file = bot.get_file(file_id)
 
-        # Make a request to the Telegram API to download the file
-        response = requests.get(url)
+#         # Get the file path of the file object
+#         file_path = file.file_path
 
-        # Use the myExtractor library to extract the phone number from the file contents
-        myExtractor = extractor.Extractor(response.content)
-        phone_number = myExtractor.get_phones()
+#         # Construct the URL for the file
+#         url = f'https://api.telegram.org/file/bot{bot.token}/{file_path}'
 
-        return phone_number[0]
+#         # Make a request to the Telegram API to download the file
+#         response = requests.get(url)
 
-    # If the user doesn't have profile photos, return None
-    else:
-        return None
+#         # Use the myExtractor library to extract the phone number from the file contents
+#         myExtractor = extractor.Extractor(response.content)
+#         phone_number = myExtractor.get_phones()
 
-# Define a function to handle the user's messages and button presses
-def handle_message(update, context):
-    # Get the user ID
-    user_id = update.message.from_user.id
+#         return phone_number[0]
 
-    # Get the user's phone number
-    phone_number = get_phone_number(user_id)
-    # phone_number = '0987654321'
+#     # If the user doesn't have profile photos, return None
+#     else:
+#         return None
 
-    # If the user's phone number is in the database
-    if phone_number is not None:
-        cursor.execute(f"SELECT courses_id FROM materials_userprofile WHERE phone_number='{phone_number}' AND is_approved=True")
-        course_id = cursor.fetchall()
-        # Get the user's lessons or materials, depending on which button they pressed
-        if update.message.text == 'Lessons':
-            lessons = course_id[0].lesson1.all()         
-            # cursor.execute(f"SELECT lesson FROM materials_lesson WHERE phone_number='{phone_number}'")
-            # lessons = cursor.fetchall()
-            lesson_list = [lesson for lesson in lessons]
-            message = 'Your lessons:\n' + '\n'.join(lesson_list)
-        else:
-            message = "Please select either 'Lessons' or 'Materials'."
+# # Define a function to handle the user's messages and button presses
+# def handle_message(update, context):
+#     # Get the user ID
+#     user_id = update.message.from_user.id
 
-    # If the user's phone number is not in the database
-    else:
-        message = 'Please add your phone number to the database.'
+#     # Get the user's phone number
+#     phone_number = get_phone_number(user_id)
+#     # phone_number = '0987654321'
 
-    # Send the message to the user
-    update.message.reply_text(message, reply_markup=telegram.ReplyKeyboardRemove())
+#     # If the user's phone number is in the database
+#     if phone_number is not None:
+#         cursor.execute(f"SELECT courses_id FROM materials_userprofile WHERE phone_number='{phone_number}' AND is_approved=True")
+#         course_id = cursor.fetchall()
+#         # Get the user's lessons or materials, depending on which button they pressed
+#         if update.message.text == 'Lessons':
+#             lessons = course_id[0].lesson1.all()         
+#             # cursor.execute(f"SELECT lesson FROM materials_lesson WHERE phone_number='{phone_number}'")
+#             # lessons = cursor.fetchall()
+#             lesson_list = [lesson for lesson in lessons]
+#             message = 'Your lessons:\n' + '\n'.join(lesson_list)
+#         else:
+#             message = "Please select either 'Lessons' or 'Materials'."
 
-# Set up the Telegram bot updater and dispatcher
-updater = telegram.ext.Updater(token='your_api_token', use_context=True)
-dispatcher = updater.dispatcher
+#     # If the user's phone number is not in the database
+#     else:
+#         message = 'Please add your phone number to the database.'
 
-# Register the message handler function
-dispatcher.add_handler(telegram.ext.MessageHandler(
-    telegram.ext.Filters.text, handle_message))
+#     # Send the message to the user
+#     update.message.reply_text(message, reply_markup=telegram.ReplyKeyboardRemove())
 
-# Set up the keyboard with the 'Lessons' and 'Materials' buttons
-keyboard = [['Lessons'], ['Materials']]
-reply_markup = telegram.ReplyKeyboardMarkup(keyboard, one_time_keyboard=True)
+# # Set up the Telegram bot updater and dispatcher
+# updater = telegram.ext.Updater(token='your_api_token', use_context=True)
+# dispatcher = updater.dispatcher
 
-# Start the bot
-updater.start_polling()
+# # Register the message handler function
+# dispatcher.add_handler(telegram.ext.MessageHandler(
+#     telegram.ext.Filters.text, handle_message))
+
+# # Set up the keyboard with the 'Lessons' and 'Materials' buttons
+# keyboard = [['Lessons'], ['Materials']]
+# reply_markup = telegram.ReplyKeyboardMarkup(keyboard, one_time_keyboard=True)
+
+# # Start the bot
+# updater.start_polling()
 
 
 

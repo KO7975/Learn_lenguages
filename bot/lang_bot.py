@@ -7,11 +7,12 @@ from handlers import client, admin, other
 # here we can make connaction to db
 async def on_startup(_):
     print('Bot is online')
-    await mysql_con.db_start()
-
+    base, cur = await mysql_con.db_start()
+    base.close()
 
 client.registr_handlers_client(dp)
 admin.registr_handlers_admin(dp)
 other.registr_handlers_other(dp)
 
-executor.start_polling(dp, skip_updates=True, on_startup=on_startup)
+
+executor.start_polling(dp, skip_updates=True, on_startup=on_startup,)

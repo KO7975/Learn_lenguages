@@ -1,11 +1,13 @@
-from  aiogram import Bot
-from aiogram.dispatcher import Dispatcher
+from  aiogram import Bot, Dispatcher, executor
 import os
 from dotenv import load_dotenv
 from aiogram.contrib.fsm_storage.memory import MemoryStorage #help keep data in random access memory
+import logging
 
 
 load_dotenv()
+
+logging.basicConfig(level=logging.INFO)
 
 storage = MemoryStorage()
 bot = Bot(token=os.getenv('TOKEN'))
@@ -21,3 +23,7 @@ contact_tel= os.getenv('CONTACT_TEL')
 email= os.getenv("EMAIL")
 facebook= os.getenv('FACEBOOK')
 
+
+if __name__ == "__main__":
+    executor.start_polling(dp, skip_updates=True)
+    
