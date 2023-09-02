@@ -26,7 +26,7 @@ DEBUG = os.getenv("DEBUG")
 
 TEMPLATE_DEBUG = DEBUG
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['nayalang.onrender.com', 'lang-bot.onrender.com']
 
 
 # Application definition
