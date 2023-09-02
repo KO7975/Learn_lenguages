@@ -11,16 +11,16 @@
     /* стили для маленьких экранов */
   @media screen and (max-width: 480px) {
     body {
-      font-size: 5px; /* изменение размера шрифта */
-      text-size-adjust: 5px;
+      font-size: 15px; /* изменение размера шрифта */
+      text-size-adjust: 15px;
     }
   }
 
   /* стили для средних экранов */
   @media screen and (min-width: 481px) and (max-width: 768px) {
     body {
-      font-size: 10px; /* изменение размера шрифта */
-      text-size-adjust: 10px;
+      font-size: 15px; /* изменение размера шрифта */
+      text-size-adjust: 15px;
     }
   }
 
@@ -154,9 +154,9 @@
   }
 </style>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <section  class="vh-100" style="color: #C6C8C6; margin-top: 55px;">
+  <section  class="vh-100 w-100" style="color: #C6C8C6; margin-top: 58px; margin-left: 10px;">
     <div id="top" class="row p-4 p-md-5 mb-4 rounded d-flex justify-content-center align-items-center text-bg-dark">
-      <div id="tone" class="col-sm-6 col-md-6 col-lg-8 px-3" style="margin:auto">
+      <div id="tone" class="col-sm-6 col-md-6 col-lg-7 px-3" style="margin:auto">
         <h1 class="display-4 fst-italic">{% translate 'Hello. Nice to meet you here. My Name is' %} <b><span style=" color:#859bca; text-shadow: 0px 14px 10px rgba(212, 89, 89, 0.4);">Anastasiia Rakhovskaia</span></b>!</h1>
         <p class="lead my-3">{% translate 'I can help you learn languages faster and more enjoyable. I offer a variety of courses to help you reach your language goals.'%}<br>{% translate 'I have video and audio materials to help you learn the basics and practice the language.'%}
           <br>{% translate 'Studying an individual course online can be a convenient and flexible way to learn new skills or advance your education.' %}<br>
@@ -173,8 +173,8 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-12 col-md-6 col-lg-4  px-5 img-fluid  justify-content-center align-items-cente" style="margin:auto">
-        <a href="{% url 'registr' %}"><img src="/media/photo/nastya.jpg"class="img-fluid" width="320" height="auto" style="border-radius: 1rem;"></a>
+      <div class="col-sm-12 col-md-6 col-lg-5  px-5 d-flex justify-content-center align-items-cente" style="margin:auto">
+        <a href="{% url 'registr' %}"><img src="/media/photo/nastya.jpg" class="img-fluid" width="320" height="auto" style="border-radius: 1rem;"></a>
       </div>
     </div>
 
