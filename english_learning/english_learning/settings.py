@@ -24,7 +24,9 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DEBUG")
 
-ALLOWED_HOSTS = ['https://nayalang.onrender.com', 'https://lang-bot.onrender.com']
+TEMPLATE_DEBUG = DEBUG
+
+ALLOWED_HOSTS = ['nayalang.onrender.com', 'lang-bot.onrender.com']
 
 
 # Application definition
